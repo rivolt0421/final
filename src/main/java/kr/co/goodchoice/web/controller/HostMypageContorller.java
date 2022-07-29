@@ -1,4 +1,4 @@
-package kr.co.goodchoice.host.controller;
+package kr.co.goodchoice.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
