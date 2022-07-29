@@ -19,6 +19,7 @@ public class HomeController {
 
 	@Autowired
 	private UserService userService;
+
 	
 	@GetMapping(path ="/")
 	public String home() {
@@ -52,5 +53,11 @@ public class HomeController {
 		return "redirect:/";
 	}
 	
+	@GetMapping(path ="/myinfo")
+	public String myinfo() {
+
+		
+		return "/user/myinfo";
+	}
 	
 }
