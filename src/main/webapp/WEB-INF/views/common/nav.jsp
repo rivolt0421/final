@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-sm" style="background-color:#f7323f;">
 	<div class="container">
 		<ul class="navbar-nav">
-			<li class="nav-logo"><a href="/"><img src="/resources/images/redlogo.jpg" width=91px; height=21px;></a></li>
+			<li class="nav-logo"><a href="/"><img src="/images/redlogo.jpg" width=91px; height=21px;></a></li>
 		</ul>
 		<ul class="navbar-nav">
 			<c:if test="${not empty LOGIN_USER }">

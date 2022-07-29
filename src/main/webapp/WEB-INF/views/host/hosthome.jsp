@@ -19,7 +19,7 @@
 	#main-top #progress li {color: #0000008f; font-weight: bold; text-align: center;}
 	#main-top li {width: 20%; height: 50px;}
 	
-	#main-middle {height: 500px; border: 1px solid #aaa; border-radius: 5px; background-image: url("/resources/images/mainspot_image.png"); background-size: cover;}
+	#main-middle {height: 500px; border: 1px solid #aaa; border-radius: 5px; background-image: url("/images/mainspot_image.png"); background-size: cover;}
 	
 	#main-bottom {height: 350px;}
 	#main-bottom h4 {font-size: 15px; font-weight: bold; margin: 20px 0;}
@@ -46,7 +46,7 @@
 			<div class="col" id="progress">
 				<ul>
 					<li>
-						<img src="resources/images/register1.png">
+						<img src="/images/register1.png">
 						<span>마이페이지<br>업체 정보 등록</span>
 					</li>
 					<li>
