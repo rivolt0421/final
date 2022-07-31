@@ -9,6 +9,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <title>호스트 하우스</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon">
 <style type="text/css">
 	body {background-color: #EBEBEB;}
 	.container {width: 1000px;}
