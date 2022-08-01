@@ -17,46 +17,63 @@
 <!-- 프로젝트 내 css파일, js파일 임포트 -->
 <link href="/css/home.css" rel="stylesheet">
 <script src="/script/home.js" type="text/javascript"></script>
+<style>
 
+</style>
 </head>
-<body>
-<header class="">
-
-        <section>
-                        <h1><a class="" href="https://www.goodchoice.kr/" title="여기어때">여기어때</a></h1>
-            <button type="button" class="btn_menu nav_open ">메뉴</button>
-            <button type="button" class="btn_srch srch_open " style="right: 396px;">검색</button>
-            <ul class="gnb_pc">
-                                    <li><a href="https://www.goodchoice.kr/product/srp">내주변</a></li>
-                    <li><a href="https://www.goodchoice.kr/user/login?returnUrl=my%2FreserveList">예약내역</a></li>
-                    <li class="over">
-                        <button type="button"><span>더보기</span></button>
-                        <ul class="list_03" style="display: none; opacity: 1;">
-                            <li><a href="https://www.goodchoice.kr/more/notice">공지사항</a></li>
-                            <li><a href="https://www.goodchoice.kr/more/event">이벤트</a></li>
-                            <!-- <li><a href="https://www.goodchoice.kr/more/project">혁신 프로젝트</a></li> -->
-                            <li><a href="https://www.goodchoice.kr/more/faq">자주 묻는 질문</a></li>
-                            <li><a href="https://www.goodchoice.kr/more/inquiry">1:1 문의</a></li>
-                            <li><a href="https://www.goodchoice.kr/more/terms">약관 및 정책</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="https://www.goodchoice.kr/user/login"><span>로그인</span></a></li>
-                            </ul>
-
-            <!-- Search -->
-            <div class="srch_bar">
-                <div class="wrap_inp">
-                    <input type="text" id="keyword" placeholder="지역, 숙소명" autocomplete="off">
-                    <button type="button" class="btn_srch" style="right: 396px;">검색</button>
-                </div>
-                <button class="btn_cancel" onclick="srch_close()">취소</button>
-            </div>
-            <!-- //Search -->
-
-        </section>
-    </header>
-<div class="container">
+<body class="pc">
+	<div class="wrap main_wrap show">
+		<header class>
+			<section>
+				<h1>
+					<a class="" href="/" title="굿초이스">여기어때</a>
+				</h1>
+				
+				<ul class="gnb" style="display:block;">
+					<li>
+						<a href="">내주변</a>
+					</li>
+					<li>
+						<a href="">예약내역</a>
+					</li>
+					
+				<li class="dropdown">
+				      <button class="dropbtn" style="padding: 3px 0px 0px 0px;"> 
+				        	<span class="dropbtn_icon">더보기</span>
+				      </button>
+				      	<ul class="dropdown-content" display: none; opacity: 1;>
+					        <li>
+					        <a href="#" style="color: rgba(0,0,0,0.87);">더보기</a>
+					        </li>
+					        <li>
+					        <a href="#" style="color: rgba(0,0,0,0.87);">이벤트</a>
+					        </li>
+					        <li>
+					        <a href="#" style="color: rgba(0,0,0,0.87);">1:1 문의</a>
+					        </li>
+					        <li>
+					        <a href="#" style="color: rgba(0,0,0,0.87);">약관 및 정책</a>
+					        </li>
+				     	</ul>
+				      
+					     	<li>
+							<a href="">로그인</a>
+							</li>
+				</li>	
+		    </ul>				
+		</section>
+	</header>
 	
+	<div id="main_category">
+		<ul>
+			<li>
+				<a href="">
+					<span class=""></span>
+					<p>모텔</p>
+				</a>
+			</li>
+		</ul>
+	</div>
 </div>
 </body>
 </html>
