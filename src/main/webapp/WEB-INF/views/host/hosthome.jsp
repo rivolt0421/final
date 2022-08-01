@@ -10,11 +10,18 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <title>호스트 하우스</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon">
 <style type="text/css">
 	body {background-color: #EBEBEB;}
 	a {text-decoration: none; color: #000;}
 	ul, ol, li {list-style: none;}
 	.container {width: 1000px;}
+	
+	#main-top {height: 300px; border: 1px solid #aaa; border-radius: 5px; margin: 30px 0; background-color: #fff;}
+	#main-top h3 {font-size: 20px; font-weight: bold; margin: 0 auto; text-align: center; margin: 30px 0;}
+	#main-top a {}
+	#main-top #progress li {color: #0000008f; font-weight: bold; text-align: center;}
+	#main-top li {width: 20%; height: 50px;}
 	
 	#main-middle {height: 650px; border: 1px solid #aaa; border-radius: 5px; background-image: url("/resources/images/host/mainspot_image.png"); background-size: cover;}
 	
@@ -36,6 +43,7 @@
 <div class="container mt-4">
 	<div class="border shadow mb-4 p-3">
 		<%@ include file="common/registerprogress.jsp" %>
+
 	</div>
 	<!-- 이미지 -->
 	<div class="row mb-4" id="main-middle">
