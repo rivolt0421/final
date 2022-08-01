@@ -1,14 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<link href="/css/hostnav.css" rel="stylesheet">
 <style>
-	* {margin: 0; padding: 0;}
-	a {color: #000; text-decoration: none;}
-	ul li {float: left; list-style: none;}
-	
-	#hosthome-header {width: 100%; background-color: #00BFA5; height: 50px;}
-	
-	#main-nav {height: 80px; border: 1px solid #eee;}
-	#main-nav img {width: 160px;}
+
 	
 </style>
 <header id="hosthome-header">
@@ -21,7 +16,7 @@
 					<li>예약문의 1544-4087</li>
 				</ul>
 			</div>
-			<div class="col-6 text-end">
+			<div class="col-6" id="top-nav-right">
 				<ul>
 					<li><a href="/mypage">마이페이지</a></li>
 					<li><a href="">로그아웃</a></li>
@@ -34,16 +29,40 @@
 	<div class="container">
 		<!-- nav -->
 		<div class="row" id="main-nav">
-			<div class="col">
+			<div class="col-2">
 				<div id="logo-div">
 					<a href="/hosthome">
-						<img src="resources/images/host/logosample.PNG">
+						<img src="/images/host/logosample.PNG">
 					</a>
 				</div>
-				<ul>
-					<li>숙소관리</li>
-					<li>예약관리</li>
-					<li>고객행복센터</li>
+			</div>
+			<div class="col-10">
+				<ul class="hostMenu">
+					<li>
+						숙소관리
+						<ul class="submenu">
+							<li><a href="#">소개 작성</a></li>
+							<li><a href="#">이용규칙 관리</a></li>
+							<li><a href="#">객실 관리</a></li>
+							<li><a href="#">리뷰 관리</a></li>
+						</ul>
+					</li>
+					<li>
+						예약관리
+						<ul class="submenu">
+							<li><a href="#">실시간 예약 관리</a></li>
+							<li><a href="#">예약 내역</a></li>
+							<li><a href="#">매출 내역</a></li>
+						</ul>
+					</li>
+					<li>
+						고객행복센터
+						<ul class="submenu">
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">자주 묻는 질문</a></li>
+							<li><a href="#">서비스 약관</a></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 		</div>
