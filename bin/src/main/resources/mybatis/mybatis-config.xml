@@ -5,4 +5,8 @@
 		<setting name="logImpl" value="LOG4J2"/>
 		<setting name="jdbcTypeForNull" value="NULL"/>
 	</settings>
+	
+	<typeAliases>
+		<package name="kr.co.goodchoice.vo"/>	
+	</typeAliases>
 </configuration>
