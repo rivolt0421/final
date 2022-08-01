@@ -26,6 +26,11 @@ public class HomeController {
 		return "home";
 	}
 	
+	@GetMapping(path = "/login")
+	public String loginform() {
+		return "loginform";
+	}
+	
 	@GetMapping(path ="/register")
 	public String registerform(Model model) {
 		UserRegisterForm userRegisterForm = new UserRegisterForm();
