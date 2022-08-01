@@ -9,4 +9,5 @@
 	<typeAliases>
 		<package name="kr.co.goodchoice.vo"/>	
 	</typeAliases>
+	
 </configuration>
