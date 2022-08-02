@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+body {background-color: #EBEBEB;}
+	a {text-decoration: none; color: #000;}
+	ul, ol, li {list-style: none;}
+	.container {width: 1000px;}
+	
+	#main-top {height: 300px; border: 1px solid #aaa; border-radius: 5px; margin: 30px 0; background-color: #fff;}
+	#main-top h3 {font-size: 20px; font-weight: bold; margin: 0 auto; text-align: center; margin: 30px 0;}
+	#main-top #progress li {color: #0000008f; font-weight: bold; text-align: center;}
+	#main-top li {width: 20%; height: 50px;}
+	
+	#main-middle {height: 650px; border: 1px solid #aaa; border-radius: 5px; background-image: url("/images/host/mainspot_image.png"); background-size: cover;}
+	
+	#main-bottom {height: 350px;}
+	#main-bottom h4 {font-size: 15px; font-weight: bold; }
+	
+	#notice-preview {padding: 20px; border-radius: 5px;}
+	#notice-preview a {text-decoration: none; color: #000;}
+	#notice-top {border-bottom: 1px solid #eee; padding-bottom: 20px;}
+	
+	#room-reserve {background-color: #546E7A; height: 180px; border-radius: 5px; padding: 10px 20px;}
+	#room-reserve h4 a, li {color: #fff;}
+	#room-reserve h4 {font-size: 18px;}
+	#room-reserve #reserve-count{font-size: 45px; color: #fff;}
+	
+	#reserve-info {border-radius: 5px;}
+	#hosthome-table {width: 100%; text-align: center; line-height: 40px;}
+	#hosthome-table th {border-bottom: 1px solid #eee;}

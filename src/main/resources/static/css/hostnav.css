@@ -1,0 +1,18 @@
+@charset "UTF-8";
+	* {margin: 0; padding: 0;}
+	a {color: #000; text-decoration: none;}
+	ul li {list-style: none;}
+	
+	#hosthome-header {width: 100%; background-color: #00BFA5; height: 50px;}
+	#hosthome-header li {float: left; padding: 0 10px; font-weight: bold;}
+	#hosthome-header li a {color: #fff; text-decoration: none;}
+
+	#main-nav {height: 80px; border: 1px solid #eee;}
+	#main-nav ul li {border: 1px solid #000; color: #000;}	
+	#main-nav a {text-decoration: none; color: #000;}
+	#main-nav img {width: 160px;}
+	
+	.hostMenu > li { width: 200px; padding: 10px 20px; display: inline-block; text-align: center; position: relative; margin-top: 15px;}
+	.hostMenu > li:hover {border-bottom: 2px solid #00BFA5;}
+	.hostMenu > li ul.submenu {position: absolute; top: 45px;}
+	.hostMenu > li ul.submenu li {width: 200px; padding: 10px 20px; }
