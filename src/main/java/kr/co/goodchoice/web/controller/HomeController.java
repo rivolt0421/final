@@ -61,8 +61,25 @@ public class HomeController {
 	@GetMapping(path ="/myinfo")
 	public String myinfo() {
 
-		
 		return "/user/myinfo";
+	}
+	
+	@GetMapping(path ="/point")
+	public String point() {
+		
+		return "/user/point";
+	}
+	
+	@GetMapping(path ="/coupon")
+	public String coupon() {
+		
+		return "/user/couponbox";
+	}
+	
+	@GetMapping(path ="/reservations")
+	public String reservation() {
+		
+		return "/user/reservation";
 	}
 	
 }

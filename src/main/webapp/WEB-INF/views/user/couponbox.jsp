@@ -205,13 +205,13 @@ a, input, button, div, li, textarea, form, label, select {
 					<a class="" href="/point">포인트</a>
 				</li>
 				<li>
-					<a class="" href="/couponbox">쿠폰함</a>
+					<a class="active" href="/coupon">쿠폰함</a>
 				</li>
 				<li>
 					<a class="" href="/reservations">예약 내역</a>
 				</li>
 				<li>
-					<a class="active" href="/myinfo">내 정보 관리</a>
+					<a class="" href="/myinfo">내 정보 관리</a>
 				</li>
 			</ul>
 		</nav>
