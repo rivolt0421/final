@@ -36,7 +36,7 @@
 	</div>
 	<div class="row" id="progress">
 		<div class="col text-center">
-			<img src="resources/images/host/register1.png">
+			<img src="/images/host/register1.png">
 			<p class="fw-bold mt-2">마이페이지<br>업체 정보 등록</p>
 		</div>
 		<div class="col text-center p-4">
@@ -45,7 +45,7 @@
 			<i class="bi bi-circle-fill text-danger small"></i>
 		</div>
 		<div class="col text-center">
-			<img src="resources/images/host/register2.png">
+			<img src="/images/host/register2.png">
 			<p class="fw-bold mt-2">소개작성</p>
 		</div>
 		<div class="col text-center p-4">
@@ -54,7 +54,7 @@
 			<i class="bi bi-circle-fill text-secondary small"></i>
 		</div>
 		<div class="col text-center">
-			<img src="resources/images/host/register3.png">
+			<img src="/images/host/register3.png">
 			<p class="fw-bold mt-2">이용규칙 관리</p>
 		</div>
 		<div class="col text-center p-4">
@@ -63,7 +63,7 @@
 			<i class="bi bi-circle-fill text-secondary small"></i>
 		</div>
 		<div class="col text-center">
-			<img src="resources/images/host/register4.png">
+			<img src="/images/host/register4.png">
 			<p class="fw-bold mt-2">객실관리</p>
 		</div>
 	</div>
