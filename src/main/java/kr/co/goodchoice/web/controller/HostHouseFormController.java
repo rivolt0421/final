@@ -10,4 +10,14 @@ public class HostHouseFormController {
 	public String form1() {
 		return "host/form1";
 	}
+	
+	@GetMapping(path = "/form2")
+	public String form2() {
+		return "host/form2";
+	}
+	
+	@GetMapping(path = "/form3")
+	public String form3() {
+		return "host/form3";
+	}
 }
