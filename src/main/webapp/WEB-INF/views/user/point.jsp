@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -153,46 +152,7 @@ a, input, button, div, li, textarea, form, label, select {
 </style>
 </head>
 <body>
-<header class>
-	<section>
-		<h1>
-			<a class="" href="/" title="굿초이스">여기어때</a>
-		</h1>
-		
-		<ul class="gnb" style="display:block; padding:30px;">
-			<li>
-				<a href="">내주변</a>
-			</li>
-			<li>
-				<a href="">예약내역</a>
-			</li>
-			
-		<li class="dropdown">
-		      <button class="dropbtn" style="padding: 3px 0px 0px 0px;"> 
-		        	<span class="dropbtn_icon">더보기</span>
-		      </button>
-		      	<ul class="dropdown-content" display: none; opacity: 1;>
-			        <li>
-			        <a href="#" style="color: rgba(0,0,0,0.87);">더보기</a>
-			        </li>
-			        <li>
-			        <a href="#" style="color: rgba(0,0,0,0.87);">이벤트</a>
-			        </li>
-			        <li>
-			        <a href="#" style="color: rgba(0,0,0,0.87);">1:1 문의</a>
-			        </li>
-			        <li>
-			        <a href="#" style="color: rgba(0,0,0,0.87);">약관 및 정책</a>
-			        </li>
-		     	</ul>
-		      
-			     	<li>
-					<a href="">로그인</a>
-					</li>
-		</li>	
-    </ul>				
-	</section>
-</header>
+<%@ include file="../common/nav.jsp" %>
 <div class="sub_top_wrap">
 	<div class="sub_top bg_kong_2">
 		<h2>내정보</h2>
@@ -202,16 +162,16 @@ a, input, button, div, li, textarea, form, label, select {
 		<nav>
 			<ul>
 				<li>
-					<a class="active" href="/point">포인트</a>
+					<a class="active" href="/user/point">포인트</a>
 				</li>
 				<li>
-					<a class="" href="/coupon">쿠폰함</a>
+					<a class="" href="/user/couponbox">쿠폰함</a>
 				</li>
 				<li>
-					<a class="" href="/reservations">예약 내역</a>
+					<a class="" href="/user/reservations">예약 내역</a>
 				</li>
 				<li>
-					<a class="" href="/myinfo">내 정보 관리</a>
+					<a class="" href="/user/myinfo">내 정보 관리</a>
 				</li>
 			</ul>
 		</nav>

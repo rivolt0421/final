@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +9,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <title>여행할때 굿초이스</title>
 <link href="/favicon.ico" rel="icon" type="image/x-icon">
+
 <link href="/css/home.css" rel="stylesheet">
 <style>
 * {
@@ -150,49 +150,17 @@ a, input, button, div, li, textarea, form, label, select {
     color: rgb(230,28,81);
 }
 
+.mypage .pw_input__title:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 </style>
 </head>
 <body>
-<header class>
-	<section>
-		<h1>
-			<a class="" href="/" title="굿초이스">여기어때</a>
-		</h1>
-		
-		<ul class="gnb" style="display:block; padding:30px;">
-			<li>
-				<a href="">내주변</a>
-			</li>
-			<li>
-				<a href="">예약내역</a>
-			</li>
-			
-		<li class="dropdown">
-		      <button class="dropbtn" style="padding: 3px 0px 0px 0px;"> 
-		        	<span class="dropbtn_icon">더보기</span>
-		      </button>
-		      	<ul class="dropdown-content" display: none; opacity: 1;>
-			        <li>
-			        <a href="#" style="color: rgba(0,0,0,0.87);">더보기</a>
-			        </li>
-			        <li>
-			        <a href="#" style="color: rgba(0,0,0,0.87);">이벤트</a>
-			        </li>
-			        <li>
-			        <a href="#" style="color: rgba(0,0,0,0.87);">1:1 문의</a>
-			        </li>
-			        <li>
-			        <a href="#" style="color: rgba(0,0,0,0.87);">약관 및 정책</a>
-			        </li>
-		     	</ul>
-		      
-			     	<li>
-					<a href="">로그인</a>
-					</li>
-		</li>	
-    </ul>				
-	</section>
-</header>
+<%@ include file="../common/nav.jsp" %>
+
 <div class="sub_top_wrap">
 	<div class="sub_top bg_kong_2">
 		<h2>내정보</h2>
@@ -202,24 +170,47 @@ a, input, button, div, li, textarea, form, label, select {
 		<nav>
 			<ul>
 				<li>
-					<a class="" href="/point">포인트</a>
+					<a class="" href="/user/point">포인트</a>
 				</li>
 				<li>
-					<a class="" href="/couponbox">쿠폰함</a>
+					<a class="" href="/user/couponbox">쿠폰함</a>
 				</li>
 				<li>
-					<a class="" href="/reservations">예약 내역</a>
+					<a class="" href="/user/reservations">예약 내역</a>
 				</li>
 				<li>
-					<a class="active" href="/myinfo">내 정보 관리</a>
+					<a class="active" href="/user/myinfo">내 정보 관리</a>
 				</li>
 			</ul>
 		</nav>
 		<div class="align_rt">
 			<div class="mypage">
 				<section class="top_area">
-	
+					<strong>내 정보 수정</strong>
 				</section>
+				<div class="login_info">
+					<div>
+						<img src="/images/ico_1.png" alt>
+					</div>
+					<p></p> <!-- 이메일 나오는곳 -->
+				</div>
+				<div class="pw_input">
+					<div class="pw_input_title">
+						<b>닉네임</b>
+						<span class="title_uinfo"><!-- 닉네임 나오는곳 --></span>
+					</div>
+					<section class="modifying-section" style="display: block;">
+							<p class="inp_wrap remove form-errors">
+								<input type="text" value="asdafdsa" placeholder="체크인시 필요한 정보입니다." data-input="unick" data-msg-required="닉네임을 입력하세요." data-rule-minlength="2" data-rule-maxlength="14" data-rule-spacechar="true" data-rule-specialchar="true">
+							</p>
+							<button type="button" class="btn_etc btn_confirm active" onclick="changeNickname();">딴거할래요</button> <!-- 활성화 클래스 'active' -->
+					</section>
+					<div class="pw_input__btns-wrap modifying">
+						<button class="btns-wrap__edit-btn" type="button">수정</button>
+						<button class="btns-wrap__submit-btn" type="submit">수정완료</button>
+						<button class="btns-wrap__cancel-btn" type="button">수정취소</button>
+					</div>
+				</div>
 				<p class="bot_link">
 					<a href="">비밀번호 변경</a> >
 				</p>

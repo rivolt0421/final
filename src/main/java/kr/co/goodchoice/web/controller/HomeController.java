@@ -9,12 +9,17 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.support.SessionStatus;
 
 import kr.co.goodchoice.exception.OnlineApplicationException;
 import kr.co.goodchoice.service.UserService;
+import kr.co.goodchoice.vo.User;
 import kr.co.goodchoice.web.form.UserRegisterForm;
 
 @Controller
+@SessionAttributes("LOGIN_USER")
 public class HomeController {
 
 	@Autowired
@@ -26,10 +31,6 @@ public class HomeController {
 		return "home";
 	}
 	
-	@GetMapping(path = "/login")
-	public String loginform() {
-		return "loginform";
-	}
 	
 	@GetMapping(path ="/register")
 	public String registerform(Model model) {
@@ -45,11 +46,11 @@ public class HomeController {
 		
 		if (errors.hasErrors()) {
 			return "registerform";
-		}
+		}			
 		try {
 			userService.addNewUser(userRegisterForm);
 		} catch (OnlineApplicationException e) {
-			errors.rejectValue("ema il", null, e.getMessage());
+			errors.rejectValue("email", null, e.getMessage());
 			return "registerform";
 		}
 		
@@ -58,28 +59,44 @@ public class HomeController {
 		return "redirect:/";
 	}
 	
-	@GetMapping(path ="/myinfo")
-	public String myinfo() {
-
-		return "/user/myinfo";
+	@GetMapping(path = "/login")
+	public String loginform() {
+		return "loginform";
 	}
 	
-	@GetMapping(path ="/point")
-	public String point() {
+	@PostMapping(path = "/login")
+	public String login(@RequestParam("email") String email, @RequestParam("password") String password, Model model) {
 		
-		return "/user/point";
-	}
+		try {
+			User user = userService.login(email, password);
+			model.addAttribute("LOGIN_USER", user);
+		} catch (OnlineApplicationException e) {
+			e.printStackTrace();
+			return "redirect:/login?fail=invalid";
+		}
+		
+		return "redirect:/";
+}
 	
-	@GetMapping(path ="/coupon")
-	public String coupon() {
-		
-		return "/user/couponbox";
-	}
+//	@PostMapping(path = "/login")
+//	public String login(@RequestParam("email") String email, @RequestParam("password") String password, HttpSession session) {
+//		
+//		try {
+//			User user = userService.login(email, password);
+//			session.setAttribute("LOGIN_USER", user);
+//			
+//		} catch (OnlineApplicationException e) {
+//			return "redirect:/login?fail=invalid";
+//		}		
+//		
+//		return "redirect:/";
+//	}
 	
-	@GetMapping(path ="/reservations")
-	public String reservation() {
+	@GetMapping(path = "/logout")
+	public String logout(SessionStatus sessionStatus) {
+		sessionStatus.setComplete();
 		
-		return "/user/reservation";
+		return "redirect:/";
 	}
 	
 }
