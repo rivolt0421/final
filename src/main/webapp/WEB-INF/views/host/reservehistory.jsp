@@ -11,17 +11,16 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@ include file="common/nav.jsp" %>
 <div class="container">
-	<div>
-		<form action="">
-			<label>이메일</label>
-			<input type="text" placeholder="이메일">
-			
-			<label>비밀번호</label>
-			<input type="text" placeholder="영문, 숫자, 특수문자 혼합 8자 이상">
-			
-		</form>
+	<div class="border shadow mt-4">
+		<div class="row mt-4 mx-3">
+			<div class="col">
+				<h3 class="fw-bold fs-5">예약관리 > 예약 내역</h3>
+			</div>
+		</div>
 	</div>
 </div>
+<%@ include file="common/footer.jsp" %>
 </body>
 </html>

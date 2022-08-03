@@ -90,7 +90,7 @@
 									<th>예약확인</th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody class="text-center">
 								<tr>
 									<td colspan="6">예약 내역이 없습니다.</td>
 								</tr>

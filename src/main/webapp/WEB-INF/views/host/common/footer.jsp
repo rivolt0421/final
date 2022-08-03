@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<style>
+	a {text-decoration: none;}
+</style>
 <footer class="bg-dark mt-5 text-white pt-3" style="height: 220px;">
 	<div class="container p-3">
 		<div class="mx-5">
