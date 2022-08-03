@@ -16,7 +16,7 @@
 	<div class="border shadow mt-4">
 		<div class="row mt-4 mx-3">
 			<div class="col-6">
-				<h3 class="fw-bold fs-5">고객행복센터 > 공지사항</h3>
+				<h3 class="fw-bold fs-5">고객행복센터 > 자주 묻는 질문</h3>
 			</div>
 			<div class="col-6 text-end">
 			<!-- 검색 -->
@@ -32,55 +32,70 @@
 			</div>
 		</div>
 		<div class="row">
+			<div class="col">
+				
+			</div>
+		</div>
+		<div class="row">
 			<div class="col p-5">
 				<table class="table mt-3 ">
 					<colgroup>
 						<col width="10%">
+						<col width="10%">
 						<col width="">
-						<col width="15%">
 					</colgroup>
 					<thead class="text-center bg-secondary bg-opacity-10">
 						<tr>
 							<th>번호</th>
+							<th>분류</th>
 							<th>제목</th>
-							<th>등록일</th>
 						</tr>
 					</thead>
 					<tbody class="fs-6">
-						<tr>
-							<td class="text-center">115</td>
-							<td>[공지] 2022년 소상공인 온라인 기획전 <대한민국 동행세일 여행페스타> 모집</td>
-							<td class="text-center">2022/07/29</td>
+						<tr class="text-center">
+							<td>10</td>
+							<td>기타</td>
+							<td>Q. 취소환불규정이 어떻게 되나요?</td>
 						</tr>
-						<tr>
-							<td class="text-center">115</td>
-							<td>[공지] 2022년 소상공인 온라인 기획전 <대한민국 동행세일 여행페스타> 모집</td>
-							<td class="text-center">2022/07/29</td>
+						<tr class="text-center">
+							<td>10</td>
+							<td>기타</td>
+							<td>Q. 취소환불규정이 어떻게 되나요?</td>
 						</tr>
-						<tr>
-							<td class="text-center">115</td>
-							<td>[공지] 2022년 소상공인 온라인 기획전 <대한민국 동행세일 여행페스타> 모집</td>
-							<td class="text-center">2022/07/29</td>
+						<tr class="text-center">
+							<td>10</td>
+							<td>기타</td>
+							<td>Q. 취소환불규정이 어떻게 되나요?</td>
 						</tr>
-						<tr>
-							<td class="text-center">115</td>
-							<td>[공지] 2022년 소상공인 온라인 기획전 <대한민국 동행세일 여행페스타> 모집</td>
-							<td class="text-center">2022/07/29</td>
+						<tr class="text-center">
+							<td>10</td>
+							<td>기타</td>
+							<td>Q. 취소환불규정이 어떻게 되나요?</td>
 						</tr>
-						<tr>
-							<td class="text-center">115</td>
-							<td>[공지] 2022년 소상공인 온라인 기획전 <대한민국 동행세일 여행페스타> 모집</td>
-							<td class="text-center">2022/07/29</td>
+						<tr class="text-center">
+							<td>10</td>
+							<td>기타</td>
+							<td>Q. 취소환불규정이 어떻게 되나요?</td>
 						</tr>
-						<tr>
-							<td class="text-center">115</td>
-							<td>[공지] 2022년 소상공인 온라인 기획전 <대한민국 동행세일 여행페스타> 모집</td>
-							<td class="text-center">2022/07/29</td>
+						<tr class="text-center">
+							<td>10</td>
+							<td>기타</td>
+							<td>Q. 취소환불규정이 어떻게 되나요?</td>
 						</tr>
-						<tr>
-							<td class="text-center">115</td>
-							<td>[공지] 2022년 소상공인 온라인 기획전 <대한민국 동행세일 여행페스타> 모집</td>
-							<td class="text-center">2022/07/29</td>
+						<tr class="text-center">
+							<td>10</td>
+							<td>기타</td>
+							<td>Q. 취소환불규정이 어떻게 되나요?</td>
+						</tr>
+						<tr class="text-center">
+							<td>10</td>
+							<td>기타</td>
+							<td>Q. 취소환불규정이 어떻게 되나요?</td>
+						</tr>
+						<tr class="text-center">
+							<td>10</td>
+							<td>기타</td>
+							<td>Q. 취소환불규정이 어떻게 되나요?</td>
 						</tr>
 					</tbody>
 				</table>
