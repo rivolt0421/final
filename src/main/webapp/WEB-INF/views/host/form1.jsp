@@ -35,22 +35,22 @@
 							기본 정보
 						</th>
 						<td>
-							<div class="form-layer row mb-3">
-								<div class="form-title col-sm-1">업체명</div>
-								<div class="form-body col-sm-5">
-									<input class="form-control normal-size" type="text" name="aname" placeholder="업체명을 입력하세요." value="">
+							<div class="row mb-3">
+								<div class="col-sm-1">업체명</div>
+								<div class="col-sm-5">
+									<input class="form-control" type="text" name="aname" placeholder="업체명을 입력하세요." value="">
 								</div>
 							</div>
-							<div class="form-layer row mb-3">
-								<div class="form-title col-sm-1">업체주소</div>
-								<span class="form-body col-sm-5">
-									<input class="form-control normal-size" id="input_roadAddress" type="text" name="address1" readonly placeholder="업체 주소를 입력하세요." value="">
+							<div class="row mb-3">
+								<div class="col-sm-1">업체주소</div>
+								<span class="col-sm-5">
+									<input class="form-control" id="inputRoadAddress" type="text" name="address1" readonly placeholder="업체 주소를 입력하세요." value="">
 									<button type="button" class="btn btn-danger">주소검색</button>
 								</span>
 							</div>
-							<div class="form-layer">
-								<div class="form-body">
-									<input class="form-control normal-size" type="text" name="address2" placeholder="나머지 주소를 입력하세요." value="">
+							<div class="">
+								<div class="">
+									<input class="form-control" type="text" name="address2" placeholder="나머지 주소를 입력하세요." value="">
 								</div>
 							</div>
 						</td>
@@ -68,7 +68,7 @@
 							(최대 20장)
 						</th>
 						<td class="">
-							<div class="form-layer">
+							<div class="">
 								<p class="fs-6">* 객실 및 업체 전경, 로비, 주차장 등 업체의 전반적인 이미지를 업로드해주시기 바랍니다.</p>
 								<p class="fs-6">* 이미지 교체를 원하시면 "변경"을 선택하시고 삭제를 원하시면 우측 "삭제"를 선택하시기 바랍니다.</p>
 								<p class="fs-6">* 이미지 장소는 짧게 기입해주시기 바랍니다. 예시) 전경, 로비, 주차장 등</p>
@@ -96,129 +96,129 @@
 								<div class="col-sm-auto">
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck1">
-										<label class="form-check-label" for="gridCheck1">주방/식당</label>
+										<label class="" for="gridCheck1">주방/식당</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck2">
-										<label class="form-check-label" for="gridCheck2">엘리베이터</label>
+										<label class="" for="gridCheck2">엘리베이터</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck3">
-										<label class="form-check-label" for="gridCheck3">에어컨</label>
+										<label class="" for="gridCheck3">에어컨</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck4">
-										<label class="form-check-label" for="gridCheck4">드라이기</label>
+										<label class="" for="gridCheck4">드라이기</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck5">
-										<label class="form-check-label" for="gridCheck5">반려견동반</label>
+										<label class="" for="gridCheck5">반려견동반</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck6">
-										<label class="form-check-label" for="gridCheck6">프린터사용</label>
+										<label class="" for="gridCheck6">프린터사용</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck7">
-										<label class="form-check-label" for="gridCheck7">카페</label>
+										<label class="" for="gridCheck7">카페</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck8">
-										<label class="form-check-label" for="gridCheck8">카드결제</label>
+										<label class="" for="gridCheck8">카드결제</label>
 									</div>
 								</div>
 								<div class="col-sm-auto">
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck9">
-										<label class="form-check-label" for="gridCheck9">세탁기</label>
+										<label class="" for="gridCheck9">세탁기</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck10">
-										<label class="form-check-label" for="gridCheck10">주차장</label>
+										<label class="" for="gridCheck10">주차장</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck11">
-										<label class="form-check-label" for="gridCheck11">냉장고</label>
+										<label class="" for="gridCheck11">냉장고</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck12">
-										<label class="form-check-label" for="gridCheck12">다리미</label>
+										<label class="" for="gridCheck12">다리미</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck13">
-										<label class="form-check-label" for="gridCheck13">짐보관가능</label>
+										<label class="" for="gridCheck13">짐보관가능</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck14">
-										<label class="form-check-label" for="gridCheck14">무료주차</label>
+										<label class="" for="gridCheck14">무료주차</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck15">
-										<label class="form-check-label" for="gridCheck15">전자레인지</label>
+										<label class="" for="gridCheck15">전자레인지</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck16">
-										<label class="form-check-label" for="gridCheck16">TV</label>
+										<label class="" for="gridCheck16">TV</label>
 									</div>
 								</div>
 								<div class="col-sm-auto">
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck25">
-										<label class="form-check-label" for="gridChec25">건조기</label>
+										<label class="" for="gridChec25">건조기</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck26">
-										<label class="form-check-label" for="gridCheck26">와이파이</label>
+										<label class="" for="gridCheck26">와이파이</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck27">
-										<label class="form-check-label" for="gridCheck27">객실샤워실</label>
+										<label class="" for="gridCheck27">객실샤워실</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck28">
-										<label class="form-check-label" for="gridCheck28">조식포함</label>
+										<label class="" for="gridCheck28">조식포함</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck29">
-										<label class="form-check-label" for="gridCheck29">공용PC</label>
+										<label class="" for="gridCheck29">공용PC</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck30">
-										<label class="form-check-label" for="gridCheck30">BBQ</label>
+										<label class="" for="gridCheck30">BBQ</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck31">
-										<label class="form-check-label" for="gridCheck31">취사가능</label>
+										<label class="" for="gridCheck31">취사가능</label>
 									</div>
 								</div>
 								<div class="col-sm-auto">
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck32">
-										<label class="form-check-label" for="gridChec32">탈수기</label>
+										<label class="" for="gridChec32">탈수기</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck33">
-										<label class="form-check-label" for="gridCheck33">용실용품</label>
+										<label class="" for="gridCheck33">용실용품</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck34">
-										<label class="form-check-label" for="gridCheck34">욕조</label>
+										<label class="" for="gridCheck34">욕조</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck35">
-										<label class="form-check-label" for="gridCheck35">객실내흡연</label>
+										<label class="" for="gridCheck35">객실내흡연</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck36">
-										<label class="form-check-label" for="gridCheck36">개인사물함</label>
+										<label class="" for="gridCheck36">개인사물함</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck37">
-										<label class="form-check-label" for="gridCheck37">라운지</label>
+										<label class="" for="gridCheck37">라운지</label>
 									</div>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="gridCheck38">
-										<label class="form-check-label" for="gridCheck38">개인콘센트</label>
+										<label class="" for="gridCheck38">개인콘센트</label>
 									</div>
 								</div>
 							</div>
@@ -235,16 +235,16 @@
 						<td>
 							<div class="form-check">
 								<input class="form-check-input" type="checkbox" id="hostName">
-								<label class="form-check-label" for="hostName">업주 실명 및 업주 사진 노출</label>
+								<label class="" for="hostName">업주 실명 및 업주 사진 노출</label>
 							</div>
-							<div class="form-layer row-mb-3">
-								<div class="form-title col-sm-2">업주 실명</div>
-								<div class="form-body col-sm-5">
+							<div class="row-mb-3">
+								<div class="col-sm-2">업주 실명</div>
+								<div class="col-sm-5">
 									<input class="form-control" type="text" name="aname" placeholder="업체명을 입력하세요." value="">
 								</div>
 							</div>
 							<div>
-								<div class="form-title">업주 사진</div>
+								<div class="">업주 사진</div>
 								<button type="button" class="btn btn-danger">이미지 추가</button>
 							</div>
 							<div class="row">
@@ -254,9 +254,9 @@
 								<span style="color: red;">· 사진 권장사이즈 : 300 * 300</span>
 								<img class="col-2" alt="이미지" src="">
 							</div>
-							<div class="form-layer">
-		                    	<textarea class="form-control textarea-layer" rows="6" name="r_comment" placeholder="사장님의 특이 경력 혹은 사장님만의 재밌는 이야기가 있다면 게스트들에 소개해주세요. 게스트는 숙소의 시설과 위치, 서비스는 물론, 사장님이 어떤 분인지도 관심이 있답니다."></textarea>
-		                     	<span id="remain-r_comment" class="remain-cnt float-right">(<span id="count">0</span>/<span id="max">1000</span>)</span>
+							<div class="">
+		                    	<textarea class="form-control textarea-layer" rows="6" name="comment" placeholder="사장님의 특이 경력 혹은 사장님만의 재밌는 이야기가 있다면 게스트들에 소개해주세요. 게스트는 숙소의 시설과 위치, 서비스는 물론, 사장님이 어떤 분인지도 관심이 있답니다."></textarea>
+		                     	<span id="remainComment" class="float-right">(<span id="count">0</span>/<span id="max">1000</span>)</span>
 		                    </div>
 		                   <p class="mt-3">
 								<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#example_host" aria-expanded="false" aria-controls="example_host">
