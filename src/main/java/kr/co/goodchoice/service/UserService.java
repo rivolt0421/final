@@ -17,6 +17,9 @@ public class UserService {
 	@Autowired
 	private UserMapper userMapper;
 	
+	public User getUserInfo(int userNo) {
+		return userMapper.getUserByNo(userNo);
+	}
 	
 	public void addNewUser(UserRegisterForm userRegisterForm) throws Exception {
 		
@@ -43,5 +46,7 @@ public class UserService {
 		return user;
 	}
 		
+	
+	
 }
 

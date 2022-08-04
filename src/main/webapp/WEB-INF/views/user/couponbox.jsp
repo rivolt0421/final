@@ -9,7 +9,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <title>여행할때 굿초이스</title>
 <link href="/favicon.ico" rel="icon" type="image/x-icon">
-<link href="/css/home.css" rel="stylesheet">
+<link href="/css/userinfo.css" rel="stylesheet">
 <style>
 * {
     outline: 0;
@@ -115,7 +115,7 @@ a {
     text-decoration: none;
 }
 
-a, input, button, div, li, textarea, form, label, select {
+a, input, button, div, li, textarea, label, select {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
@@ -162,7 +162,7 @@ a, input, button, div, li, textarea, form, label, select {
 		<p class="sub_title">내 정보 관리</p>
 		<nav>
 			<ul>
-							<li>
+				<li>
 					<a class="" href="/user/point">포인트</a>
 				</li>
 				<li>

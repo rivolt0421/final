@@ -54,8 +54,6 @@ public class HomeController {
 			return "registerform";
 		}
 		
-		userService.addNewUser(userRegisterForm);
-		
 		return "redirect:/";
 	}
 	
@@ -70,12 +68,13 @@ public class HomeController {
 		try {
 			User user = userService.login(email, password);
 			model.addAttribute("LOGIN_USER", user);
+			return "redirect:/";
+			
 		} catch (OnlineApplicationException e) {
 			e.printStackTrace();
 			return "redirect:/login?fail=invalid";
 		}
 		
-		return "redirect:/";
 }
 	
 //	@PostMapping(path = "/login")
