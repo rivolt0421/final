@@ -1,4 +1,7 @@
 @charset "UTF-8";
+
+/* 필요없는 css 제거하기*/
+
 *{outline:0}
 html,body{font-family:'Pretendard', 'Apple SD Gothic Neo', '맑은 고딕', '맑은고딕', 'Malgun Gothic', sans-serif;font-size:14px;line-height:1;color:rgba(0,0,0,0.87);-webkit-text-size-adjust:none} /* 폰트크기 자동조절 제거 */
 input::-ms-clear, input::-ms-reveal{display:none} /* IE - select arrow remove */
@@ -492,7 +495,9 @@ footer .ico span{display: inline-block;overflow: hidden;width: 0;text-indent: -9
 
 .layer_fix {display:block;overflow: hidden;position:fixed;top:0;right:0;bottom:0;left:0;z-index:400;width: 100%;min-width: 320px;height: 100%;background:#fff;font-size:14px;line-height:22px;color:rgba(0,0,0,0.87);	touch-action:none;}
 .layer_fix .fix_title{position:relative;margin-bottom:16px;background:#fff;border-bottom:none}
+
 .layer_fix .fix_title .logo{display:inline-block;width:80px;height:44px;background:url('/images/redtext.png') 0 50% no-repeat;background-size:80px auto;}
+
 .layer_fix .fix_title .logo a{display: block;text-indent:-9999px}
 .layer_fix .fix_title strong{display:block;font-size:18px;line-height:44px;font-weight:normal}
 .layer_fix .fix_title button{margin-right:-18px}
@@ -627,6 +632,8 @@ label.error{display: none !important;}
 
 /* 팝업 */
 .fix_title{position:fixed;top:0;left:0;right:0;z-index:300;width:100%;height:44px;background:#fff;font-size:18px;line-height:44px;text-align:center}
+/*.fix_title{position:fixed;top:0;left:0;right:0;z-index:300;width:100%;height:44px;border-bottom:1px solid rgba(0,0,0,0.08);background:rgb(250,250,250);font-size:18px;line-height:44px;text-align:center}*/
+
 .fix_title button,.fix_title .close{display:inline-block;position:absolute;top:0;right:0;width:44px;height:44px;border:none;background:url('//image.goodchoice.kr/images/web_v3/ico_close.png') 50% 50% no-repeat;background-size:24px auto;text-indent:-9999px}
 .layer{display:none}
 .alert_msg{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:2000;background:rgba(0,0,0,0.56)}
@@ -649,6 +656,8 @@ label.error{display: none !important;}
 } /* Media query Close */
 
 /* 팝업 - 2버튼 */
+/*.pop_twobtn{position:fixed;top:50%;left:50%;z-index:430;width:280px;margin:0 0 0 -140px;background:#fff;border-radius:4px}*/
+
 .pop_twobtn {
 	position: fixed !important;
 	top: 50% !important;
@@ -778,6 +787,7 @@ button.btn_link.gra_red {
 	border: 0px;
 }
 
+
 /* 상단 앱 다운로드 노출*/
 .mobile_appdown{display:none;position:relative;height:auto;padding:10px 0 10px 84px;border-bottom:1px solid rgba(0,0,0,0.08);background:rgba(0,0,0,0.08) url('https://image.goodchoice.kr/images/web_v3/img_app.png') 46px 50% no-repeat;background-size:32px 32px;font-size:14px;line-height:normal;}
 .mobile_appdown button{display:inline-block;position:absolute;top:0;left:16px;width:24px;height:56px;margin-right:2px;border:none;background:url('https://image.goodchoice.kr/images/web_v3/svg/icn_close.svg') 50% 50% no-repeat;background-size:20px 20px;text-indent:-9999px;opacity: 0.48;vertical-align:top;}
@@ -801,6 +811,7 @@ button.btn_link.gra_red {
 @media all and (min-width:1024px){
 	.business_pop .list{left:50%;width:450px;height:500px;margin:-250px 0 0 -225px;background:#fff}
 }
+
 
 /* 안심번호 */
 .safety_txt{display:block;padding-bottom:8px;font-size:12px;color:rgba(0,0,0,0.56);}
@@ -881,6 +892,7 @@ button.btn_link.gra_red {
 .numbersend .reset_val{right: 32px}
 .numbersend section:nth-of-type(1) .reset_val{right:54px}
 
+
 /* 토스트 팝업 */
 .toast_pop{position: fixed;
 	bottom: 32px;
@@ -909,7 +921,6 @@ button.btn_link.gra_red {
 	.toast_pop{bottom: 80px;left:0;right:0;text-align: center;}
 	.toast_pop div{display: inline-block;padding:11px 20px 10px 20px;font-size:15px;line-height:26px;margin: 0 auto;}
 }
-
 
 
 /* 휴면계정 */
@@ -993,6 +1004,7 @@ button.btn_link.gra_red {
 	line-height: 48px;
 	color: rgb(0,121,107);
 	box-sizing: border-box;
+
 }
 
 /* 모바일 팝업 */
@@ -1067,3 +1079,4 @@ button.btn_link.gra_red {
 .input-component__type1 .input-wrap input::-moz-placeholder {color: rgba(0,0,0,0.24);}
 .input-component__type1 .input-wrap input:-ms-input-placeholder {color: rgba(0,0,0,0.24);}
 .input-component__type1 .input-wrap input:-moz-placeholder {color: rgba(0,0,0,0.24);}
+
