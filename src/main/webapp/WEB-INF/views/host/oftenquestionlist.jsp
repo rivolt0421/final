@@ -33,7 +33,26 @@
 		</div>
 		<div class="row">
 			<div class="col">
-				
+				<ul class="nav nav-tabs" id="myTab" role="tablist">
+				  <li class="nav-item" role="presentation">
+				    <button class="nav-link active" id="total-tab" data-bs-toggle="tab" data-bs-target="#total-tab-pane" type="button" role="tab" aria-controls="total-tab-pane" aria-selected="true">전체</button>
+				  </li>
+				  <li class="nav-item" role="presentation">
+				    <button class="nav-link" id="house-tab" data-bs-toggle="tab" data-bs-target="#house-tab-pane" type="button" role="tab" aria-controls="house-tab-pane" aria-selected="false">숙소관리</button>
+				  </li>
+				  <li class="nav-item" role="presentation">
+				    <button class="nav-link" id="reserve-tab" data-bs-toggle="tab" data-bs-target="#reserve-tab-pane" type="button" role="tab" aria-controls="reserve-tab-pane" aria-selected="false">예약관리</button>
+				  </li>
+				  <li class="nav-item" role="presentation">
+				    <button class="nav-link" id="ad-tab" data-bs-toggle="tab" data-bs-target="#ad-tab-pane" type="button" role="tab" aria-controls="ad-tab-pane" aria-selected="false">광고상품</button>
+				  </li>
+				</ul>
+				<div class="tab-content" id="myTabContent">
+				  <div class="tab-pane fade show active" id="total-tab-pane" role="tabpanel" aria-labelledby="total-tab" tabindex="0">...</div>
+				  <div class="tab-pane fade" id="house-tab-pane" role="tabpanel" aria-labelledby="house-tab" tabindex="0">...</div>
+				  <div class="tab-pane fade" id="reserve-tab-pane" role="tabpanel" aria-labelledby="reserve-tab" tabindex="0">...</div>
+				  <div class="tab-pane fade" id="ad-tab-pane" role="tabpanel" aria-labelledby="ad-tab" tabindex="0">...</div>
+				</div>
 			</div>
 		</div>
 		<div class="row">

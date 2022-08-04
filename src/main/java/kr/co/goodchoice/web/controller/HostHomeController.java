@@ -31,8 +31,20 @@ public class HostHomeController {
 	}
 	
 	// 예약 내역
-	@GetMapping(path = "reserve")
+	@GetMapping(path = "/reserve")
 	public String reserve() {
 		return "host/reservehistory";
+	}
+	
+	// 공지사항 디테일
+	@GetMapping(path = "/noticedetail")
+	public String noticedetail() {
+		return "host/hostnoticedetail";
+	}
+	
+	// 서비스 약관
+	@GetMapping(path = "/serviceterms")
+	public String serviceterms() {
+		return "host/hostserviceterms";
 	}
 }
