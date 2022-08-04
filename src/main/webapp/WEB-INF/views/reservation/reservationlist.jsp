@@ -4,9 +4,233 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<title>여행할때 굿초이스</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon">
+<link href="/css/home.css" rel="stylesheet">
+<style>
+* {
+    outline: 0;
+}
+@media (min-width: 1024px) {
+	.sub_top_wrap {
+    height: 211px;
+    background: #f7323f;
+	}
+}
+div, h2, p, nav, ul, li {
+	margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+@media (min-width: 1024px) {
+	.sub_top {
+    width: 1024px;
+    height: 211px;
+    margin: 0 auto;
+    padding-top: 72px;
+    border-radius: 0;
+    background: none;
+    position: relative;
+	}
+}
+
+@media (min-width: 1024px) {
+.sub_top h2 {
+    display: block;
+    margin: 21px 0 0 31px;
+    font-size: 38px;
+    font-weight: normal;
+    letter-spacing: -1px;
+    color: #fff;
+	}
+}
+
+#content {
+    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+	.my_wrap {
+    padding-top: 54px;
+	}
+}
+
+.sub_wrap {
+    min-height: 390px;
+}
+
+@media (min-width: 1024px) {
+.sub_wrap {
+    width: 1024px !important;
+    margin: 0 auto 0 auto;
+    padding-bottom: 50px;
+	}
+}
+
+@media (min-width: 1024px) {}
+.sub_wrap .sub_title {
+    display: none;
+	}
+}
+
+.sub_wrap .sub_title {
+    position: relative;
+    height: 44px;
+    background: #fff;
+    font-size: 18px;
+    line-height: 44px;
+    text-align: center;
+}
+
+@media (min-width: 1024px) {
+.sub_wrap nav {
+    display: block;
+    float: left;
+    width: 238px;
+    padding-left: 31px;
+	}
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+.sub_wrap nav ul li {
+    margin-bottom: 26px;
+}
+
+.sub_wrap nav ul li a {
+    display: block;
+    font-size: 18px;
+    color: rgba(0,0,0,0.56);
+}
+
+a {
+    text-decoration: none;
+}
+
+a, input, button, div, li, textarea, form, label, select {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+@media (min-width: 1024px) {
+.sub_wrap .align_rt {
+    float: right;
+    width: 724px;
+    margin-right: 31px;
+	}
+}
+
+.mypage {
+    padding: 0 16px;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.mypage .bot_link {
+    margin: 30px 0;
+}
+
+.mypage .bot_link a {
+    display: inline-block;
+    color: rgba(0,0,0,0.87);
+    text-decoration: underline;
+}
+
+.active {
+	font-size: 18px;
+    font-weight: bold;
+    color: rgb(230,28,81);
+}
+
+</style>
 </head>
 <body>
-
+<header class>
+	<section>
+		<h1>
+			<a class="" href="/" title="굿초이스">여기어때</a>
+		</h1>
+		
+		<ul class="gnb" style="display:block; padding:30px;">
+			<li>
+				<a href="">내주변</a>
+			</li>
+			<li>
+				<a href="">예약내역</a>
+			</li>
+			
+		<li class="dropdown">
+		      <button class="dropbtn" style="padding: 3px 0px 0px 0px;"> 
+		        	<span class="dropbtn_icon">더보기</span>
+		      </button>
+		      	<ul class="dropdown-content" display: none; opacity: 1;>
+			        <li>
+			        <a href="#" style="color: rgba(0,0,0,0.87);">더보기</a>
+			        </li>
+			        <li>
+			        <a href="#" style="color: rgba(0,0,0,0.87);">이벤트</a>
+			        </li>
+			        <li>
+			        <a href="#" style="color: rgba(0,0,0,0.87);">1:1 문의</a>
+			        </li>
+			        <li>
+			        <a href="#" style="color: rgba(0,0,0,0.87);">약관 및 정책</a>
+			        </li>
+		     	</ul>
+		      
+			     	<li>
+					<a href="">로그인</a>
+					</li>
+		</li>	
+    </ul>				
+	</section>
+</header>
+<div class="sub_top_wrap">
+	<div class="sub_top bg_kong_2">
+		<h2>내정보</h2>
+	</div>
+	<div id="content" class="sub_wrap my_wrap">
+		<p class="sub_title">내 정보 관리</p>
+		<nav>
+			<ul>
+				<li>
+					<a class="" href="/point">포인트</a>
+				</li>
+				<li>
+					<a class="" href="/coupon">쿠폰함</a>
+				</li>
+				<li>
+					<a class="active" href="/reservationlist">예약 내역</a>
+				</li>
+				<li>
+					<a class="" href="/myinfo">내 정보 관리</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- 예약 내역 섹션 -->
+		<div>
+			<div>
+				<h5>예약 내역</h5>
+			</div>
+			<!--이미지/예약상태/숙소명칭/체크인-체크아웃/기간(숙박일수)-->
+			<div>
+				<h5>이용 내역</h5>
+			</div>
+			<!--이미지/예약상태/숙소명칭/체크인-체크아웃/기간(숙박일수)-->
+			<div>
+				<h5>취소 내역</h5>
+			</div>
+			<!--이미지/예약상태/숙소명칭/체크인-체크아웃/기간(숙박일수)/오늘일자로 설정된 동일 숙소의 예약링크(reservationform)-->
+		</div>
+	</div>
+</div>
 </body>
 </html>

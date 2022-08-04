@@ -12,43 +12,47 @@
 <title>호스트 하우스</title>
 <link href="/favicon.ico" rel="icon" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
-
-<link href="/css/hosthome.css" rel="stylesheet">
+<style type="text/css">
+	.bg-image {height: 650px; border-radius: 5px; background-image: url("/images/host/mainspot_image.png"); background-size: cover;}
+	#room-reserve {background-color: #546E7A; color: #fff;}
+	#room-reserve h4 a {color: #fff; text-decoration: none;}
+</style>
 </head>
-<body>
+<body class="bg-secondary bg-opacity-10">
 <%@ include file="common/nav.jsp" %>
 <div class="container mt-4">
-	<div class="border shadow mb-4 p-3">
+	<main class="row border shadow mb-3 rounded">
 		<%@ include file="common/registerprogress.jsp" %>
-
-	</div>
-	<!-- 이미지 -->
-	<div class="row mb-4" id="main-middle">
-		<div class="col">
+	</main>
+		<!-- 이미지 -->
+		<div class="row mb-4 rounded" >
+			<div class="col bg-image"></div>
 		</div>
-	</div>
 	
-	<div class="row g-3" id="main-bottom">
+	
+	
+	
+	<div class="row">
 		<!-- 공지사항 -->
-		<div class="col-4 border shadow" id="notice-preview">
-			<div class="row" id="notice-top">
-				<div class="col-6 fs-5 fw-bold">
-					<a href="">공지사항</a>
+		<div class="col-4 shadow border bg-white rounded">
+			<div class=" py-3 d-flex justify-content-between">
+				<div >
+					<a href="" class="text-decoration-none text-dark fs-5 fw-bold">공지사항</a>
 				</div>
-				<div class="col-6 text-end">
-					<a href="">더보기</a>
+				<div>
+					<a href=""  class="text-decoration-none text-dark">더보기</a>
 				</div>
 			</div>
 		</div>
-		<div class="col-8">
+		<div class="col-8 pe-0">
 			<!-- 예약 객실 판매 / 준비 중입니다. -->
-			<div class="row">
-				<div class="col-6" id="room-reserve">
-					<h4><a href="#">예약 객실 판매 &gt;</a></h4>
+			<div class="d-flex justify-content-between mb-3 bg-white">
+				<div class="border shadow w-100 p-3 me-3 rounded" id="room-reserve">
+					<h4><a href="#" class="  fs-5 fw-bold">예약 객실 판매 &gt;</a></h4>
 					<div class="row" id="">
-						<div class="col-4 text-center" id="reserve-count">0</div>
-						<div class="col-4 text-center" id="reserve-count">0</div>
-						<div class="col-4 text-center" id="reserve-count">0</div>
+						<div class="col-4 text-center" id="reserve-count-1">0</div>
+						<div class="col-4 text-center" id="reserve-count-2">0</div>
+						<div class="col-4 text-center" id="reserve-count-3">0</div>
 					</div>
 					<div class="row">
 						<div class="col-4 text-center">오늘</div>
@@ -56,31 +60,26 @@
 						<div class="col-4 text-center">이번달</div>
 					</div>
 				</div>
-				<div class="col-6 border shadow">
+				<div class="border shadow w-100 p-3 bg-white rounded">
 					<!-- 준비중! -->
-					<h4><a href="#">빈 칸 &gt;</a></h4>
+					<h4><a href="#"  class="text-decoration-none text-dark  fs-5 fw-bold">빈 칸 &gt;</a></h4>
 					<div>
 					</div>
 				</div>
 			</div>
 			<!-- 입실 에정 고객정보 -->
-			<div class="border shadow" id="reserve-info">
-				<div class="row">
+			<div class="border shadow p-3 bg-white rounded" >
+				<div class="row mb-3">
 					<div class="col-6" id="reserve-customer">
-						<h4>
-							<a href="#">입실 예정 고객 정보</a>
-							<span>2022.08.01</span>
-						</h4>
+						<h4><a href="#"  class="text-decoration-none text-dark fs-5 fw-bold">입실 예정 고객 정보</a> <small class="text-muted">2022.08.01</small> </h4>
 					</div>
 					<div class="col-6 text-end">
-						<a href="#">
-							<span>더보기 &gt; </span>
-						</a>
+						<a href="#"  class="text-decoration-none text-dark "> <span>더보기</span></a>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col">
-						<table id="hosthome-table">
+					<div class="col-12">
+						<table class="table">
 							<thead>
 								<tr>
 									<th>예약번호</th>
@@ -91,7 +90,7 @@
 									<th>예약확인</th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody class="text-center">
 								<tr>
 									<td colspan="6">예약 내역이 없습니다.</td>
 								</tr>
