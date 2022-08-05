@@ -43,8 +43,8 @@
                             </select>
 						</div>
 						<div class=" row">
-							<div class="form-title col-2">체크아웃<br>가능시간</div>
-							<select class="form-control  col-3" name="checkout"  style="width: 250px; height: 45px;">
+							<div class="col-2">체크아웃<br>가능시간</div>
+							<select class="form-control col-3" name="checkout"  style="width: 250px; height: 45px;">
 	                            <option value="10" selected="">오전 10:00</option>
 	                            <option value="11">오전 11:00</option>
 	                            <option value="12">오후 12:00</option>
@@ -61,7 +61,7 @@
 					<th class="text-center align-middle">예약 마감<br>시간 설정</th>
 					<td>
 						<div>
-							<select class="form-control" name="reserve_end_time" style="width: 250px; height:45px;">
+							<select class="form-control" name="reserveEndTime" style="width: 250px; height:45px;">
                             	<option value="12">오후 12:00</option>
                                 <option value="13">오후 01:00</option>
                                 <option value="14">오후 02:00</option>
@@ -88,11 +88,11 @@
 							<div class="col-2 pt-2">준 성수기</div>
 							<div class="col-10">
                             	<div class="d-flex justify-content-start">
-                                	<input type="hidden" name="subpeak_id" value="">
-                                    <input class="form-control me-3" type="date" name="subpeak_start" value="" style="width: 250px; height:45px;">
+                                	<input type="hidden" name="subpeakId" value="">
+                                    <input class="form-control me-3" type="date" name="subpeakStart" value="" style="width: 250px; height:45px;">
                                     <span class="me-3 pt-2"> ~ </span>
-                                    <input class="form-control me-3" type="date" name="subpeak_end" value="" style="width: 250px; height:45px;">
-                                    <button type="button" class="btn btn-danger remove-layer">삭제</button>
+                                    <input class="form-control me-3" type="date" name="subpeakEnd" value="" style="width: 250px; height:45px;">
+                                    <button type="button" class="btn btn-danger">삭제</button>
                                 </div>
                      		</div>
                      	</div>
@@ -102,10 +102,10 @@
 	                     	<div class="col-10">
 		                         <div class="d-flex justify-content-start">
 			                         <input type="hidden" name="subpeakId" value="">
-			                         <input class="form-control me-3" type="date" id="subpeak_start" name="subpeak_start" value="" style="width: 250px; height:45px;">
+			                         <input class="form-control me-3" type="date" id="subpeakStart" name="subpeakStart" value="" style="width: 250px; height:45px;">
 			                         <span class="me-3 pt-2"> ~ </span>
-			                         <input class="form-control me-3" type="date" id="subpeak_end" name="subpeak_end" value="" style="width: 250px; height:45px;">
-			                         <button type="button" class="btn btn-danger remove-layer">삭제</button>
+			                         <input class="form-control me-3" type="date" id="subpeakEnd" name="subpeakEnd" value="" style="width: 250px; height:45px;">
+			                         <button type="button" class="btn btn-danger">삭제</button>
 		                         </div>
 	                         </div>
                          </div>
@@ -114,8 +114,8 @@
 				</tr>
 			</tbody>
 		</table>
-		<div class="submit-layer position-absolute start-50 pb-5">
-			<button class="btn btn-danger btn-submit btn-lg" type="submit">저장하기</button>
+		<div class="position-absolute start-50 pb-5">
+			<button class="btn btn-danger btn-lg" type="submit">저장하기</button>
 		</div>
 	</form>
 </div>

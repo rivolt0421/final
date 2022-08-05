@@ -55,7 +55,7 @@
 							</div>
 						</td>
 						<td style="border-left-style: hidden;"  class="align-middle">
-							<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+							<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="TooltipOnLeft">
 							  ?
 							</button>
 						</td>
@@ -259,13 +259,13 @@
 		                     	<span id="remainComment" class="float-right">(<span id="count">0</span>/<span id="max">1000</span>)</span>
 		                    </div>
 		                   <p class="mt-3">
-								<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#example_host" aria-expanded="false" aria-controls="example_host">
+								<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#exampleHost" aria-expanded="false" aria-controls="exampleHost">
 								예시 문구 및 화면 보기
 								</button>
 							</p>
-					  		<div class="collapse" id="example_host">
+					  		<div class="collapse" id="exampleHost">
 								<div class="card card-body">
-									<span class="guide-text">
+									<span class="">
 		                                 전 세계 50여개국 배낭여행 경험을 바탕으로 여행을 사랑하는 여행객들에게 필요한 서비스와 편안한 휴식을 제공하자는 모토로 게스트하우스를 운영하고 있는 홍길동 주인장입니다.
 		                                 <br><br>
 		                                 세계 일주를 해보았지만 그래도 최고라고 여기는 도시는 서울인데요 서울의 맛과 멋을 함께 즐길 수 있도록 여행쟁이 주인장이 최선을 다해 도와드리겠습니다.
@@ -283,17 +283,17 @@
 						</th>
 						<td>
 							<div class="form">
-		                    	<textarea class="form-control textarea" rows="6" name="find_way" placeholder="주요 버스터미널이나 기차역 혹은 공항 등에서 숙소까지 찾아가는 방법을 자세히 기재해 주세요."></textarea>
-		                    	<span id="traffic_info" class="float-right">(<span id="count">0</span>/<span id="max">1000</span>)</span>
+		                    	<textarea class="form-control textarea" rows="6" name="findWay" placeholder="주요 버스터미널이나 기차역 혹은 공항 등에서 숙소까지 찾아가는 방법을 자세히 기재해 주세요."></textarea>
+		                    	<span id="trafficInfo" class="float-right">(<span id="count">0</span>/<span id="max">1000</span>)</span>
 		                    </div>
 					  		<p class="mt-3">
-								<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#example_way" aria-expanded="false" aria-controls="example_way">
+								<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#exampleWay" aria-expanded="false" aria-controls="exampleWay">
 								예시 문구 및 화면 보기
 								</button>
 							</p>
-					  		<div class="collapse" id="example_way">
+					  		<div class="collapse" id="exampleWay">
 								<div class="card card-body">
-									<span class="guide-text">
+									<span class="">
 				                        [인천공항에서 오시는 방법]<br>
 				                        공항리무진 6015번 버스를 승차하신후, '명동역/세종호텔' 정류장에서 하차하세요.<br>
 				                        세종호텔 맞은편 횡단보도를 건넌 후 '세븐일레븐' 쪽으로 오세요.<br>
@@ -328,19 +328,19 @@
 							</div>
 							<div class="form-layer mt-2">
 								<div class="form-body col-10">
-									<input type="text" class="form-control mt-2" name="traffic_info" placeholder="숙소 주변의 명소를 홍보하여 주세요. 교통, 관광, 쇼핑 명소부터 게스트하우스까지의 소요시간을 예시 문구를 참고하여 작성해 주시면 게스트들이 예약할 때 큰 도움이 됩니다." value="">
-									<input type="text" class="form-control mt-2" name="traffic_info" placeholder="숙소 주변의 명소를 홍보하여 주세요. 교통, 관광, 쇼핑 명소부터 게스트하우스까지의 소요시간을 예시 문구를 참고하여 작성해 주시면 게스트들이 예약할 때 큰 도움이 됩니다." value="">
-									<input type="text" class="form-control mt-2" name="traffic_info" placeholder="숙소 주변의 명소를 홍보하여 주세요. 교통, 관광, 쇼핑 명소부터 게스트하우스까지의 소요시간을 예시 문구를 참고하여 작성해 주시면 게스트들이 예약할 때 큰 도움이 됩니다." value="">
+									<input type="text" class="form-control mt-2" name="trafficInfo" placeholder="숙소 주변의 명소를 홍보하여 주세요. 교통, 관광, 쇼핑 명소부터 게스트하우스까지의 소요시간을 예시 문구를 참고하여 작성해 주시면 게스트들이 예약할 때 큰 도움이 됩니다." value="">
+									<input type="text" class="form-control mt-2" name="trafficInfo" placeholder="숙소 주변의 명소를 홍보하여 주세요. 교통, 관광, 쇼핑 명소부터 게스트하우스까지의 소요시간을 예시 문구를 참고하여 작성해 주시면 게스트들이 예약할 때 큰 도움이 됩니다." value="">
+									<input type="text" class="form-control mt-2" name="trafficInfo" placeholder="숙소 주변의 명소를 홍보하여 주세요. 교통, 관광, 쇼핑 명소부터 게스트하우스까지의 소요시간을 예시 문구를 참고하여 작성해 주시면 게스트들이 예약할 때 큰 도움이 됩니다." value="">
 								</div>
 							</div>
 							<p class="mt-3">
-								<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#example_around" aria-expanded="false" aria-controls="example_around">
+								<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#exampleAround" aria-expanded="false" aria-controls="exampleAround">
 								예시 문구 및 화면 보기
 								</button>
 							</p>
-					  		<div class="collapse" id="example_around">
+					  		<div class="collapse" id="exampleAround">
 								<div class="card card-body">
-									<span class="guide-text">
+									<span class="">
 		                                명동 도보 5분
 				                        <br>
 				                        application/host/views/pages/guest/intro.php
@@ -361,7 +361,7 @@
 						<td>
 							<div class="form-layer mt-2">
 								<div class="form-body">
-									<textarea class="form-control textarea" rows="6" name="house_detail" placeholder="숙소 내 이용규칙이 있을 경우 기재해주세요."></textarea>
+									<textarea class="form-control textarea" rows="6" name="houseDetail" placeholder="숙소 내 이용규칙이 있을 경우 기재해주세요."></textarea>
 								</div>
 							</div>
 						</td>
@@ -385,7 +385,7 @@
 					<tr>
 						<th class="text-center align-middle">한줄평</th>
 						<td>
-							<div class="form-layer">
+							<div class="">
 		                        <input type="text" class="form-control" name="summary" maxlength="32" placeholder="숙소의 장점을 부각시켜 게스트에게 어필할 수 있는 한 줄을 기재해주세요. [32자 내외]" value="">
 		                    </div>
 						</td>
@@ -394,23 +394,23 @@
 					<tr>
 						<th class="text-center align-middle">이벤트 정보</th>
 						<td>
-							<div class="form-layer">
+							<div class="">
 		                        <input type="text" class="form-control" name="event_title" placeholder="업체 이미지에 표시되는 대표적인 이벤트 한줄을 남겨주세요." value="">
 		                        <br>
-		                        <textarea class="form-control textarea-layer" rows="6" id="event" name="event_content" placeholder="게스트하우스 주관의 이벤트 정보를 기재해주세요."></textarea>
+		                        <textarea class="form-control textarea" rows="6" id="event" name="eventContent" placeholder="게스트하우스 주관의 이벤트 정보를 기재해주세요."></textarea>
 		                    </div>
 		                    <p class="mt-3">
-								<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#example_event" aria-expanded="false" aria-controls="example_event">
+								<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="exampleEvent" aria-expanded="false" aria-controls="exampleEvent">
 								예시 문구 및 화면 보기
 								</button>
 							</p>
-					  		<div class="collapse" id="example_event">
+					  		<div class="collapse" id="exampleEvent">
 								<div class="card card-body">
-									<span class="guide-text">
+									<span class="">
 			                            옥상 바베큐 파티 외 2건
 			                            <br><br>
 		                            </span>
-									<span class="guide-text2">
+									<span class="">
 		                                [옥상 삼겹살 파티]<br>
 		                                일시 : 매주 금, 토 / 21:00~<br>
 		                                내용 : 1인 10,000원 (삼겹살+무한맥주)
@@ -432,16 +432,16 @@
 					<tr>
 						<th class="text-center align-middle">현장 요금<br>추가 정보</th>
 						<td>
-							<div class="form-layer">
-								<textarea class="form-control textarea-layer" rows="6" name="detail" placeholder="숙소에서 제공되는 숙박비 외의 유료 서비스가 있을 경우 가격정보와 함께 항목을 기재해주세요."></textarea>
+							<div class="">
+								<textarea class="form-control textarea" rows="6" name="detail" placeholder="숙소에서 제공되는 숙박비 외의 유료 서비스가 있을 경우 가격정보와 함께 항목을 기재해주세요."></textarea>
 		                    </div>
 		                    <p class="mt-3">
-								<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#example_add" aria-expanded="false" aria-controls="example_add">
+								<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="exampleAdd" aria-expanded="false" aria-controls="exampleAdd">
 								예시 문구 및 화면 보기
 								</button>
 							</p>
-					  		<div class="collapse" id="example_add">
-								<span class="guide-text">
+					  		<div class="collapse" id="exampleAdd">
+								<span class="">
 			                        [키보증금]<br>
 			                        50,000원 (퇴실시 체크 후 반환)
 			                        <br><br>
@@ -457,8 +457,8 @@
 					<tr>
 						<th class="text-center align-middle">주차장 정보</th>
 						<td>
-							<div class="form-layer">
-								<textarea class="form-control textarea-layer" rows="6" name="detail" placeholder="숙소에서 제공되는 숙박비 외의 유료 서비스가 있을 경우 가격정보와 함께 항목을 기재해주세요."></textarea>
+							<div class="">
+								<textarea class="form-control textarea" rows="6" name="detail" placeholder="숙소에서 제공되는 숙박비 외의 유료 서비스가 있을 경우 가격정보와 함께 항목을 기재해주세요."></textarea>
 		                    </div>
 						</td>
 					</tr>
@@ -467,15 +467,15 @@
 						<th class="text-center align-middle">확인 사항<br>및 기타</th>
 						<td>
 							<div class="form-layer">
-								<textarea class="form-control textarea-layer" rows="6" name="detail" placeholder="기재된 숙소 정보 외에 게스트 숙지 사항을 기재해주세요."></textarea>
+								<textarea class="form-control textarea" rows="6" name="detail" placeholder="기재된 숙소 정보 외에 게스트 숙지 사항을 기재해주세요."></textarea>
 		                    </div>
 		                    <p class="mt-3">
-								<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#example_check" aria-expanded="false" aria-controls="example_check">
+								<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#exampleCheck" aria-expanded="false" aria-controls="exampleCheck">
 								예시 문구 및 화면 보기
 								</button>
 							</p>
-					  		<div class="collapse" id="example_check">
-								<span class="guide-text">
+					  		<div class="collapse" id="exampleCheck">
+								<span class="">
 			                        3박이상 숙박시 20% 할인<br>
 			                        시즌별 객실 가격 상이하오니 확인바랍니다.<br>
 			                        위의 정보는 게스트하우스 사정에 따라 변경될 수 있습니다.<br>
@@ -488,7 +488,7 @@
 					</tr>
 				</tbody>
 		</table>
-		<div class="submit-layer position-absolute start-50 pb-5">
+		<div class="position-absolute start-50 pb-5">
 			<button class="btn btn-danger btn-submit btn-lg" type="submit">저장하기</button>
 		</div>
 	</form>

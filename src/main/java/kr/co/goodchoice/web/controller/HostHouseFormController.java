@@ -20,4 +20,9 @@ public class HostHouseFormController {
 	public String form3() {
 		return "host/form3";
 	}
+	
+	@GetMapping(path = "/hostReview")
+	public String hostReview() {
+		return "host/hostReview";
+	}
 }
