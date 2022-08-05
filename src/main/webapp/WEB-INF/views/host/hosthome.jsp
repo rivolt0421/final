@@ -37,10 +37,10 @@
 		<div class="col-4 shadow border bg-white rounded">
 			<div class=" py-3 d-flex justify-content-between">
 				<div >
-					<a href="" class="text-decoration-none text-dark fs-5 fw-bold">공지사항</a>
+					<a href="/hostnotice" class="text-decoration-none text-dark fs-5 fw-bold">공지사항</a>
 				</div>
 				<div>
-					<a href=""  class="text-decoration-none text-dark">더보기</a>
+					<a href="/hostnotice"  class="text-decoration-none text-dark">더보기</a>
 				</div>
 			</div>
 		</div>
@@ -62,7 +62,7 @@
 				</div>
 				<div class="border shadow w-100 p-3 bg-white rounded">
 					<!-- 준비중! -->
-					<h4><a href="#"  class="text-decoration-none text-dark  fs-5 fw-bold">빈 칸 &gt;</a></h4>
+					<h4><a href="#"  class="text-decoration-none text-dark  fs-5 fw-bold">준비중입니다.</a></h4>
 					<div>
 					</div>
 				</div>

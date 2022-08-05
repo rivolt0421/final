@@ -9,6 +9,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <title>Insert title here</title>
+<style type="text/css">
+
+</style>
 </head>
 <body>
 <%@ include file="common/nav.jsp" %>
@@ -18,9 +21,9 @@
 			<div class="col-6">
 				<h3 class="fw-bold fs-5">고객행복센터 > 공지사항</h3>
 			</div>
-			<div class="col-6 text-end">
+			<div class="col-6">
 			<!-- 검색 -->
-				<form>
+				<form id="search-form">
 					<select>
 						<option>전체</option>
 						<option>제목</option>
@@ -49,7 +52,7 @@
 					<tbody class="fs-6">
 						<tr>
 							<td class="text-center">115</td>
-							<td>[공지] 2022년 소상공인 온라인 기획전 <대한민국 동행세일 여행페스타> 모집</td>
+							<td><a href="/noticedetail">[공지] 2022년 소상공인 온라인 기획전 <대한민국 동행세일 여행페스타> 모집</a></td>
 							<td class="text-center">2022/07/29</td>
 						</tr>
 						<tr>

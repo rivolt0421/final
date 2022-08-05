@@ -59,7 +59,7 @@
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="/hostnotice">공지사항</a></li>
 								<li><a class="dropdown-item" href="/hostquestion">자주 묻는 질문</a></li>
-								<li><a class="dropdown-item" href="#">서비스 약관</a></li>
+								<li><a class="dropdown-item" href="/serviceterms">서비스 약관</a></li>
 							</ul>
 						</div>
 					</div>
