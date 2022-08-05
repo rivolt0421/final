@@ -11,7 +11,6 @@
 <title>회원가입 | 굿초이스</title>
 <link href="/favicon.ico" rel="icon" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
-
 <link href="/css/registerform.css" rel="stylesheet">
 <style>
 
@@ -42,10 +41,10 @@
                    <form:password class="form-control" path="password" id="password-field" placeholder="비밀번호를 입력해주세요."/>
                    <form:errors path="password" class="text-danger small fst-italic"></form:errors>
                 </div>
-                <div class="mb-3">
+                <%-- <div class="mb-3">
                    <label for="password-field" class="form-label"><b>비밀번호 확인</b></label>
                    <form:password class="form-control" path="password" id="password2-field" placeholder="비밀번호를 입력해주세요."/>
-                </div>
+                </div> --%>
                 <div class="mb-3">
                    <label for="tel-field" class="form-label"><b>전화번호</b></label>
                    <form:input class="form-control" path="tel" id="tel-field" placeholder="전화번호를 입력해주세요."/>

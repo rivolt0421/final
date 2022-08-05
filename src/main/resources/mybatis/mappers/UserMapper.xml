@@ -19,8 +19,15 @@
 	<!-- User getUserByEmail(String email); -->
 	<select id="getUserByEmail" parameterType="string" resultMap="UserResultMap">
 		select *
-		from users
+		from final_users
 		where user_email = #{value}
+	</select>
+	
+	<!-- User getUserByNo(int no); -->
+	<select id="getUserByNo" parameterType="int" resultMap="UserResultMap">
+		select *
+		from final_users
+		where user_no = #{value}
 	</select>
 	
 	<!-- void insertUser(User user); -->
@@ -29,7 +36,7 @@
 			select user_seq.nextval
 			from dual
 		</selectKey>
-		insert into users
+		insert into final_users
 			(user_no, user_name, user_email, user_password, user_tel, user_nickname)
 		values
 			(#{no}, #{name}, #{email}, #{password}, #{tel}, #{nickname})
