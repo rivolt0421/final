@@ -217,6 +217,8 @@ a, input, button, div, li, textarea, form, label, select {
 		</nav>
 		<!-- 예약 상세보기 섹션 -->
 		<div>
+			<!-- 예약 정보 -->
+			<div>
 			<div>
 			<p>(예약 상태)</p><!-- 예약완료/예약취소 -->
 			<table>
@@ -224,11 +226,70 @@ a, input, button, div, li, textarea, form, label, select {
 					<th>(예약 숙소 명칭)</th>
 				</tr>
 				<tr>
-					<td>**.** *요일 - **.** *요일, *박</td>
+					<td>(예약 상품 명칭, *박)</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>체크인</td>
+					<td>(**.** *요일 - **.** *요일 **:00)</td>
+				</tr>
+				<tr>
+					<td>체크아웃</td>
+					<td>(**.** *요일 - **.** *요일 **:00)</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>예약번호</td>
+					<td>(*********)</td><!-- 9자리, 테이블 확인해야 함 -->
+				</tr>
+				<tr>
+					<td>예약자 이름</td>
+					<td>(***)</td>
+				</tr>
+				<tr>
+					<td>안심번호</td> <!-- 안심번호 미구현시 일반 전화번호 출력 -->
+					<td>(010-****-****)</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>휴대본 번호 010-****-****은(는)</td>
+				</tr>
+				<tr>
+					<td>안심번호로 숙소에 전송되며, 퇴실후 7일간 보관됩니다.</td>
 				</tr>
 			</table>
 			</div>
-				
+				<hr>
+			<!-- 결제 정보 -->
+			<div>
+				<table>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>결제정보</td>
+					</tr>
+					<tr>
+						<td>총결제금액</td>
+						<td>(결제금액)원</td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+				</table>
+				<hr>
+			</div>
+			<div>
+				<p> (****년 **월 **일) 18:00까지 무료 취소 가능합니다.</p> <!-- 예약전일까지 -->
+				<input type="button" onclick="" value="결제취소">
+			</div>
+		</div>
 		</div>
 	</div>
 </div>
