@@ -10,7 +10,6 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <title>굿초이스 예약페이지</title>
 <style>
-<!-- style="background-color:grey" -->
 .container {
 		position:absolute;
 		width:100%;
