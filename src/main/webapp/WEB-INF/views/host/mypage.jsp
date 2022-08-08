@@ -10,30 +10,43 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <title>Insert title here</title>
 <link href="/favicon.ico" rel="icon" type="image/x-icon">
+<link href="/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
+<style type="text/css">
+th{
+font-family: 'Do Hyeon', sans-serif;
+}
+td{
+font-family: 'IBM Plex Sans KR', sans-serif;
+}
+</style>
 </head>
 <body>
 <div class="container">
 	<!-- 마이페이지 입력폼 -->
 	<div class="list">
-		<form>
+		<form method="post" action="updateMyInfo">
 			<table class="table table-bordered">
 				<colgroup>
-					<col width="10%">
-					<col width="77%">
-				</colgroup>
+				<col width="10%" class="bg-secondary p-2 text-white bg-opacity-25">
+				<col width="77%">
+			</colgroup>
 				<tbody>
 					<tr>
 						<th class="text-center align-middle">호스트 정보</th>
 						<td>
 							<div class="row">
 								<div class="col-2">이메일</div>
-								<div class="col-5">(작성자 이메일)</div>
+								<div class="col-5">(가입자 이메일)</div>
 							</div>
 							<div class="row pt-2 mt-2">
-	                            <div class="col-2">휴대폰 번호</div>
+	                            <div class="col-2 pt-2">휴대폰 번호</div>
 	                            <div class="col-1">
-		                            <select name="phone1">
-		                                <option value="010" selected="">010</option>
+		                            <select name="phone1" class="form-select w-auto">
+		                                <option value="010" selected="" >010</option>
 		                                <option value="011">011</option>
 		                                <option value="016">016</option>
 		                                <option value="017">017</option>
@@ -49,9 +62,9 @@
                                 </span>
 	                        </div>
 	                        <div class="row pt-2 mt-2">
-	                        	<div class="col-2">대표 번호</div>
+	                        	<div class="col-2 pt-2">대표 번호</div>
 	                        	<div class="col-1">
-	                        		<select class="form select" name="tel1">
+	                        		<select class="form-select w-auto" name="tel1">
 				                        <option value="02" selected="">02</option>
 				                        <option value="031">031</option>
 				                        <option value="032">032</option>
@@ -91,9 +104,9 @@
 						<th class="text-center align-middle">예약 정산<br>입금 계좌 정보</th>
 						<td>
 							<div class="row">
-								<div class="col-2">거래 은행</div>
+								<div class="col-2 pt-2">거래 은행</div>
 								<div class="col-3">
-									<select>
+									<select class="form-select w-auto" name="bank">
 										<option value="">선택</option>
 					                    <option value="한국은행">한국은행</option>
 					                    <option value="산업은행">산업은행</option>
@@ -126,15 +139,15 @@
 								</div>
 							</div>
 							<div class="row pt-2 mt-2">
-								<div class="col-2">예금주</div>
+								<div class="col-2 pt-2">예금주</div>
 								<div class="col-3">
-									<input class="form-control" type="text" placeholder="이름을 입력하세요." value="">
+									<input class="form-control" type="text" placeholder="이름을 입력하세요." name="bankName" value="">
 								</div>
 							</div>
 							<div class="row pt-2 mt-2">
-								<div class="col-2">계좌번호</div>
+								<div class="col-2 pt-2">계좌번호</div>
 								<div class="col-3">
-									<input class="form-control" type="text" placeholder="숫자만 입력하세요." value="">
+									<input class="form-control" type="text" placeholder="숫자만 입력하세요." name="bankNumber" value="">
 								</div>
 							</div>
 						</td>
@@ -146,52 +159,52 @@
 								<div class="row">
 									<div class="col-2">상호명<br>(법인명)</div>		
 									<div class="col-3">
-										<input class="form-control" type="text" placeholder="사업자 등록증상 상호명" value="">
+										<input class="form-control" type="text" placeholder="사업자 등록증상 상호명" name="businessName" value="">
 									</div>
-										<span class="fs-6">* 게스트하우스 이름은 별도로 기입이 가능하오니 필히 사업자 상호, 등록번호를 입력해주시기 바랍니다.</span>
+										<span class="fs-6 text-black-50">* 게스트하우스 이름은 별도로 기입이 가능하오니 필히 사업자 상호, 등록번호를 입력해주시기 바랍니다.</span>
 								</div>
 								<div class="row pt-2 mt-2">
 									<div class="col-2">등록증상<br>대표명</div>		
 									<div class="col-4">
-										<input class="form-control mb-3"  type="text" placeholder="대표자명을 입력하세요" value="">
+										<input class="form-control mb-3" type="text" placeholder="대표자명을 입력하세요" name="businessUserName" value="">
 									</div>
 								</div>
 								<div class="row pt-2 mt-2">
 									<span class="col-2">업태</span>	
 									<div class="col-auto">
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck1">
+											<input class="form-check-input" name="businessConditions" type="checkbox" id="gridCheck1">
 											<label class="" for="gridCheck1">숙박</label>
 										</div>
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck2">
+											<input class="form-check-input" name="businessConditions" type="checkbox" id="gridCheck2">
 											<label class="" for="gridCheck2">음식</label>
 										</div>
 									</div>
 									<div class="col-auto">
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck3">
+											<input class="form-check-input" name="businessConditions" type="checkbox" id="gridCheck3">
 											<label class="" for="gridCheck3">기타</label>
 										</div>
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck4">
+											<input class="form-check-input" name="businessConditions" type="checkbox" id="gridCheck4">
 											<label class="" for="gridCheck4">서비스</label>
 										</div>
 									</div>
 									<div class="col-auto">
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck5">
+											<input class="form-check-input" name="businessConditions" type="checkbox" id="gridCheck5">
 											<label class="" for="gridCheck5">음식 및 숙박</label>
 										</div>
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck6">
+											<input class="form-check-input" name="businessConditions" type="checkbox" id="gridCheck6">
 											<label class="" for="gridCheck6">부동산</label>
 										</div>
 									</div>
 									<div class="col-auto">
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck7">
-											<input class="form col-sm-5" type="text" id="gridCheck7">
+											<input class="form-check-input" name="businessConditions" type="checkbox" id="gridCheck7">
+											<input class="form-control w-50" name="businessConditions" type="text" id="gridCheck7">
 										</div>
 									</div>
 								</div>
@@ -200,80 +213,80 @@
 									<span class="col-2">업종</span>	
 									<div class="col-auto">
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck1">
+											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck1">
 											<label class="" for="gridCheck1">민박</label>
 										</div>
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck2">
+											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck2">
 											<label class="" for="gridCheck2">기타</label>
 										</div>
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck3">
+											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck3">
 											<label class="" for="gridCheck3">호스텔</label>
 										</div>
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck4">
+											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck4">
 											<label class="" for="gridCheck4">호텔</label>
 										</div>
 									</div>
 									<div class="col-auto">
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck5">
+											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck5">
 											<label class="" for="gridCheck5">외국인도시민박</label>
 										</div>
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck6">
+											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck6">
 											<label class="" for="gridCheck6">여관</label>
 										</div>
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck7">
+											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck7">
 											<label class="" for="gridCheck7">모텔</label>
 										</div>
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck8">
+											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck8">
 											<label class="" for="gridCheck8">관광호텔</label>
 										</div>
 									</div>
 									<div class="col-auto">
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck9">
+											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck9">
 											<label class="" for="gridCheck9">게스트하우스</label>
 										</div>
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck10">
+											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck10">
 											<label class="" for="gridCheck10">숙박</label>
 										</div>
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck11">
+											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck11">
 											<label class="" for="gridCheck11">관광</label>
 										</div>
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck12">
+											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck12">
 											<label class="" for="gridCheck12">일반여행</label>
 										</div>
 									</div>
 									<div class="col-auto">
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck13">
+											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck13">
 											<label class="" for="gridCheck13">한옥체험</label>
 										</div>
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck14">
+											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck14">
 											<label class="" for="gridCheck14">펜션</label>
 										</div>
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck15">
+											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck15">
 											<label class="" for="gridCheck15">임대</label>
 										</div>
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck16">
+											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck16">
 											<label class="" for="gridCheck16">무인텔</label>
 										</div>
 									</div>
 									<div class="col-auto">
 										<div class="form-check">
-											<input class="form-check-input" type="checkbox" id="gridCheck7">
-											<input class="form-input col-sm-5" type="text" id="gridCheck7">
+											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck7">
+											<input class="form-control w-50" type="text" id="gridCheck7">
 										</div>
 									</div>
 								</div>
@@ -284,7 +297,7 @@
 				</tbody>
 			</table>
 			<div class="position-absolute start-50 pb-5">
-				<button class="btn btn-danger btn-lg" type="submit">저장하기</button>
+				<button class="btn btn-danger btn-lg" type="submit" name="submit">저장하기</button>
 			</div>
 		</form>
 	</div>
