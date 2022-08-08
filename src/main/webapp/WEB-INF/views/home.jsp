@@ -10,15 +10,15 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <title>여행할때 굿초이스</title>
 <!-- css -->
-<link href="css/common.css" rel="stylesheet">
+<link href="/css/home.css" rel="stylesheet">
+<link href="/css/swiper.css" rel="stylesheet">
+<!-- script -->
+<script src="/script/home.js"></script>
 <!-- fontawesome -->
 <script src="https://kit.fontawesome.com/4f71b1e252.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <%@ include file="common/nav.jsp" %>
-    <!-- css -->
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/swiper.css" rel="stylesheet">
     <div id="content">
 		<div class="main_spot">여행할때 여기어때</div>
 		
@@ -95,14 +95,15 @@
                     <li><a href="#" target="_blank">액티비티 호스트센터</a><span>|</span></li>
                     <li><a href="#" target="_blank">HOTEL 여기어때</a><span>|</span></li>
                     <li><a href="#">콘텐츠산업진흥법에의한 표시</a></li>
+                    <a href="https://github.com/rivolt0421/final" target="_blank"><i class="fa-brands fa-github"></i></a>
                 </ul>
-                <p><b>고객행복센터 1670-6250</b><span>오전 9시 - 새벽 3시</span></p>
+                <p><b>고객행복센터 1577-1370</b><span>오전 9시 - 오후 6시</span></p>
                 <address>
-                    <span>(주) 여기어때컴퍼니</span>
-                    주소 : 서울특별시 강남구 봉은사로 479, 479타워 11층 | 대표이사 : 정명훈 | 사업자등록번호: 742-86-00224<br>
-                    통신판매번호 : 2017-서울강남-01779 | 관광사업자 등록번호: 제1026-24호 | 전화번호 : 1670-6250 | 전자우편주소 : help@goodchoice.kr<br>
-                    <span class="order">(주) 여기어때컴퍼니는 통신판매중개자로서 통신판매의 당사자가 아니며, 상품의 예약, 이용 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.</span><br>
-                    Copyright GC COMPANY Corp. All rights reserved.
+                    <span>(주) 굿초이스컴퍼니</span>
+                    주소 : 서울 마포구 양화로6길 9 | 대표이사 : 홍길동 | 사업자등록번호: 000-00-00000<br>
+                    통신판매번호 : 2022-서울종로-00000 | 관광사업자 등록번호: 제0000-00호 | 전화번호 : 1577-1370 | 전자우편주소 : help@imw1370.kr<br>
+                    <span class="order">(주) 굿초이스컴퍼니는 유령회사로서 통신판매의 당사자가 아니며, 상품의 예약, 이용 및 환불 등과 관련한 의무와 책임은 누구에게도 없습니다.</span><br>
+                    Copyright GoodChoice COMPANY Corp. No rights reserved.
                 </address>
             </div>   
         </footer>

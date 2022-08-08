@@ -1,227 +1,61 @@
 @charset "UTF-8";
+@import "variables.css";
+@import "common.css";
+@import "main.css";
 
-* {
-    outline: 0;
-    font-family: 'Pretendard', 'Apple SD Gothic Neo', '맑은 고딕', '맑은고딕', 'Malgun Gothic', sans-serif;;
+nav {
+	height: 70px;
+	transition: 0.4s;
+	background-color: var(--brand-color);
+}
+.brand_logo {
+	width: 96px;
+	background-image: url(/images/whitetext.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-right: 20px;
+}
+.brand_logo a {
+	display: block;
+	text-indent: -9999px;
+}
+nav ul li a , nav i{
+	font-size: 18px !important;	
+	color: rgba(255,255,255,0.85);
+}
+nav button {
+	border: none;
+	background: transparent;
 }
 
-@media (min-width: 1024px) {
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 72px;
-    transition: 0.4s;
-	}
+/* scroll */
+nav.scroll {
+	background-color: #fff;
+	box-shadow: 0px 2px 3px 0px rgb(0 0 0 / 10%);
+}
+nav.scroll li a, nav.scroll i{
+	color: rgba(0,0,0,0.85);
+}
+nav.scroll li a:hover{
+	color: var(--brand-color);
+}
+nav.scroll .brand_logo{
+	width: 96px;
+	background-image: url(/images/redtext.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
-header {
-	background: #f7323f;
-	z-index: 210;
-	margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-    display: block;
-}
-
-@media (min-width: 1024px) {
-header section {
-    position: relative;
-    width: 1024px;
-    height: 64px;
-    background: none;
-	}
-}
-
-@media (min-width: 1024px) {
-header section {
-    margin: 0 auto;
-	}
-}
-
-section {
-	padding: 0;
-    border: 0;
-    box-sizing: border-box;
-    display: block;
-}
-
-@media (min-width: 1024px) {
-header section h1 {
-    position: absolute;
-    top: 26px;
-    left: 31px;
-    width: 96px;
-    height: 30px;
-    margin: 0;
-    background: url(/images/whitetext.png) 0 0 no-repeat;
-    background-size: 96px auto;
-	}
-}
-
-h1 {
-	padding: 0;
-	border: 0;
-	box-sizing: border-box;
-}
-
-header section h1 a {
-    display: block;
-    text-indent: -9999px;
-}
-
-a {
-    text-decoration: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-@media (min-width: 1024px) {
-header section .btn_menu {
-    display: none;
-	}
-}
-
-@media (min-width: 1024px) {
-.pc .gnb {
-    display: inline-block;
-    position: absolute;
-    top: 27px;
-    right: 31px;
-	}
-}
-
-@media (min-width: 1024px) {
-.gnb {
-    width: auto;
-    text-align: right;
-	}
-}
-
-ul {
-	list-style: none;
-	margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-}
-
-@media (min-width: 1024px) {
-.gnb li {
-    display: inline-block;
-    position: relative;
-    min-width: 53px;
-    min-height: 35px;
-    margin-left: 30px;
-    vertical-align: top;
-	}
-}
-
-li {
-	list-style: none;
-	margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-@media (min-width: 1024px) {
-.gnb li a {
-    display: inline-block;
-    font-size: 18px;
-    color: rgba(255,255,255,0.8);
-    letter-spacing: 0;
-	}
-}
-
-a {
-    text-decoration: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-.wrap.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-.wrap {
-	width: 100%;
-    background: #fff;
-}
-
-div {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	box-sizing: border-box;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-.dropdown{
-  position : relative;
-  display : inline-block;
-}
-
-.dropbtn_icon{
+/* footer */
+footer div.align{
 	position: relative;
-  	font-family : 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+footer ul.link i {
+	font-size: 40px;
+	position: absolute;
+	right: 20px;
 }
 
-span {
-	margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-}
 
-.dropbtn{
-  border: none;
-    padding: 0;
-    background: none;
-    font-size: 18px;
-    line-height: 1;
-    color: rgba(255,255,255,0.8);
-    letter-spacing: 0;
-    -webkit-appearance: none;
-    border-radius: 0;
-    font-family: 'Pretendard', 'Apple SD Gothic Neo', '맑은 고딕', '맑은고딕', 'Malgun Gothic', sans-serif;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-.dropdown-content{
-  	display : none;
-  	top: 30px;
-    left: -65px;
-    width: 184px;
-    position: absolute;
-    border-radius: 5px;
-    padding: 20px;
-    background: #fff;
-    text-align: left;
-    box-shadow: 0px 3px 5px 0px rgb(0 0 0 / 20%);
-}
-
-.dropdown-content a{
-    overflow: visible !important;
-    display: block;
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    width: auto !important;
-    height: auto !important;
-    margin: 0;
-    font-size: 8px;
-    letter-spacing: 0;
-    text-decoration: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-.dropdown-content a:hover{
-  background-color : #ececec
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
