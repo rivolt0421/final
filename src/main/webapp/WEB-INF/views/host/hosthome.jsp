@@ -9,16 +9,17 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<title>호스트 하우스</title>
+<title>여기어때 호스트하우스</title>
 <link href="/favicon.ico" rel="icon" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
 <style type="text/css">
+	body {background-color: #eee;}
 	.bg-image {height: 650px; border-radius: 5px; background-image: url("/images/host/mainspot_image.png"); background-size: cover;}
 	#room-reserve {background-color: #546E7A; color: #fff;}
 	#room-reserve h4 a {color: #fff; text-decoration: none;}
 </style>
 </head>
-<body class="bg-secondary bg-opacity-10">
+<body>
 <%@ include file="common/nav.jsp" %>
 <div class="container mt-4">
 	<main class="row border shadow mb-3 rounded">
