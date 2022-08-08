@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.co.goodchoice.mapper.OftenMapper">
+	
+	<resultMap type="Often" id="OftenResultMap">
+		<id column="often_no" property="no"/>
+		<result column="often_id" property="id"/>
+		<result column="often_title" property="title"/>
+		<result column="often_content" property="content"/>
+		<result column="created_date" property="createdDate"/>
+		<result column="updated_date" property="updatedDate"/>
+	</resultMap>
+
+	<!-- Often getOftenById(String id); -->
+	<select id="getOftenById" parameterType="string">
+		select *
+		from often_questions
+		where often_id = #{value}
+		order by often_no asc
+	</select>
+</mapper>

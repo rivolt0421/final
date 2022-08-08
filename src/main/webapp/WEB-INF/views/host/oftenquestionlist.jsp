@@ -46,12 +46,47 @@
 				  <li class="nav-item" role="presentation">
 				    <button class="nav-link" id="ad-tab" data-bs-toggle="tab" data-bs-target="#ad-tab-pane" type="button" role="tab" aria-controls="ad-tab-pane" aria-selected="false">광고상품</button>
 				  </li>
+				  <li class="nav-item" role="presentation">
+				    <button class="nav-link" id="etc-tab" data-bs-toggle="tab" data-bs-target="#etc-tab-pane" type="button" role="tab" aria-controls="etc-tab-pane" aria-selected="false">기타</button>
+				  </li>
 				</ul>
 				<div class="tab-content" id="myTabContent">
-				  <div class="tab-pane fade show active" id="total-tab-pane" role="tabpanel" aria-labelledby="total-tab" tabindex="0">...</div>
-				  <div class="tab-pane fade" id="house-tab-pane" role="tabpanel" aria-labelledby="house-tab" tabindex="0">...</div>
-				  <div class="tab-pane fade" id="reserve-tab-pane" role="tabpanel" aria-labelledby="reserve-tab" tabindex="0">...</div>
-				  <div class="tab-pane fade" id="ad-tab-pane" role="tabpanel" aria-labelledby="ad-tab" tabindex="0">...</div>
+				  <div class="tab-pane fade show active" id="total-tab-pane" role="tabpanel" aria-labelledby="total-tab" tabindex="0">
+				  <!-- 전체 -->
+				  ...
+				  <table>
+				  	<thead>
+				  		<tr>
+				  			<th>번호</th>
+							<th>분류</th>
+							<th>제목</th>
+				  		</tr>
+				  	</thead>
+				  	<tbody>
+				  		<tr>
+				  			<td><a></a></td>
+				  			<td><a></a></td>
+				  			<td><a></a></td>
+				  		</tr>
+				  	</tbody>
+				  </table>
+				  </div>
+				  <div class="tab-pane fade" id="house-tab-pane" role="tabpanel" aria-labelledby="house-tab" tabindex="0">
+				  <!-- 숙소관리 -->
+				  ...
+				  </div>
+				  <div class="tab-pane fade" id="reserve-tab-pane" role="tabpanel" aria-labelledby="reserve-tab" tabindex="0">
+				  <!-- 예약관리 -->
+				  ...
+				  </div>
+				  <div class="tab-pane fade" id="ad-tab-pane" role="tabpanel" aria-labelledby="ad-tab" tabindex="0">
+				  <!-- 광고상품 -->
+				  ...
+				  </div>
+				  <div class="tab-pane fade" id="etc-tab-pane" role="tabpanel" aria-labelledby="etc-tab" tabindex="0">
+				  <!-- 광고상품 -->
+				  ...
+				  </div>
 				</div>
 			</div>
 		</div>
