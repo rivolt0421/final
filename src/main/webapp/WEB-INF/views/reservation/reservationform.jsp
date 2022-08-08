@@ -11,26 +11,26 @@
 <title>굿초이스 예약페이지</title>
 <style>
 .container {
-		position:absolute;
-		width:100%;
+	position:absolute;
+	width:100%;
 }
 
 #rightsection {
-			float:left;
-			width:50%
-			padding: 1%;
-            margin: 1%;
-			}
+	float:left;
+	width:50%
+	padding: 1%;
+    margin: 1%;
+}
 #leftsection {
-			float:left;
-			width:50%
-			padding: 1%;
-            margin: 1%;
-            background-color:lightgrey;
-			}			
+	float:left;
+	width:50%
+	padding: 1%;
+    margin: 1%;
+    background-color:lightgrey;
+}			
 td {
 	padding: 15px;
-    }
+}
 
 input, checkbox {
   accent-color: red;
@@ -38,7 +38,7 @@ input, checkbox {
 
 #colortext{
 		color:red;
-		}
+}
 </style>
 </head>
 <body>

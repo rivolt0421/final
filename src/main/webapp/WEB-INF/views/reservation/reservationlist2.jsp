@@ -13,19 +13,18 @@
 <link href="/css/home.css" rel="stylesheet">
 <style>
 .container {
-				display: flex;
-      			justify-content: center;
-     			 align-items: center;
-
-      flex-direction: column;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .reservation {
-			width: 100px;
-      		height: 100px;
-			padding: 1%;
-            margin: 1%;
-            margin-bottom: 50px;
+	width: 100px;
+    height: 100px;
+	padding: 1%;
+    margin: 1%;
+    margin-bottom: 50px;
 }
 
 .card {
@@ -34,6 +33,22 @@
     object-fit: cover;
     text-align: center;
 }
+
+.confirmation {
+	background:red;
+	width:60px;
+	color:white;
+	margin-left: 42%;
+	margin-bottom:5px;
+}
+
+.useandcancel {
+	background:lightgrey;
+	width:60px;
+	margin-left: 42%;
+	margin-bottom:5px;
+}
+
 </style>
 </head>
 <body>
@@ -44,7 +59,7 @@
 				<!--이미지/예약상태/숙소명칭/체크인-체크아웃/기간(숙박일수)-->
 				<div class="card">
 				  <img src="?.png" alt="room">
-				  	<span style="background:red; width:60px; color:white; margin-left: 42%; margin-bottom:5px;">예약확정</span>
+				  	<span class="confirmation">예약확정</span>
 				    <h4><b>(숙소명칭)</b></h4>
 				    <p>체크인: (**.** *요일 **:00) (*)박</p>
 				  </div>
@@ -54,7 +69,7 @@
 				<!--이미지/예약상태/숙소명칭/체크인-체크아웃/기간(숙박일수)-->
 				<div class="card">
 				  <img src="?.png" alt="room">
-				  	<span style="background:lightgrey; width:60px; margin-left: 42%; margin-bottom:5px;">이용완료</span>
+				  	<span class="useandcancel">이용완료</span>
 				    <h4><b>(숙소명칭)</b></h4>
 				    <p>(**.** *요일) - (**.** *요일) (*)박</p>
 				 </div>
@@ -64,7 +79,7 @@
 				<!--이미지/예약상태/숙소명칭/체크인-체크아웃/기간(숙박일수)/오늘일자로 설정된 동일 숙소의 예약링크(reservationform)-->
 				<div class="card">
 				  <img src="?.png" alt="room">
-				  	<span style="background:lightgrey; width:60px; margin-left: 42%; margin-bottom:5px; ">예약취소</span>
+				  	<span class="useandcancel">예약취소</span>
 				    <h4><b>(숙소명칭)</b></h4>
 				    <p>(**.** *요일) - (**.** *요일) (*)박</p>
 				    <br>

@@ -116,7 +116,7 @@ a {
     text-decoration: none;
 }
 
-a, input, button, div, li, textarea, form, label, select {
+a, input, button, div, li, textarea, label, select {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
@@ -148,70 +148,49 @@ a, input, button, div, li, textarea, form, label, select {
 	font-size: 18px;
     font-weight: bold;
     color: rgb(230,28,81);
-
-}
+}    
     
     
-    
-#reservationhistory {
-				display:table;
-				
-				width:100%;
+.container {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .reservation {
-			display:table-cell;
-  			vertical-align: middle;
-			width:31.3%
-			padding: 1%;
-            margin: 1%;
-
+	width: 100px;
+    height: 100px;
+	padding: 1%;
+    margin: 1%;
+    margin-bottom: 50px;
 }
 
+.card {
+	width: 25rem;
+	height: 20vw;
+    object-fit: cover;
+    text-align: center;
+}
 
+.confirmation {
+	background:red;
+	width:60px;
+	color:white;
+	margin-left: 42%;
+	margin-bottom:5px;
+}
+
+.useandcancel {
+	background:lightgrey;
+	width:60px;
+	margin-left: 42%;
+	margin-bottom:5px;
+}
 </style>
 </head>
 <body>
-<header class>
-	<section>
-		<h1>
-			<a class="" href="/" title="굿초이스">여기어때</a>
-		</h1>
-		
-		<ul class="gnb" style="display:block; padding:30px;">
-			<li>
-				<a href="">내주변</a>
-			</li>
-			<li>
-				<a href="">예약내역</a>
-			</li>
-			
-		<li class="dropdown">
-		      <button class="dropbtn" style="padding: 3px 0px 0px 0px;"> 
-		        	<span class="dropbtn_icon">더보기</span>
-		      </button>
-		      	<ul class="dropdown-content" display: none; opacity: 1;>
-			        <li>
-			        <a href="#" style="color: rgba(0,0,0,0.87);">더보기</a>
-			        </li>
-			        <li>
-			        <a href="#" style="color: rgba(0,0,0,0.87);">이벤트</a>
-			        </li>
-			        <li>
-			        <a href="#" style="color: rgba(0,0,0,0.87);">1:1 문의</a>
-			        </li>
-			        <li>
-			        <a href="#" style="color: rgba(0,0,0,0.87);">약관 및 정책</a>
-			        </li>
-		     	</ul>
-		      
-			     	<li>
-					<a href="">로그인</a>
-					</li>
-		</li>	
-    </ul>				
-	</section>
-</header>
+<%@ include file="../common/nav.jsp" %>
 <div class="sub_top_wrap">
 	<div class="sub_top bg_kong_2">
 		<h2>내정보</h2>
@@ -234,41 +213,40 @@ a, input, button, div, li, textarea, form, label, select {
 				</li>
 			</ul>
 		</nav>
-		<!-- 예약 내역 섹션 -->
-		<div id="reservationhistory">
+		<!-- 예약 내역 영역 -->
+		<div class="container">
 			<div class="reservation">
-				<h5>예약 내역</h5>
+				<p><strong>예약 내역</strong></p>
 				<!--이미지/예약상태/숙소명칭/체크인-체크아웃/기간(숙박일수)-->
 				<div class="card">
-				  <img src="?.png" alt="room" style="width:100%">
-				  	<p>(예약 상태)</p>
+				  <img src="?.png" alt="room">
+				  	<span class="confirmation">예약확정</span>
 				    <h4><b>(숙소명칭)</b></h4>
 				    <p>체크인: (**.** *요일 **:00) (*)박</p>
 				  </div>
 			</div>
-				
 			<div class="reservation">
-				<h5>이용 내역</h5>
+				<p><strong>이용 내역</strong></p>
 				<!--이미지/예약상태/숙소명칭/체크인-체크아웃/기간(숙박일수)-->
 				<div class="card">
-				  <img src="?.png" alt="room" style="width:100%">
-				  	<p>(예약 상태)</p>
+				  <img src="?.png" alt="room">
+				  	<span class="useandcancel">이용완료</span>
 				    <h4><b>(숙소명칭)</b></h4>
-				    <p>체크인: (**.** *요일 **:00) (*)박</p>
+				    <p>(**.** *요일) - (**.** *요일) (*)박</p>
 				 </div>
 			</div>
 			<div class="reservation">
-				<h5>취소 내역</h5>
+				<p><strong>취소 내역</strong></p>
 				<!--이미지/예약상태/숙소명칭/체크인-체크아웃/기간(숙박일수)/오늘일자로 설정된 동일 숙소의 예약링크(reservationform)-->
 				<div class="card">
-				  <img src="?.png" alt="room" style="width:100%">
-				  	<p>(예약 상태)</p>
+				  <img src="?.png" alt="room">
+				  	<span class="useandcancel">예약취소</span>
 				    <h4><b>(숙소명칭)</b></h4>
-				    <p>체크인: (**.** *요일 **:00) (*)박</p>
-				    <p><button>다시 예약</button></p>
+				    <p>(**.** *요일) - (**.** *요일) (*)박</p>
+				    <br>
+				    <a href=""><p style="color:green">다시 예약</p></a>
 				 </div>
 			</div>
-			
 		</div>
 	</div>
 </div>
