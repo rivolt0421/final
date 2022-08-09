@@ -10,28 +10,27 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <title>굿초이스 예약페이지</title>
 <style>
-<!-- style="background-color:grey" -->
 .container {
-		position:absolute;
-		width:100%;
+	position:absolute;
+	width:100%;
 }
 
 #rightsection {
-			float:left;
-			width:50%
-			padding: 1%;
-            margin: 1%;
-			}
+	float:left;
+	width:50%
+	padding: 1%;
+    margin: 1%;
+}
 #leftsection {
-			float:left;
-			width:50%
-			padding: 1%;
-            margin: 1%;
-            background-color:lightgrey;
-			}			
+	float:left;
+	width:50%
+	padding: 1%;
+    margin: 1%;
+    background-color:lightgrey;
+}			
 td {
 	padding: 15px;
-    }
+}
 
 input, checkbox {
   accent-color: red;
@@ -39,7 +38,7 @@ input, checkbox {
 
 #colortext{
 		color:red;
-		}
+}
 </style>
 </head>
 <body>

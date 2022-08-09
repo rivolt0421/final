@@ -10,6 +10,18 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <title>Insert title here</title>
 <link href="/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
+<style type="text/css">
+th{
+font-family: 'Do Hyeon', sans-serif;
+}
+td{
+font-family: 'IBM Plex Sans KR', sans-serif;
+}
+</style>
 </head>
 <body>
 <div class="container">
@@ -23,7 +35,7 @@
 			<h3>[필수 기입 정보]</h3>
 			<table class="table table-bordered">
 				<colgroup>
-					<col width="20%">
+					<col width="10%" class="bg-secondary p-2 text-white bg-opacity-25">
 					<col width="77%">
 					<col width="3%">
 				</colgroup>
@@ -45,8 +57,8 @@
 								<div class="col-sm-1">업체주소</div>
 								<span class="col-sm-5">
 									<input class="form-control" id="inputRoadAddress" type="text" name="address1" readonly placeholder="업체 주소를 입력하세요." value="">
-									<button type="button" class="btn btn-danger">주소검색</button>
 								</span>
+								<button type="button" class="btn btn-danger col-1">주소검색</button>
 							</div>
 							<div class="">
 								<div class="">
@@ -55,7 +67,7 @@
 							</div>
 						</td>
 						<td style="border-left-style: hidden;"  class="align-middle">
-							<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="TooltipOnLeft">
+							<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="">
 							  ?
 							</button>
 						</td>
@@ -75,11 +87,11 @@
 								<p class="fs-6">* 첫 이미지가 메인 이미지이며 드래그를 통해 순서 변경이 가능합니다.</p>
 							</div>
 							<div>
-								<button type="button" class="btn btn-danger">이미지 추가</button>
+								<button type="file" class="btn btn-danger" name="housePictures">이미지 추가</button>
 							</div>
 						</td>
-						<td style="border-left-style: hidden;">
-							<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+						<td style="border-left-style: hidden;"  class="align-middle">
+							<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="TooltipOnLeft">
 							  ?
 							</button>
 						</td>
@@ -95,135 +107,139 @@
 							<div class="row mb-3">
 								<div class="col-sm-auto">
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck1">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck1">
 										<label class="" for="gridCheck1">주방/식당</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck2">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck2">
 										<label class="" for="gridCheck2">엘리베이터</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck3">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck3">
 										<label class="" for="gridCheck3">에어컨</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck4">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck4">
 										<label class="" for="gridCheck4">드라이기</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck5">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck5">
 										<label class="" for="gridCheck5">반려견동반</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck6">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck6">
 										<label class="" for="gridCheck6">프린터사용</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck7">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck7">
 										<label class="" for="gridCheck7">카페</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck8">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck8">
 										<label class="" for="gridCheck8">카드결제</label>
 									</div>
 								</div>
 								<div class="col-sm-auto">
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck9">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck9">
 										<label class="" for="gridCheck9">세탁기</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck10">
+										<input class="form-check-input"name="facilities" type="checkbox" id="gridCheck10">
 										<label class="" for="gridCheck10">주차장</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck11">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck11">
 										<label class="" for="gridCheck11">냉장고</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck12">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck12">
 										<label class="" for="gridCheck12">다리미</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck13">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck13">
 										<label class="" for="gridCheck13">짐보관가능</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck14">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck14">
 										<label class="" for="gridCheck14">무료주차</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck15">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck15">
 										<label class="" for="gridCheck15">전자레인지</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck16">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck16">
 										<label class="" for="gridCheck16">TV</label>
 									</div>
 								</div>
 								<div class="col-sm-auto">
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck25">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck25">
 										<label class="" for="gridChec25">건조기</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck26">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck26">
 										<label class="" for="gridCheck26">와이파이</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck27">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck27">
 										<label class="" for="gridCheck27">객실샤워실</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck28">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck28">
 										<label class="" for="gridCheck28">조식포함</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck29">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck29">
 										<label class="" for="gridCheck29">공용PC</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck30">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck30">
 										<label class="" for="gridCheck30">BBQ</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck31">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck31">
 										<label class="" for="gridCheck31">취사가능</label>
 									</div>
 								</div>
 								<div class="col-sm-auto">
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck32">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck32">
 										<label class="" for="gridChec32">탈수기</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck33">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck33">
 										<label class="" for="gridCheck33">용실용품</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck34">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck34">
 										<label class="" for="gridCheck34">욕조</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck35">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck35">
 										<label class="" for="gridCheck35">객실내흡연</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck36">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck36">
 										<label class="" for="gridCheck36">개인사물함</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck37">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck37">
 										<label class="" for="gridCheck37">라운지</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" type="checkbox" id="gridCheck38">
+										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck38">
 										<label class="" for="gridCheck38">개인콘센트</label>
 									</div>
 								</div>
 							</div>
 						</td>
-						<td style="border-left-style: hidden;"></td>
+						<td style="border-left-style: hidden;"  class="align-middle">
+							<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="TooltipOnLeft">
+							  ?
+							</button>
+						</td>
 					</tr>
 					<!-- 주인장 소개글  -->
 					<tr>
@@ -234,24 +250,26 @@
 						</th>
 						<td>
 							<div class="form-check">
-								<input class="form-check-input" type="checkbox" id="hostName">
-								<label class="" for="hostName">업주 실명 및 업주 사진 노출</label>
+								<input class="form-check-input" name="open" type="checkbox" id="hostName">
+								<label class="pb-3" for="hostName">업주 실명 및 업주 사진 노출</label>
 							</div>
-							<div class="row-mb-3">
-								<div class="col-sm-2">업주 실명</div>
+							<div class="row mb-3">
+								<div class="col-sm-1 pt-2">업주 실명</div>
 								<div class="col-sm-5">
-									<input class="form-control" type="text" name="aname" placeholder="업체명을 입력하세요." value="">
+									<input class="form-control" type="text" name="hostName" placeholder="실명을 입력하세요." value="">
 								</div>
 							</div>
-							<div>
-								<div class="">업주 사진</div>
-								<button type="button" class="btn btn-danger">이미지 추가</button>
+							<div class="row mb-3">
+								<div class="col-sm-1">업주 사진</div>
+								<button type="file" name="hostPicture" class="btn btn-danger col-2 ms-2">이미지 추가</button>
 							</div>
-							<div class="row">
-								<div style="color: black;">사진 등록 예시</div>
-								<span style="color: red;">· 한 개의 이미지만 업로드 할 수 있습니다.</span>
-								<br>
-								<span style="color: red;">· 사진 권장사이즈 : 300 * 300</span>
+							<div class="row mb-3">
+								<div style="color: black;" class="col-sm-auto">사진 등록 예시</div>
+								<div class="col-auto">
+									<span style="color: red;">· 한 개의 이미지만 업로드 할 수 있습니다.</span>
+									<br>
+									<span style="color: red;">· 사진 권장사이즈 : 300 * 300</span>
+								</div>
 								<img class="col-2" alt="이미지" src="">
 							</div>
 							<div class="">
@@ -310,7 +328,11 @@
 								</div>
 							</div>
 						</td>
-						<td style="border-left-style: hidden;"></td>
+						<td style="border-left-style: hidden;" class="align-middle">
+							<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="TooltipOnLeft">
+							  ?
+							</button>
+						</td>
 					</tr>
 					<!-- 주변 정보  -->
 					<tr>
@@ -319,7 +341,7 @@
 						</th>
 						<td>
 							<div>
-								<span>
+								<span class="text-black-50">
 								* 숙소 주변의 명소(교통, 관광, 쇼핑 등 )와 이동수단, 게스트하우스로부터 소요시간을 기입해주세요.<br>
 								* [명소 / 이동수단 / 소요시간] 순으로 한줄만 입력이 가능하며 최대 3개까지 작성 가능합니다.<br>
 								* 예시) 가산디지털단지역 도보 5분<br>
@@ -377,8 +399,9 @@
 			</h3>
 			<table class="table table-bordered">
 				<colgroup>
-					<col width="20%">
-					<col width="80%">
+					<col width="10%" class="bg-secondary p-2 text-white bg-opacity-25">
+					<col width="77%">
+					<col width="3%">
 				</colgroup>
 				<tbody>
 					<!-- 한줄평 -->
@@ -389,13 +412,19 @@
 		                        <input type="text" class="form-control" name="summary" maxlength="32" placeholder="숙소의 장점을 부각시켜 게스트에게 어필할 수 있는 한 줄을 기재해주세요. [32자 내외]" value="">
 		                    </div>
 						</td>
+						<td style="border-left-style: hidden;"  class="align-middle">
+							<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="TooltipOnLeft">
+							  ?
+							</button>
+						</td>
+						
 					</tr>
 					<!-- 이벤트 정보 -->
 					<tr>
 						<th class="text-center align-middle">이벤트 정보</th>
 						<td>
 							<div class="">
-		                        <input type="text" class="form-control" name="event_title" placeholder="업체 이미지에 표시되는 대표적인 이벤트 한줄을 남겨주세요." value="">
+		                        <input type="text" class="form-control" name="eventTitle" placeholder="업체 이미지에 표시되는 대표적인 이벤트 한줄을 남겨주세요." value="">
 		                        <br>
 		                        <textarea class="form-control textarea" rows="6" id="event" name="eventContent" placeholder="게스트하우스 주관의 이벤트 정보를 기재해주세요."></textarea>
 		                    </div>
@@ -427,13 +456,14 @@
 								</div>
 							</div>
 						</td>
+						<td style="border-left-style: hidden;"></td>
 					</tr>
 					<!-- 현장요금 추가정보 -->
 					<tr>
 						<th class="text-center align-middle">현장 요금<br>추가 정보</th>
 						<td>
 							<div class="">
-								<textarea class="form-control textarea" rows="6" name="detail" placeholder="숙소에서 제공되는 숙박비 외의 유료 서비스가 있을 경우 가격정보와 함께 항목을 기재해주세요."></textarea>
+								<textarea class="form-control textarea" rows="6" name="addCost" placeholder="숙소에서 제공되는 숙박비 외의 유료 서비스가 있을 경우 가격정보와 함께 항목을 기재해주세요."></textarea>
 		                    </div>
 		                    <p class="mt-3">
 								<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="exampleAdd" aria-expanded="false" aria-controls="exampleAdd">
@@ -452,22 +482,24 @@
 		                        </span>
 							</div>
 						</td>
+						<td style="border-left-style: hidden;"></td>
 					</tr>
 					<!-- 주차장 정보 -->
 					<tr>
 						<th class="text-center align-middle">주차장 정보</th>
 						<td>
 							<div class="">
-								<textarea class="form-control textarea" rows="6" name="detail" placeholder="숙소에서 제공되는 숙박비 외의 유료 서비스가 있을 경우 가격정보와 함께 항목을 기재해주세요."></textarea>
+								<textarea class="form-control textarea" rows="6" name="parking" placeholder="숙소에서 제공되는 숙박비 외의 유료 서비스가 있을 경우 가격정보와 함께 항목을 기재해주세요."></textarea>
 		                    </div>
 						</td>
+						<td style="border-left-style: hidden;"></td>
 					</tr>
 					<!-- 확인 및 기타사항 -->
 					<tr>
 						<th class="text-center align-middle">확인 사항<br>및 기타</th>
 						<td>
 							<div class="form-layer">
-								<textarea class="form-control textarea" rows="6" name="detail" placeholder="기재된 숙소 정보 외에 게스트 숙지 사항을 기재해주세요."></textarea>
+								<textarea class="form-control textarea" rows="6" name="etc" placeholder="기재된 숙소 정보 외에 게스트 숙지 사항을 기재해주세요."></textarea>
 		                    </div>
 		                    <p class="mt-3">
 								<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#exampleCheck" aria-expanded="false" aria-controls="exampleCheck">
@@ -485,14 +517,20 @@
 		                        </span>
 							</div>
 						</td>
+						<td style="border-left-style: hidden;"></td>
 					</tr>
 				</tbody>
 		</table>
 		<div class="position-absolute start-50 pb-5">
-			<button class="btn btn-danger btn-submit btn-lg" type="submit">저장하기</button>
+			<button class="btn btn-danger btn-submit btn-lg" name="submit" type="submit">저장하기</button>
 		</div>
 	</form>
 	</div>
 </div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
 </body>
 </html>
