@@ -53,111 +53,207 @@
 				<div class="tab-content" id="myTabContent">
 				  <div class="tab-pane fade show active" id="total-tab-pane" role="tabpanel" aria-labelledby="total-tab" tabindex="0">
 				  <!-- 전체 -->
-				  ...
-				  <table>
-				  	<thead>
-				  		<tr>
-				  			<th>번호</th>
-							<th>분류</th>
-							<th>제목</th>
-				  		</tr>
-				  	</thead>
-				  	<tbody>
-				  		<tr>
-				  			<td><a></a></td>
-				  			<td><a></a></td>
-				  			<td><a></a></td>
-				  		</tr>
-				  	</tbody>
-				  </table>
+					  <div class="row">
+					  	<div class="col p-5">
+					  		<table class="talbe">
+					  			<colgroup>
+					  				<col width="10%">
+					  				<col width="10%">
+					  				<col width="">
+					  			</colgroup>
+					  			<thead class="text-center bg-secondary bg-opacity-10">
+					  				<tr>
+					  					<th>번호</th>
+										<th>분류</th>
+										<th>제목</th>
+					  				</tr>
+					  			</thead>
+					  			<tbody>
+					  				<tr>
+					  					<td></td>
+					  				</tr>
+					  			</tbody>
+					  		</table>
+					  	</div>
+					  </div>
+				  </div>
 				  </div>
 				  <div class="tab-pane fade" id="house-tab-pane" role="tabpanel" aria-labelledby="house-tab" tabindex="0">
 				  <!-- 숙소관리 -->
-				  ...
+				  <div class="row">
+					  	<div class="col p-5">
+					  		<table class="talbe">
+					  			<colgroup>
+					  				<col width="10%">
+					  				<col width="10%">
+					  				<col width="">
+					  			</colgroup>
+					  			<thead class="text-center bg-secondary bg-opacity-10">
+					  				<tr>
+					  					<th>번호</th>
+										<th>분류</th>
+										<th>제목</th>
+					  				</tr>
+					  			</thead>
+					  			<tbody>
+					  				<tr>
+					  					<td></td>
+					  				</tr>
+					  			</tbody>
+					  		</table>
+					  	</div>
+					  </div>
 				  </div>
 				  <div class="tab-pane fade" id="reserve-tab-pane" role="tabpanel" aria-labelledby="reserve-tab" tabindex="0">
 				  <!-- 예약관리 -->
-				  ...
+				  <div class="row">
+					  	<div class="col p-5">
+					  		<table class="talbe">
+					  			<colgroup>
+					  				<col width="10%">
+					  				<col width="10%">
+					  				<col width="">
+					  			</colgroup>
+					  			<thead class="text-center bg-secondary bg-opacity-10">
+					  				<tr>
+					  					<th>번호</th>
+										<th>분류</th>
+										<th>제목</th>
+					  				</tr>
+					  			</thead>
+					  			<tbody>
+					  				<tr>
+					  					<td></td>
+					  				</tr>
+					  			</tbody>
+					  		</table>
+					  	</div>
+					  </div>
 				  </div>
 				  <div class="tab-pane fade" id="ad-tab-pane" role="tabpanel" aria-labelledby="ad-tab" tabindex="0">
 				  <!-- 광고상품 -->
-				  ...
+				  <div class="row">
+					  	<div class="col p-5">
+					  		<table class="talbe">
+					  			<colgroup>
+					  				<col width="10%">
+					  				<col width="10%">
+					  				<col width="">
+					  			</colgroup>
+					  			<thead class="text-center bg-secondary bg-opacity-10">
+					  				<tr>
+					  					<th>번호</th>
+										<th>분류</th>
+										<th>제목</th>
+					  				</tr>
+					  			</thead>
+					  			<tbody>
+					  				<tr>
+					  					<td></td>
+					  				</tr>
+					  			</tbody>
+					  		</table>
+					  	</div>
+					  </div>
 				  </div>
 				  <div class="tab-pane fade" id="etc-tab-pane" role="tabpanel" aria-labelledby="etc-tab" tabindex="0">
 				  <!-- 광고상품 -->
-				  ...
+				  <div class="row">
+					  	<div class="col p-5">
+					  		<table class="talbe">
+					  			<colgroup>
+					  				<col width="10%">
+					  				<col width="10%">
+					  				<col width="">
+					  			</colgroup>
+					  			<thead class="text-center bg-secondary bg-opacity-10">
+					  				<tr>
+					  					<th>번호</th>
+										<th>분류</th>
+										<th>제목</th>
+					  				</tr>
+					  			</thead>
+					  			<tbody>
+					  				<tr>
+					  					<td></td>
+					  				</tr>
+					  			</tbody>
+					  		</table>
+					  	</div>
+					  </div>
 				  </div>
 				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col p-5">
-				<table class="table mt-3 ">
-					<colgroup>
-						<col width="10%">
-						<col width="10%">
-						<col width="">
-					</colgroup>
-					<thead class="text-center bg-secondary bg-opacity-10">
-						<tr>
-							<th>번호</th>
-							<th>분류</th>
-							<th>제목</th>
-						</tr>
-					</thead>
-					<tbody class="fs-6">
-						<tr class="text-center">
-							<td>10</td>
-							<td>기타</td>
-							<td>Q. 취소환불규정이 어떻게 되나요?</td>
-						</tr>
-						<tr class="text-center">
-							<td>10</td>
-							<td>기타</td>
-							<td>Q. 취소환불규정이 어떻게 되나요?</td>
-						</tr>
-						<tr class="text-center">
-							<td>10</td>
-							<td>기타</td>
-							<td>Q. 취소환불규정이 어떻게 되나요?</td>
-						</tr>
-						<tr class="text-center">
-							<td>10</td>
-							<td>기타</td>
-							<td>Q. 취소환불규정이 어떻게 되나요?</td>
-						</tr>
-						<tr class="text-center">
-							<td>10</td>
-							<td>기타</td>
-							<td>Q. 취소환불규정이 어떻게 되나요?</td>
-						</tr>
-						<tr class="text-center">
-							<td>10</td>
-							<td>기타</td>
-							<td>Q. 취소환불규정이 어떻게 되나요?</td>
-						</tr>
-						<tr class="text-center">
-							<td>10</td>
-							<td>기타</td>
-							<td>Q. 취소환불규정이 어떻게 되나요?</td>
-						</tr>
-						<tr class="text-center">
-							<td>10</td>
-							<td>기타</td>
-							<td>Q. 취소환불규정이 어떻게 되나요?</td>
-						</tr>
-						<tr class="text-center">
-							<td>10</td>
-							<td>기타</td>
-							<td>Q. 취소환불규정이 어떻게 되나요?</td>
-						</tr>
-					</tbody>
-				</table>
+			
+			<div class="row">
+				<div class="col p-5">
+					<table class="table mt-3 ">
+						<colgroup>
+							<col width="10%">
+							<col width="10%">
+							<col width="">
+						</colgroup>
+						<thead class="text-center bg-secondary bg-opacity-10">
+							<tr>
+								<th>번호</th>
+								<th>분류</th>
+								<th>제목</th>
+							</tr>
+						</thead>
+						<tbody class="fs-6">
+							<tr class="text-center">
+								<td>10</td>
+								<td>기타</td>
+								<td>Q. 취소환불규정이 어떻게 되나요?</td>
+							</tr>
+							<tr class="text-center">
+								<td>10</td>
+								<td>기타</td>
+								<td>Q. 취소환불규정이 어떻게 되나요?</td>
+							</tr>
+							<tr class="text-center">
+								<td>10</td>
+								<td>기타</td>
+								<td>Q. 취소환불규정이 어떻게 되나요?</td>
+							</tr>
+							<tr class="text-center">
+								<td>10</td>
+								<td>기타</td>
+								<td>Q. 취소환불규정이 어떻게 되나요?</td>
+							</tr>
+							<tr class="text-center">
+								<td>10</td>
+								<td>기타</td>
+								<td>Q. 취소환불규정이 어떻게 되나요?</td>
+							</tr>
+							<tr class="text-center">
+								<td>10</td>
+								<td>기타</td>
+								<td>Q. 취소환불규정이 어떻게 되나요?</td>
+							</tr>
+							<tr class="text-center">
+								<td>10</td>
+								<td>기타</td>
+								<td>Q. 취소환불규정이 어떻게 되나요?</td>
+							</tr>
+							<tr class="text-center">
+								<td>10</td>
+								<td>기타</td>
+								<td>Q. 취소환불규정이 어떻게 되나요?</td>
+							</tr>
+							<tr class="text-center">
+								<td>10</td>
+								<td>기타</td>
+								<td>Q. 취소환불규정이 어떻게 되나요?</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col">
-				<!-- 페이징처리 -->
+			<div class="row">
+				<div class="col">
+					<!-- 페이징처리 -->
+				</div>
 			</div>
 		</div>
 	</div>
