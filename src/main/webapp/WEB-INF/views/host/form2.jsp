@@ -30,7 +30,7 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 		<li>[이용규칙관리] 는 업체 공통적인 정책을 기입하는 란입니다. (체크인, 체크아웃, 성수기 설정 등)</li>
 		<li>우측 물음표를 클릭하시면 앱에서 어떻게 표시되는지 확인이 가능합니다.</li>
     </ul>
-    <form>
+    <form method="post" action="updateHouseInfo2" class="pt-4 mt-4">
 		<table class="table table-bordered">
 			<colgroup>
 				<col width="10%" class="bg-secondary p-2 text-white bg-opacity-25">
