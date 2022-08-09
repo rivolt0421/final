@@ -38,7 +38,7 @@ public class UserController {
 		return "user/couponbox";
 	}
 	
-	@GetMapping(path ="/reservations")
+	@GetMapping(path ="/reservation")
 	public String reservation() {
 		
 		return "user/reservation";

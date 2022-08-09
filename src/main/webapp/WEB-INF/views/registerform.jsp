@@ -30,8 +30,8 @@
                    <label for="name-field" class="form-label"><b>이름</b></label>
                    <form:input class="form-control" path="name" id="name-field" placeholder="이름을 입력해주세요."/>
                    <form:errors path="name" class="text-danger small fst-italic"></form:errors>
-                </div>   
-                <div class="mb-3">
+                </div> 
+	            <div class="mb-3">
                    <label for="email-field" class="form-label"><b>이메일</b></label>
                    <form:input class="form-control" path="email" id="email-field" placeholder="이메일 주소를 입력해주세요."/>
                    <form:errors path="email" class="text-danger small fst-italic"></form:errors>
@@ -63,9 +63,6 @@
 </div>
  
 <script type="text/javascript">
-$(funciton(){
-   
-})
 </script>
 </body>
 </html>

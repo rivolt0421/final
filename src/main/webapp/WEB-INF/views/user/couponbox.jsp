@@ -9,184 +9,49 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <title>여행할때 굿초이스</title>
 <link href="/favicon.ico" rel="icon" type="image/x-icon">
-<link href="/css/userinfo.css" rel="stylesheet">
+<link href="/css/font.css" rel="stylesheet">
+<link href="/css/common.css" rel="stylesheet">
 <style>
-* {
-    outline: 0;
-}
-@media (min-width: 1024px) {
-	.sub_top_wrap {
-    height: 211px;
-    background: #f7323f;
-	}
-}
-div, h2, p, nav, ul, li {
-	margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-@media (min-width: 1024px) {
-	.sub_top {
-    width: 1024px;
-    height: 211px;
-    margin: 0 auto;
-    padding-top: 72px;
-    border-radius: 0;
-    background: none;
-    position: relative;
-	}
-}
-
-@media (min-width: 1024px) {
-.sub_top h2 {
-    display: block;
-    margin: 21px 0 0 31px;
-    font-size: 38px;
-    font-weight: normal;
-    letter-spacing: -1px;
-    color: #fff;
-	}
-}
-
-#content {
-    overflow: hidden;
-}
-
-@media (min-width: 1024px) {
-	.my_wrap {
-    padding-top: 54px;
-	}
-}
-
-.sub_wrap {
-    min-height: 390px;
-}
-
-@media (min-width: 1024px) {
-.sub_wrap {
-    width: 1024px !important;
-    margin: 0 auto 0 auto;
-    padding-bottom: 50px;
-	}
-}
-
-@media (min-width: 1024px) {}
-.sub_wrap .sub_title {
-    display: none;
-	}
-}
-
-.sub_wrap .sub_title {
-    position: relative;
-    height: 44px;
-    background: #fff;
-    font-size: 18px;
-    line-height: 44px;
-    text-align: center;
-}
-
-@media (min-width: 1024px) {
-.sub_wrap nav {
-    display: block;
-    float: left;
-    width: 238px;
-    padding-left: 31px;
-	}
-}
-
-ul, ol, li {
-    list-style: none;
-}
-
-.sub_wrap nav ul li {
-    margin-bottom: 26px;
-}
-
-.sub_wrap nav ul li a {
-    display: block;
-    font-size: 18px;
-    color: rgba(0,0,0,0.56);
-}
-
-a {
-    text-decoration: none;
-}
-
-a, input, button, div, li, textarea, label, select {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-@media (min-width: 1024px) {
-.sub_wrap .align_rt {
-    float: right;
-    width: 724px;
-    margin-right: 31px;
-	}
-}
-
-.mypage {
-    padding: 0 16px;
-    font-size: 16px;
-    overflow: hidden;
-}
-
-.mypage .bot_link {
-    margin: 30px 0;
-}
-
-.mypage .bot_link a {
-    display: inline-block;
-    color: rgba(0,0,0,0.87);
-    text-decoration: underline;
-}
-
-.active {
-	font-size: 18px;
-    font-weight: bold;
-    color: rgb(230,28,81);
-}
 
 </style>
 </head>
 <body>
+<link href="/css/mypage.css" rel="stylesheet">
 <%@ include file="../common/nav.jsp" %>
-
-<div class="sub_top_wrap">
-	<div class="sub_top bg_kong_2">
-		<h2>내정보</h2>
-	</div>
-	<div id="content" class="sub_wrap my_wrap">
-		<p class="sub_title">내 정보 관리</p>
-		<nav>
-			<ul>
-				<li>
-					<a class="" href="/user/point">포인트</a>
-				</li>
-				<li>
-					<a class="active" href="/user/couponbox">쿠폰함</a>
-				</li>
-				<li>
-					<a class="" href="/user/reservations">예약 내역</a>
-				</li>
-				<li>
-					<a class="" href="/user/myinfo">내 정보 관리</a>
-				</li>
-			</ul>
-		</nav>
-		<div class="align_rt">
-			<div class="mypage">
-				<section class="top_area">
-	
-				</section>
-				<p class="bot_link">
-					<a href="">비밀번호 변경</a> >
-				</p>
-			</div>
+<div class="wrap show">
+	<div class="sub_top_wrap">
+		<div class="sub_top bg_kong_2">
+			<h2>내정보</h2>
 		</div>
 	</div>
+	
+	<div id="content" class="sub_wrap my_wrap">
+	    <nav>
+	        <ul>
+	            <li><a class="" href="/user/point" style="text-decoration: none;">포인트</a></li>
+	            <li><a class="active" href="/user/couponbox" style="text-decoration: none;">쿠폰함</a></li>
+	            <li><a class="" href="/user/reservation" style="text-decoration: none;">예약 내역</a></li>
+	            <li><a class="" href="/user/myinfo" style="text-decoration: none;">내 정보 관리</a></li>
+	        </ul>
+   	  </nav>
+		<div class="align_rt">
+
+        <div class="watch_wrap">
+            <div class="watch_top coupon_top">
+                <strong><span>보유쿠폰</span></strong> <b>0장</b>
+            </div>
+
+            <div class="coupon_wrap">
+                            <!-- 리스트 없을시 -->
+                <div class="list_none" style="display: block;">
+                    보유한 쿠폰이 없습니다.<br>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+	</div>
 </div>
+<%@ include file="../common/footer.jsp" %>
 </body>
 </html>
