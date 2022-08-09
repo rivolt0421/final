@@ -48,10 +48,9 @@
               </li>
 			  </c:if>
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" />
-              <button class="" type="submit"><i class="fas fa-magnifying-glass"></i></button>
-            </form>
+            <button class="btn_srch srch_open" type="button"><i class="fas fa-magnifying-glass"></i></button>
+            <input id="keyword" class="me-2 srch_bar" placeholder="지역, 숙소명" autocomplete="off" style="display: none;"/>
+            <button class="btn_cancel" type="button" onclick="srch_close()" style="display: none;"><i class="fas fa-xmark"></i></button>
           </div>
         </div>
     </nav>

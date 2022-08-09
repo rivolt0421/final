@@ -47,6 +47,45 @@ nav.scroll .brand_logo{
 	background-repeat: no-repeat;
 	background-position: center;
 }
+nav.scroll .srch_bar:focus{
+	color: rgba(0,0,0,0.85);
+}
+nav.scroll .srch_bar::placeholder{
+	color: rgba(0,0,0,0.85);	
+}
+
+/* open srch_bar */
+nav .container {
+	position: relative;
+	margin: 0 150px;
+}
+.btn_srch{
+	position: absolute;
+	right: 0;
+}
+.btn_cancel{
+	position: absolute;
+	right: 0;
+}
+.srch_bar{
+	width: 550px;
+	background: transparent;
+	position: absolute;
+	left: 640px;
+	border: none;
+	color: rgba(255,255,255,0.85);
+	outline: none;
+	font-size: 18px;
+}
+.srch_bar:focus{
+	outline: none;
+	background: transparent;
+	color: rgba(255,255,255,0.85);	
+}
+.srch_bar::placeholder{
+	color: rgba(255,255,255,0.65);	
+}
+
 
 /* footer */
 footer div.align{
