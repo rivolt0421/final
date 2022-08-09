@@ -9,6 +9,19 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <title>Insert title here</title>
+<link href="/favicon.ico" rel="icon" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
+<style type="text/css">
+th{
+font-family: 'Do Hyeon', sans-serif;
+}
+td{
+font-family: 'IBM Plex Sans KR', sans-serif;
+}
+</style>
 </head>
 <body>
 <div class="container">
@@ -17,10 +30,12 @@
 		<form>
 			<table class="table table-bordered">
 				<colgroup>
-					<col width="10%">
+					<col width="10%" class="bg-secondary p-2 text-white bg-opacity-25">
 					<col width="77%">
+					<col width="3%">
 				</colgroup>
 				<tbody>
+					<!-- 객실정보 -->
 					<tr>
 						<th class="text-center align-middle">객실정보</th>
 						<td>
@@ -47,7 +62,7 @@
 								<div class="col-1 pt-2">인원</div>
 								<div class="col-1 pt-2">정원</div>
 								<div class="col-2">
-									<select name="people" class="form-select">
+									<select name="roomPeople" class="form-select">
 	                                    <option value="2">2 명</option>
 	                                    <option value="3">3 명</option>
 	                                    <option value="4">4 명</option>
@@ -61,12 +76,18 @@
 								</div>
 							</div>
 						</td>
+						<td style="border-left-style: hidden;"  class="align-middle">
+							<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="TooltipOnLeft">
+							  ?
+							</button>
+						</td>
 					</tr>
+					<!-- 이미지 정보 -->
 					<tr>
 						<th class="text-center align-middle">이미지 정보<br>(최대 15장)</th>
 						<td>
 							<div class="mb-3">
-								<span>
+								<span class="text-black-50">
 									* 객실의 전반적인 이미지를 업로드 해주시기 바랍니다.<br>
 									* 이미지 교체를 원하시면 "변경"을 선택하시고 삭제를 원하시면 우측 "삭제"를 선택하시기 바랍니다.<br>
 									* 이미지 장소는 짧게 기입해주시기 바랍니다. 예시) 객실명, 침대, 화장실 등<br>
@@ -74,16 +95,22 @@
 								</span>
 							</div>
 							<div>
-								<input type="file" class="form-control col-3"></input>
+								<input type="file" class="form-control col-3" name="roomPictures"></input>
 							</div>
 						</td>
+						<td style="border-left-style: hidden;"  class="align-middle">
+							<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="TooltipOnLeft">
+							  ?
+							</button>
+						</td>
 					</tr>
+					<!-- 객실 소개글 -->
 					<tr>
 						<th class="text-center align-middle">객실 소개글</th>
 						<td>
 							<div class="mt-2">
 								<div class="">
-									<textarea class="form-control textarea" rows="6" name="houseDetail" placeholder="객실 내 침대 구성과, 전용 욕실 여부 등 객실 소개/구성을 자세히 기재해주세요."></textarea>
+									<textarea class="form-control textarea" rows="6" name="roomDetail" placeholder="객실 내 침대 구성과, 전용 욕실 여부 등 객실 소개/구성을 자세히 기재해주세요."></textarea>
 								</div>
 								<p class="mt-3">
 									<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#roomIntroduce" aria-expanded="false" aria-controls="roomIntroduce">
@@ -107,7 +134,9 @@
 								</div>
 							</div>
 						</td>
+						<td style="border-left-style: hidden;"></td>
 					</tr>
+					<!-- 편의시설 및 서비스 안내 -->
 					<tr>
 						<th class="text-center align-middle">편의시설<br>서비스 안내</th>
 						<td>
@@ -119,47 +148,60 @@
 								</div>
 							</div>
 						</td>
+						<td style="border-left-style: hidden;"  class="align-middle">
+							<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="TooltipOnLeft">
+							  ?
+							</button>
+						</td>
 					</tr>
+					<!-- 요금설정 -->
 					<tr>
 						<th class="text-center align-middle">요금설정<br>
 							<a class="btn btn-secondary btn-sm" type="button" href="" target="blank">준/성수기<br>기간 설정></a>
 						</th>
 						<td class="">
 							<div class="pb-2 mb-2">
-								<span class="fs-6 col-12">* 해당 페이지의 요금 설정은 객실별 기준가격 입니다. 객실별 판매 금액은 '예약관리 > 실시간 예약 관리' 에서 수정하셔야 합니다.</span>
+								<span class="fs-6 col-12 text-black-50">* 해당 페이지의 요금 설정은 객실별 기준가격 입니다. 객실별 판매 금액은 '예약관리 > 실시간 예약 관리' 에서 수정하셔야 합니다.</span>
 							</div>
 							<div class="row">
 								<span class="col-sm-3"><strong>기본(비수기)</strong><br>
-									<p>
+									<p class="text-black-50">
 									*준 성수기, 성수기<br>제외한 모든 날짜
 									</p>
 								</span>
 								<div class="col-7 border">
 		                            <div class="ms-2 mt-4 me-2 mb-2">
-			                            <label class="me-2"><input type="checkbox" class="" checked="checked">일</label>
-			                            <label class="me-2"><input type="checkbox" class="" checked="checked">월</label>
-			                            <label class="me-2"><input type="checkbox" class="" checked="checked">화</label>
-			                            <label class="me-2"><input type="checkbox" class="" checked="checked">수</label>
-			                            <label class="me-2"><input type="checkbox" class="" checked="checked">목</label>
-			                            <label class="me-2"><input type="checkbox" class="">금</label>
-			                            <label class="me-2"><input type="checkbox" class="">토</label>
-			                            <label class="me-2"><input type="checkbox" class="">공휴일</label>
-			                            <label class="me-2"><input type="checkbox" class="">공휴일 전날</label>
+			                            <label class="me-2"><input type="checkbox" class="" checked="checked" name="sun">일</label>
+			                            <label class="me-2"><input type="checkbox" class="" checked="checked" name="mon">월</label>
+			                            <label class="me-2"><input type="checkbox" class="" checked="checked" name="tue">화</label>
+			                            <label class="me-2"><input type="checkbox" class="" checked="checked" name="wed">수</label>
+			                            <label class="me-2"><input type="checkbox" class="" checked="checked" name="thur">목</label>
+			                            <label class="me-2"><input type="checkbox" class="" name="fri">금</label>
+			                            <label class="me-2"><input type="checkbox" class="" name="sat">토</label>
+			                            <label class="me-2"><input type="checkbox" class="" name="holi">공휴일</label>
+			                            <label class="me-2"><input type="checkbox" class="" name="holiBefore">공휴일 전날</label>
 		                            </div>
 		                            <div class="">
 			                            <label class="ms-2 mt-2 me-2 mb-2" style="margin-right:10px">
-			                            정상가 : <input class="form-control" type="text" style="width:90px">원
+			                            정상가 : <input class="form-control" name="price" type="text" style="width:90px">원
 			                            </label>
 		                            </div>
 	                            </div>
 	                         </div>
 						</td>
+						<td style="border-left-style: hidden;"  class="align-middle">
+							<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="TooltipOnLeft">
+							  ?
+							</button>
+						</td>
 					</tr>
 				</tbody>
 			</table>
+			<div class="position-absolute start-50 pb-5">
+				<button class="btn btn-danger btn-lg" name="submit" type="submit">저장하기</button>
+			</div>
 		</form>
 	</div>
-				
 </div>
 </body>
 </html>
