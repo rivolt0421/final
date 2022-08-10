@@ -7,7 +7,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class OftenCategories {
+public class OftenCategory {
 
 	private String id;
 	private String type;
