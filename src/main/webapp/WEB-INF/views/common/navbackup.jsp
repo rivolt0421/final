@@ -3,7 +3,7 @@
    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon">asdf</span>
          </button>
           <!-- 브랜드 로고 -->
           <h1 class="brand_logo"><a href="/" title="굿초이스">굿초이스</a></h1>
@@ -48,9 +48,9 @@
               </li>
 			  </c:if>
             </ul>
-          </div>
             <button class="btn_srch srch_open" type="button"><i class="fas fa-magnifying-glass"></i></button>
             <input id="keyword" class="me-2 srch_bar" placeholder="지역, 숙소명" autocomplete="off" style="display: none;"/>
             <button class="btn_cancel" type="button" onclick="srch_close()" style="display: none;"><i class="fas fa-xmark"></i></button>
+          </div>
         </div>
     </nav>

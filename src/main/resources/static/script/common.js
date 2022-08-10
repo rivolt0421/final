@@ -27,7 +27,7 @@ function srch_open(){
 function srch_close() {
 	$('nav .srch_bar').hide();
 	$('nav .btn_cancel').fadeOut(150);
-	$('nav .btn_srch').stop().animate({right:0},'150');
+	$('nav .btn_srch').stop().animate({right:150},'150');
 	$('nav .srch_bar').val("");
 }
 

@@ -9,10 +9,11 @@
 		<result column="often_content" property="content"/>
 		<result column="created_date" property="createdDate"/>
 		<result column="updated_date" property="updatedDate"/>
+		<association property="often" column="often_id" select="kr.co.goodchoice.mapper.OftenCategoryMapper.getOftenById"></association>
 	</resultMap>
 
 	<!-- Often getOftenById(String id); -->
-	<select id="getOftenById" parameterType="string">
+	<select id="getOftenById" parameterType="string" resultMap="OftenResultMap">
 		select *
 		from often_questions
 		where often_id = #{value}

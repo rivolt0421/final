@@ -9,8 +9,14 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <title>여행할때 굿초이스</title>
 <link href="/favicon.ico" rel="icon" type="image/x-icon">
+<<<<<<< HEAD
 <link href="/css/font.css" rel="stylesheet">
 <link href="/css/common.css" rel="stylesheet">
+=======
+<link href="/css/userinfo.css" rel="stylesheet">
+<script src="/script/common.js"></script>
+<script src="https://kit.fontawesome.com/4f71b1e252.js" crossorigin="anonymous"></script>
+>>>>>>> master
 <style>
 
 </style>

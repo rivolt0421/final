@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import kr.co.goodchoice.web.form.HostUpdateForm;
+import kr.co.goodchoice.web.form.HostMypageUpdateForm;
 
 @Controller
 public class HostMypageContorller {
@@ -19,9 +19,9 @@ public class HostMypageContorller {
 	}
 
 	@PostMapping("/updateMyInfo")
-	public String updateMyInfo(HostUpdateForm hostUpdateForm) {
+	public String updateMyInfo(HostMypageUpdateForm hostMypageUpdateForm) {
 		
-		System.out.println(hostUpdateForm);
+		System.out.println(hostMypageUpdateForm);
 		
 		return "redirect:/host/mypage";
 	}

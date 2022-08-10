@@ -9,7 +9,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class HostUpdateForm {
+public class HostMypageUpdateForm {
 
 	private String phone1;
 	private String phone2;

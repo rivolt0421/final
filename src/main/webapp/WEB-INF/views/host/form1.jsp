@@ -27,11 +27,11 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 <div class="container">
 	<!-- 호스트 필수 정보 입력폼 -->
 	<div class="list">
-		<ul>
-	        <li>[소개 작성] 은 게스트하우스 전체를 소개하는 기능입니다. (사진, 이벤트 정보, 오시는 길 등)</li>
-	        <li>우측 물음표를 클릭하시면 앱에서 어떻게 표시되는지 확인이 가능합니다.</li>
-        </ul>
-        <form>
+        <form method="post" action="updateHouseInfo1" class="pt-4 mt-4">
+			<ul>
+		        <li>[소개 작성] 은 게스트하우스 전체를 소개하는 기능입니다. (사진, 이벤트 정보, 오시는 길 등)</li>
+		        <li>우측 물음표를 클릭하시면 앱에서 어떻게 표시되는지 확인이 가능합니다.</li>
+	        </ul>
 			<h3>[필수 기입 정보]</h3>
 			<table class="table table-bordered">
 				<colgroup>
@@ -58,16 +58,16 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 								<span class="col-sm-5">
 									<input class="form-control" id="inputRoadAddress" type="text" name="address1" readonly placeholder="업체 주소를 입력하세요." value="">
 								</span>
-								<button type="button" class="btn btn-danger col-1">주소검색</button>
-							</div>
-							<div class="">
-								<div class="">
-									<input class="form-control" type="text" name="address2" placeholder="나머지 주소를 입력하세요." value="">
+								<div class="col-2">
+									<input class="form-control" id="inputRoadAddress1" type="text" name="address2" placeholder="나머지 주소를 입력하세요." value="" />
 								</div>
+								<input type="button" class="btn btn-danger col-1" onclick="daumAddress()" value="주소검색" />
 							</div>
+							
+							
 						</td>
 						<td style="border-left-style: hidden;"  class="align-middle">
-							<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="">
+							<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="/final/src/main/resources/static/images/host/tooltipImage.png">
 							  ?
 							</button>
 						</td>
@@ -527,10 +527,58 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 	</form>
 	</div>
 </div>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+// 다음 지도 API 가져오기
+function daumAddress() {
+	new daum.Postcode({
+        oncomplete: function(data) {
+            // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
+            
+        	// 각 주소의 노출 규칙에 따라 주소를 조합한다.
+            // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+            var addr = ''; // 주소 변수
+            var extraAddr = ''; // 참고항목 변수
+
+            //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+            if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                addr = data.roadAddress;
+            } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                addr = data.jibunAddress;
+            }
+
+            // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+            if(data.userSelectedType === 'R'){
+                // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+                // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+                if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                    extraAddr += data.bname;
+                }
+                // 건물명이 있고, 공동주택일 경우 추가한다.
+                if(data.buildingName !== '' && data.apartment === 'Y'){
+                    extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                }
+                // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+                if(extraAddr !== ''){
+                    extraAddr = ' (' + extraAddr + ')';
+                }
+                // 조합된 참고항목을 해당 필드에 넣는다.
+                addr += extraAddr;
+            
+            } else {
+                addr += ' ';
+            }
+
+            // 주소 정보를 해당 필드에 넣는다.
+            document.getElementById("inputRoadAddress").value = addr;
+            
+            // 커서를 상세주소 필드로 이동한다.
+            document.getElementById("inputRoadAddress1").focus();
+        }
+    }).open(); 
+}
+</script>
 <script type="text/javascript">
-$(document).ready(function(){
-	$('[data-toggle="tooltip"]').tooltip();   
-});
 </script>
 </body>
 </html>

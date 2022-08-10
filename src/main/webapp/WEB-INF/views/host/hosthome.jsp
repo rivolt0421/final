@@ -29,10 +29,6 @@
 		<div class="row mb-4 rounded" >
 			<div class="col bg-image"></div>
 		</div>
-	
-	
-	
-	
 	<div class="row">
 		<!-- 공지사항 -->
 		<div class="col-4 shadow border bg-white rounded">

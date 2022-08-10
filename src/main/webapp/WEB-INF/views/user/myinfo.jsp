@@ -11,6 +11,8 @@
 <link href="/css/font.css" rel="stylesheet">
 <link href="/css/common.css" rel="stylesheet">
 <link href="/favicon.ico" rel="icon" type="image/x-icon">
+<script src="/script/common.js"></script>
+<script src="https://kit.fontawesome.com/4f71b1e252.js" crossorigin="anonymous"></script>
 <style>
 
 </style>
@@ -26,7 +28,7 @@
 	</div>
 	
 	<div id="content" class="sub_wrap my_wrap">
-	    <nav>
+	    <nav class="side">
 	        <ul>
 	            <li><a class="" href="/user/point" style="text-decoration: none;">포인트</a></li>
 	            <li><a class="" href="/user/couponbox" style="text-decoration: none;">쿠폰함</a></li>

@@ -11,6 +11,12 @@
 <link href="/css/font.css" rel="stylesheet">
 <link href="/css/common.css" rel="stylesheet">
 <link href="/favicon.ico" rel="icon" type="image/x-icon">
+<<<<<<< HEAD
+=======
+<link href="/css/home.css" rel="stylesheet">
+<script src="/script/common.js"></script>
+<script src="https://kit.fontawesome.com/4f71b1e252.js" crossorigin="anonymous"></script>
+>>>>>>> master
 <style>
 
 </style>
