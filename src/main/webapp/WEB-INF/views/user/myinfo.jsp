@@ -10,6 +10,8 @@
 <title>여행할때 굿초이스</title>
 <link href="/css/userinfo.css" rel="stylesheet">
 <link href="/favicon.ico" rel="icon" type="image/x-icon">
+<script src="/script/common.js"></script>
+<script src="https://kit.fontawesome.com/4f71b1e252.js" crossorigin="anonymous"></script>
 <style>
 
 </style>
@@ -24,7 +26,7 @@
 	</div>
 	
 	<div id="content" class="sub_wrap my_wrap">
-	    <nav>
+	    <nav class="side">
 	        <ul>
 	            <li><a class="" href="/user/point">포인트</a></li>
 	            <li><a class="" href="/user/couponbox">쿠폰함</a></li>

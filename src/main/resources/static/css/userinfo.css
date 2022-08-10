@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "nav.css";
 
 * {
     outline: 0;
@@ -9,7 +10,7 @@
     background: #f7323f;
 	}
 }
-div, h2, p, nav, ul, li {
+div, h2, p, nav.side, ul, li {
 	margin: 0;
     padding: 0;
     border: 0;
@@ -78,7 +79,7 @@ div, h2, p, nav, ul, li {
 }
 
 @media (min-width: 1024px) {
-.sub_wrap nav {
+.sub_wrap nav.side {
     display: block;
     float: left;
     width: 238px;
@@ -90,11 +91,11 @@ ul, ol, li {
     list-style: none;
 }
 
-.sub_wrap nav ul li {
+.sub_wrap nav.side ul li {
     margin-bottom: 26px;
 }
 
-.sub_wrap nav ul li a {
+.sub_wrap nav.side ul li a {
     display: block;
     font-size: 18px;
     color: rgba(0,0,0,0.56);
