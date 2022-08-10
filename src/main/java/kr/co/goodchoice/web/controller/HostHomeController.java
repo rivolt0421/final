@@ -47,4 +47,10 @@ public class HostHomeController {
 	public String serviceterms() {
 		return "host/hostserviceterms";
 	}
+	
+	// 매출 내역
+	@GetMapping(path = "/saleshistory")
+	public String saleshistory() {
+		return "host/saleshistory";
+	}
 }
