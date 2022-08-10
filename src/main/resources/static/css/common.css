@@ -233,8 +233,6 @@ header,.roll{position:relative;background:#f7323f}
 .menu_wrap .scroll_nav ul .has_ul{position:relative}
 .menu_wrap .scroll_nav ul .has_ul:after{display:inline-block;content:'';position:absolute;top:50%;right:0;width:10px;height:6px;margin-top:-3px;background:url('//image.goodchoice.kr/images/web_v3/ico_arr_2.png') 0 0 no-repeat;background-size:10px auto}
 .menu_wrap .scroll_nav ul .open:after{display:inline-block;content:'';position:absolute;top:50%;right:0;width:10px;height:6px;margin-top:-3px;background:url('//image.goodchoice.kr/images/web_v3/ico_arr_2.png') 0 -6px no-repeat;background-size:10px auto}
-.srch_bar{display:none;position:fixed;top:0;left:0;right:0;z-index:300;height:44px;background:#f9f9f9;touch-action:none}
-.srch_bar .wrap_inp{overflow:hidden;position:relative;margin:6px 56px 0 16px;padding:0 15px 0 35px;height:32px;border:1px solid rgba(0,0,0,0.08);border-radius:4px;background:#fff;}
 
 .srch_bar .wrap_inp input{border:none;background:none;width:100%;height:20px;margin-top:4.5px;line-height:20px;font-size:15px;color:rgba(0,0,0,0.87);}
 /*.srch_bar .wrap_inp input{width:100%;height:19px;margin:4px 0 0 0;border:none;background:none;font-size:15px;color:rgba(0,0,0,0.87);line-height:normal;}*/

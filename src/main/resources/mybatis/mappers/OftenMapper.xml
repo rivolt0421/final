@@ -12,7 +12,7 @@
 	</resultMap>
 
 	<!-- Often getOftenById(String id); -->
-	<select id="getOftenById" parameterType="string">
+	<select id="getOftenById" parameterType="string" resultMap="OftenResultMap">
 		select *
 		from often_questions
 		where often_id = #{value}

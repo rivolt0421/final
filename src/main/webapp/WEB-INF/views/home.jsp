@@ -13,7 +13,7 @@
 <link href="/css/home.css" rel="stylesheet">
 <link href="/css/swiper.css" rel="stylesheet">
 <!-- script -->
-<script src="/script/home.js"></script>
+<script src="/script/common.js"></script>
 <!-- fontawesome -->
 <script src="https://kit.fontawesome.com/4f71b1e252.js" crossorigin="anonymous"></script>
 </head>

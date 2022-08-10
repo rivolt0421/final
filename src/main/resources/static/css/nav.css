@@ -1,0 +1,101 @@
+@charset "UTF-8";
+@import "variables.css";
+@import "common.css";
+@import "main.css";
+
+nav {
+	height: 70px;
+	transition: 0.4s;
+	background-color: var(--brand-color);
+}
+.brand_logo {
+	width: 96px;
+	background-image: url(/images/whitetext.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-right: 20px;
+}
+.brand_logo a {
+	display: block;
+	text-indent: -9999px;
+}
+nav ul li a , nav i{
+	font-size: 18px !important;	
+	color: rgba(255,255,255,0.85);
+}
+nav button {
+	border: none;
+	background: transparent;
+}
+
+/* scroll */
+nav.scroll {
+	background-color: #fff;
+	box-shadow: 0px 2px 3px 0px rgb(0 0 0 / 10%);
+}
+nav.scroll li a, nav.scroll i{
+	color: rgba(0,0,0,0.85);
+}
+nav.scroll li a:hover{
+	color: var(--brand-color);
+}
+nav.scroll .brand_logo{
+	width: 96px;
+	background-image: url(/images/redtext.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+nav.scroll .srch_bar:focus{
+	color: rgba(0,0,0,0.85);
+}
+nav.scroll .srch_bar::placeholder{
+	color: rgba(0,0,0,0.85);	
+}
+
+/* open srch_bar */
+nav .container {
+	position: relative;
+	padding: 0 150px;
+	height: auto;
+}
+.btn_srch{
+	position: absolute;
+	right: 150px;
+}
+.btn_cancel{
+	position: absolute;
+	right: 150px;
+}
+.srch_bar{
+	width: 420px;
+	background: transparent;
+	position: absolute;
+	right: 150px;
+	border: none;
+	color: rgba(255,255,255,0.85);
+	outline: none;
+	font-size: 18px;
+}
+.srch_bar:focus{
+	outline: none;
+	background: transparent;
+	color: rgba(255,255,255,0.85);	
+}
+.srch_bar::placeholder{
+	color: rgba(255,255,255,0.65);	
+}
+
+
+/* footer */
+footer div.align{
+	position: relative;
+}
+footer ul.link i {
+	font-size: 40px;
+	position: absolute;
+	right: 20px;
+}
+
+
