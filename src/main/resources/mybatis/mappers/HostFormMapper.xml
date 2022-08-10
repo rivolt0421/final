@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.co.goodchoice.mapper.HostFormMapper">
+	
+	<resultMap type="House" id="HouseResultMap">
+		<id column="HOUSE_NO" property="no"/> <!-- 숙소 번호 -->
+		<result column="HOUSE_NAME" property="name"/> <!-- 업체명 -->
+		<result column="HOUSE_INTRODUCE" property="introduce"/> <!-- 주인장 소개글 -->
+		<result column="APPRAISAL" property="appralsal"/> <!-- 한줄평 -->
+		<result column="HOUSE_ADDRESS" property="address"/> <!-- 업체주소 -->
+		<result column="HOUSE_SURROUND_INFO" property="surroundInfo"/> <!-- 주변정보 -->
+		<result column="HOUSE_NOTICE" property="notice"/> <!-- 공지사항 -->
+		<result column="HOUSE_BASIC_INFO" property="basicInfo"/> <!-- 확인 사항 -->
+		<result column="HOUSE_ADD_PEOPLE_INFO" property="addPeopleInfo"/> <!-- 추가 요금 -->
+		<result column="HOUSE_PARK_INFO" property="parkInfo"/> <!-- 주차장 정보 -->
+		<result column="HOUSE_COVER_IMAGE_NAME" property="coverImageName"/> <!-- 업체 이미지 -->
+	</resultMap>
+	
+	<!-- void insertHouse(House house); -->
+	<insert id="insertHouse" parameterType="House">
+		insert into House
+		(HOUSE_NO, HOUSE_NAME, HOUSE_INTRODUCE, APPRAISAL, HOUSE_ADDRESS, HOUSE_SURROUND_INFO, HOUSE_NOTICE, HOUSE_BASIC_INFO, HOUSE_ADD_PEOPLE_INFO, HOUSE_PARK_INFO, HOUSE_COVER_IMAGE_NAME)
+		values
+		(#{no}, #{name}, #{introduce}, #{appralsal}, #{address}, #{surroundInfo}, #{notice}, #{basicInfo}, #{addPeopleInfo}, #{parkInfo}, #{coverImageName})
+	</insert>
+</mapper>
