@@ -10,6 +10,7 @@
 <title>여행할때 굿초이스</title>
 <link href="/favicon.ico" rel="icon" type="image/x-icon">
 <link href="/css/userinfo.css" rel="stylesheet">
+<link href="/css/home.css" rel="stylesheet">
 <style>
 * {
     outline: 0;

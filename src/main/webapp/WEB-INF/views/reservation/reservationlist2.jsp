@@ -10,7 +10,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <title>여행할때 굿초이스</title>
 <link href="/favicon.ico" rel="icon" type="image/x-icon">
-<link href="/css/home.css" rel="stylesheet">
+
 <style>
 .container {
 	display: flex;
@@ -24,7 +24,7 @@
     height: 100px;
 	padding: 1%;
     margin: 1%;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 .card {
@@ -72,6 +72,8 @@
 				  	<span class="useandcancel">이용완료</span>
 				    <h4><b>(숙소명칭)</b></h4>
 				    <p>(**.** *요일) - (**.** *요일) (*)박</p>
+				    <br>
+				    <a href=""><p style="color:green">다시 예약</p></a>
 				 </div>
 			</div>
 			<div class="reservation">
