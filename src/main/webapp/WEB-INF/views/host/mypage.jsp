@@ -28,7 +28,7 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 <div class="container">
 	<!-- 마이페이지 입력폼 -->
 	<div class="list">
-		<form method="post" action="updateMyInfo">
+		<form method="post" action="updateMyInfo" class="pt-4 mt-4">
 			<table class="table table-bordered">
 				<colgroup>
 				<col width="10%" class="bg-secondary p-2 text-white bg-opacity-25">
