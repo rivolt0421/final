@@ -8,7 +8,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <title>여행할때 굿초이스</title>
-<link href="/css/userinfo.css" rel="stylesheet">
+<link href="/css/font.css" rel="stylesheet">
+<link href="/css/common.css" rel="stylesheet">
 <link href="/favicon.ico" rel="icon" type="image/x-icon">
 <script src="/script/common.js"></script>
 <script src="https://kit.fontawesome.com/4f71b1e252.js" crossorigin="anonymous"></script>
@@ -17,6 +18,7 @@
 </style>
 </head>
 <body>
+<link href="/css/mypage.css" rel="stylesheet">
 <%@ include file="../common/nav.jsp" %>
 <div class="wrap show">
 	<div class="sub_top_wrap">
@@ -28,10 +30,10 @@
 	<div id="content" class="sub_wrap my_wrap">
 	    <nav class="side">
 	        <ul>
-	            <li><a class="" href="/user/point">포인트</a></li>
-	            <li><a class="" href="/user/couponbox">쿠폰함</a></li>
-	            <li><a class="" href="/user/reservation">예약 내역</a></li>
-	            <li><a class="active" href="/user/mypage">내 정보 관리</a></li>
+	            <li><a class="" href="/user/point" style="text-decoration: none;">포인트</a></li>
+	            <li><a class="" href="/user/couponbox" style="text-decoration: none;">쿠폰함</a></li>
+	            <li><a class="" href="/user/reservation" style="text-decoration: none;">예약 내역</a></li>
+	            <li><a class="active" href="/user/myinfo" style="text-decoration: none;">내 정보 관리</a></li>
 	        </ul>
    	  </nav>
 	<div class="align_rt">
@@ -41,19 +43,18 @@
 					<strong>내 정보 수정</strong>
 					<div class="login_info">
 						<div><img src="https://image.goodchoice.kr/profile/ico/ico_24.png" alt=""></div>
-						<p>ksn908@naver.com</p>
+						<p>${user.email }</p>
 					</div>
 
 					<div class="pw_input">
 						<div class="pw_input__title">
 							<b>닉네임</b>
-							<span class="title__uinfo">asdafdsa</span>
+							<span class="title__uinfo">사르방</span>
 						</div>
 						<section class="modifying-section" style="display: block;">
 							<p class="inp_wrap remove form-errors">
-								<input type="text" value="asdafdsa" placeholder="체크인시 필요한 정보입니다." data-input="unick" data-msg-required="닉네임을 입력하세요." data-rule-minlength="2" data-rule-maxlength="14" data-rule-spacechar="true" data-rule-specialchar="true">
+								<input type="text" value="사르방" placeholder="체크인시 필요한 정보입니다." data-input="unick" data-msg-required="닉네임을 입력하세요." data-rule-minlength="2" data-rule-maxlength="14" data-rule-spacechar="true" data-rule-specialchar="true">
 							</p>
-							<button type="button" class="btn_etc btn_confirm active" onclick="changeNickname();">딴거할래요</button> <!-- 활성화 클래스 'active' -->
 						</section>
 						<div class="pw_input__btns-wrap modifying">
 							<button class="btns-wrap__edit-btn" type="button">수정</button>
@@ -70,24 +71,14 @@
 					<input type="text" name="uname" aria-hidden="true" value="">
 					<input type="tel" name="uphone" aria-hidden="true" value="010****9251">
 				</div>
-				<input type="hidden" name="yeogi_token" value="6284995c9a01d7f0c232d5f3b3816cd6">
+				<input type="hidden" name="yeogi_token" value="c342734a47d8dcde95d654d64ff9ef79">
 				<input type="hidden" name="utype" value="1">
 
 				<section class="top_area">
 					<div class="pw_input">
-						<div class="pw_input__title">
+						<div class="pw_input__title" style="padding-bottom: 30px;">
 							<b>예약자 이름</b>
-							<span class="title__uinfo"></span>
-						</div>
-						<section class="modifying-section" style="display: none;">
-							<p class="inp_wrap remove form-errors">
-								<input type="text" id="uname" value="" placeholder="체크인시 필요한 정보입니다." data-input="uname" data-rule-spacechar="true" data-rule-specialchar="true">
-							</p>
-						</section>
-						<div class="pw_input__btns-wrap">
-							<button class="btns-wrap__edit-btn" type="button" style="?android:attr/borderlessButtonStyle">수정</button>
-							<button class="btns-wrap__submit-btn" type="submit">수정완료</button>
-							<button class="btns-wrap__cancel-btn" type="button" style="?android:attr/borderlessButtonStyle">수정취소</button>
+							<span class="title__uinfo">${user.name }</span>
 						</div>
 					</div>
 				</section>
@@ -106,7 +97,7 @@
 					<div class="pw_input phone_confirm">
 						<div class="pw_input__title">
 							<b>휴대폰 번호</b>
-							<span class="title__uinfo">010****9251</span>
+							<span class="title__uinfo">${user.tel }</span>
 							<div class="safety_txt">개인 정보 보호를 위해 내 정보는 모두 안전하게 암호화됩니다.</div>
 						</div>
 						<div class="modifying-section" style="display: none;">
@@ -149,8 +140,10 @@
 			<button type="button" onclick="pop_twobtn('ell','로그아웃 하시겠습니까?','취소','로그아웃','close_layer()','logoutPro()');">로그아웃</button>
 							<button type="button"><a href="https://www.goodchoice.kr/my/withdraw">회원탈퇴</a></button>
 					</div>
-	</div>
+			</div>
+		</div>
+<%@ include file="../common/footer.jsp" %>
 </div>
-</div>
+</script>
 </body>
 </html>
