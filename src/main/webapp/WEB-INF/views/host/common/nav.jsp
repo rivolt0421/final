@@ -49,7 +49,7 @@
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item" href="/realtimereserve">실시간 예약 관리</a></li>
 								<li><a class="dropdown-item" href="/reserve">예약 내역</a></li>
-								<li><a class="dropdown-item" href="#">매출 내역</a></li>
+								<li><a class="dropdown-item" href="/saleshistory">매출 내역</a></li>
 							</ul>
 						</div>
 						<div class="dropdown">
