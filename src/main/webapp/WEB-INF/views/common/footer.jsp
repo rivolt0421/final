@@ -14,16 +14,16 @@
 <body>
 <footer>
        <div class="align">
-                <ul class="link">
-                    <li><a href="#" target="_blank">회사소개</a><span>|</span></li>
-                    <li><a href="#" data-default="term">이용약관</a><span>|</span></li>
-                    <li><a href="#" data-default="privacy">개인정보처리방침</a><span>|</span></li>
-                    <li><a href="#" data-default="consumer">소비자 분쟁해결 기준</a><span>|</span></li>
-                    <li><button type="button" onclick="pop_licence();return false;">사업자 정보확인</button><span>|</span></li>
-                    <li><a href="#" target="_blank">여기어때 마케팅센터</a><span>|</span></li>
-                    <li><a href="#" target="_blank">액티비티 호스트센터</a><span>|</span></li>
-                    <li><a href="#" target="_blank">HOTEL 여기어때</a><span>|</span></li>
-                    <li><a href="#">콘텐츠산업진흥법에의한 표시</a></li>
+                <ul class="link" style="padding-left: 0rem;">
+                    <li><a href="#" target="_blank" style="text-decoration: none;">회사소개</a><span>|</span></li>
+                    <li><a href="#" data-default="term" style="text-decoration: none;">이용약관</a><span>|</span></li>
+                    <li><a href="#" data-default="privacy" style="text-decoration: none;">개인정보처리방침</a><span>|</span></li>
+                    <li><a href="#" data-default="consumer" style="text-decoration: none;">소비자 분쟁해결 기준</a><span>|</span></li>
+                    <li><button type="button" onclick="pop_licence();return false;" style="text-decoration: none;">사업자 정보확인</button><span>|</span></li>
+                    <li><a href="#" target="_blank" style="text-decoration: none;">여기어때 마케팅센터</a><span>|</span></li>
+                    <li><a href="#" target="_blank" style="text-decoration: none;">액티비티 호스트센터</a><span>|</span></li>
+                    <li><a href="#" target="_blank" style="text-decoration: none;">HOTEL 여기어때</a><span>|</span></li>
+                    <li><a href="#" style="text-decoration: none;">콘텐츠산업진흥법에의한 표시</a></li>
                 </ul>
                 <p><b>고객행복센터 1670-6250</b><span>오전 9시 - 새벽 3시</span></p>
                 <address>

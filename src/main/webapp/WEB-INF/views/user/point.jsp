@@ -11,19 +11,18 @@
 <link href="/css/font.css" rel="stylesheet">
 <link href="/css/common.css" rel="stylesheet">
 <link href="/favicon.ico" rel="icon" type="image/x-icon">
-<<<<<<< HEAD
-=======
+
 <link href="/css/home.css" rel="stylesheet">
 <script src="/script/common.js"></script>
 <script src="https://kit.fontawesome.com/4f71b1e252.js" crossorigin="anonymous"></script>
->>>>>>> master
+
 <style>
 
 </style>
 </head>
 <body>
-<link href="/css/mypage.css" rel="stylesheet">
 <%@ include file="../common/nav.jsp" %>
+<link href="/css/mypage.css" rel="stylesheet">
 <div class="wrap show">
 	<div class="sub_top_wrap">
 		<div class="sub_top bg_kong_2">
@@ -32,15 +31,15 @@
 	</div>
 	
 	<div id="content" class="sub_wrap my_wrap">
-	    <nav>
-	        <ul>
+	    <div class="side">
+	        <ul style="padding-left: 0rem;">
 	            <li><a class="active" href="/user/point" style="text-decoration: none;">포인트</a></li>
 	            <li><a class="" href="/user/couponbox" style="text-decoration: none;">쿠폰함</a></li>
 	            <li><a class="" href="/user/reservation" style="text-decoration: none;">예약 내역</a></li>
 	            <li><a class="" href="/user/myinfo" style="text-decoration: none;">내 정보 관리</a></li>
 	        </ul>
-   	  </nav>
-		<div class="align_rt">
+   	  </div>
+		<div class="right">
         <input type="hidden" name="page" value="1">
         <div>
             <div class="point_show gra_red">
