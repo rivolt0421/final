@@ -18,5 +18,4 @@ public class HostHouseRegisterForm3 {
 	private String holi;
 	private String holiBefore;
 	private String price;
-	private String submit;
 }
