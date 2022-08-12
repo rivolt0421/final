@@ -10,5 +10,4 @@ public class HostHouseRegisterForm2 {
 	private String notsubpeakEnd;
 	private String subpeakStart;
 	private String subpeakEnd;
-	private String submit;
 }

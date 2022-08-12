@@ -10,9 +10,10 @@
 <title>여행할때 굿초이스</title>
 <link href="/css/font.css" rel="stylesheet">
 <link href="/css/common.css" rel="stylesheet">
+<link href="/css/mypage.css" rel="stylesheet">
 <link href="/favicon.ico" rel="icon" type="image/x-icon">
 
-<link href="/css/home.css" rel="stylesheet">
+<!-- <link href="/css/home.css" rel="stylesheet"> -->
 <script src="/script/common.js"></script>
 <script src="https://kit.fontawesome.com/4f71b1e252.js" crossorigin="anonymous"></script>
 
@@ -22,7 +23,6 @@
 </head>
 <body>
 <%@ include file="../common/nav.jsp" %>
-<link href="/css/mypage.css" rel="stylesheet">
 <div class="wrap show">
 	<div class="sub_top_wrap">
 		<div class="sub_top bg_kong_2">

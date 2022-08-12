@@ -43,4 +43,7 @@ $(function(){
 	$('nav .btn_cancel').click(function(){
 		srch_close();
 	});
+	$('nav .srch_bar').blur(function(){
+		srch_close();
+	});
 });

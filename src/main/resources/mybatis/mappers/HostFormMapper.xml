@@ -18,9 +18,14 @@
 	
 	<!-- void insertHouse(House house); -->
 	<insert id="insertHouse" parameterType="House">
+		<selectKey keyProperty="no" resultType="int" order="BEFORE">
+			select house_no_seq.nextval 
+			from house
+		</selectKey>
 		insert into House
 		(HOUSE_NO, HOUSE_NAME, HOUSE_INTRODUCE, APPRAISAL, HOUSE_ADDRESS, HOUSE_SURROUND_INFO, HOUSE_NOTICE, HOUSE_BASIC_INFO, HOUSE_ADD_PEOPLE_INFO, HOUSE_PARK_INFO, HOUSE_COVER_IMAGE_NAME)
 		values
 		(#{no}, #{name}, #{introduce}, #{appralsal}, #{address}, #{surroundInfo}, #{notice}, #{basicInfo}, #{addPeopleInfo}, #{parkInfo}, #{coverImageName})
 	</insert>
+	
 </mapper>
