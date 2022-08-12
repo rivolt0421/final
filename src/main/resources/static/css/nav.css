@@ -37,7 +37,7 @@ nav.scroll {
 nav.scroll li a, nav.scroll i{
 	color: rgba(0,0,0,0.85);
 }
-nav.scroll li a:hover{
+nav.scroll li a:hover, nav.scroll li a:focus{
 	color: var(--brand-color);
 }
 nav.scroll .brand_logo{
