@@ -1,5 +1,12 @@
 package kr.co.goodchoice.web.form;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
 public class HostHouseRegisterForm1 {
 
 	private String aname;
@@ -20,5 +27,4 @@ public class HostHouseRegisterForm1 {
 	private String addCost;
 	private String parking;
 	private String etc;
-	private String submit;
 }
