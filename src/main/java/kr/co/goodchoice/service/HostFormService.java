@@ -1,10 +1,19 @@
 package kr.co.goodchoice.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import kr.co.goodchoice.mapper.HostFormMapper;
+import kr.co.goodchoice.mapper.RegionMapper;
+import kr.co.goodchoice.mapper.UserMapper;
 import kr.co.goodchoice.vo.House;
+import kr.co.goodchoice.vo.HouseEvent;
+import kr.co.goodchoice.vo.HouseFacilities;
+import kr.co.goodchoice.vo.Region;
+import kr.co.goodchoice.vo.User;
 import kr.co.goodchoice.web.form.HostHouseRegisterForm1;
 
 @Service
@@ -13,27 +22,53 @@ public class HostFormService {
 	@Autowired
 	HostFormMapper hostFormMapper;
 	
-	public void HostHouseInsertForm1(HostHouseRegisterForm1 form1) {
+	@Autowired
+	UserMapper userMapper;
+	
+	@Autowired
+	RegionMapper regionMapper;
+	
+	public void insertForm1(HostHouseRegisterForm1 form1, User loginUser) {
 		House house = new House();
 		house.setName(form1.getAname());
-		house.setName(form1.getAddress1());
-		house.setName(form1.getAddress2());
-		house.setName(form1.getHousePictures());
-		house.setName(form1.getFacilities());
-		house.setName(form1.getOpen());
-		house.setName(form1.getHostName());
-		house.setName(form1.getHostPicture());
-		house.setName(form1.getComment());
-		house.setName(form1.getFindWay());
-		house.setName(form1.getTrafficInfo());
-		house.setName(form1.getHouseDetail());
-		house.setName(form1.getSummary());
-		house.setName(form1.getEventTitle());
-		house.setName(form1.getEventContent());
-		house.setName(form1.getAddCost());
-		house.setName(form1.getParking());
-		house.setName(form1.getEtc());
+		house.setAddress(form1.getAddress1());
+		house.setAddress(form1.getAddress2());
+		house.setSurroundInfo(form1.getSurroundInfo());
+		house.setIntroduce(form1.getIntroduce());
+		house.setAppralsal(form1.getAppralsal());
+		house.setAddPeopleInfo(form1.getAddCost());
+		house.setParkInfo(form1.getParking());
+		house.setBasicInfo(form1.getEtc());
+		
+		String address = form1.getAddress1();
+		String[] addressArray = address.split(" ");
+		Region region = regionMapper.getRegion(addressArray[0], addressArray[1]);	
+		house.setRegionId(region.getId());
+		
+	
+		List<MultipartFile> pictures = form1.getHousePictures();
+		MultipartFile coverMultipartFile = pictures.get(0);
+		house.setCoverImageName(coverMultipartFile.getOriginalFilename());
 		
 		hostFormMapper.insertHouse(house);
+		
+
+		List<Integer> facilities = form1.getFacilities();
+		for (int facilityNo : facilities) {
+			HouseFacilities houseFacilities = new HouseFacilities();
+			houseFacilities.setHouseNo(house.getNo());
+			houseFacilities.setFacilitiesNo(facilityNo);
+			
+			//houseFacilitiesMapper.insertHouseFacilities(houseFacilities)
+		}
+//		
+//		
+//		loginUser.setHost("Y");
+//		userMapper.updateUser(loginUser);	
+//
+//		HouseEvent houseEvent = new HouseEvent();
+//		houseEvent.setEventTitle(form1.getEventTitle());
+//		houseEvent.setEventContent(form1.getEventContent());
+		
 	}
 }

@@ -9,8 +9,6 @@ import kr.co.goodchoice.web.form.HostMypageUpdateForm;
 
 @Controller
 public class HostMypageContorller {
-
-	
 	
 	// 호스트 마이페이지
 	@GetMapping(path = "/mypage")
