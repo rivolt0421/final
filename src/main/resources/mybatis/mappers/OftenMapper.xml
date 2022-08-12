@@ -4,14 +4,20 @@
 	
 	<resultMap type="Often" id="OftenResultMap">
 		<id column="often_no" property="no"/>
-		<result column="often_id" property="id"/>
 		<result column="often_title" property="title"/>
 		<result column="often_content" property="content"/>
 		<result column="created_date" property="createdDate"/>
 		<result column="updated_date" property="updatedDate"/>
-		<association property="often" column="often_id" select="kr.co.goodchoice.mapper.OftenCategoryMapper.getOftenById"></association>
+		<association property="oftenCategory" column="often_id" select="kr.co.goodchoice.mapper.OftenCategoryMapper.getOftenById"></association>
 	</resultMap>
 
+	<!-- List<Often> getOftens(); -->
+	<select id="getOftens" resultMap="OftenResultMap">
+		select *
+		from often_questions
+		order by often_no asc
+	</select>
+	
 	<!-- Often getOftenById(String id); -->
 	<select id="getOftenById" parameterType="string" resultMap="OftenResultMap">
 		select *

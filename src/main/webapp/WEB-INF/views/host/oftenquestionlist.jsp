@@ -81,7 +81,7 @@
 				  				<tr>
 				  					<td></td>
 				  					<td>${often.oftenCategory.id }</td>
-				  					<td>${often.title }</td>
+				  					<td><a href="oftendetail.">${often.title }</a></td>
 				  				</tr>
 				  			</c:forEach>
 		  			</c:choose>

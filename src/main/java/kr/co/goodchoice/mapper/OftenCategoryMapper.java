@@ -1,11 +1,15 @@
 package kr.co.goodchoice.mapper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 
 import kr.co.goodchoice.vo.Often;
+import kr.co.goodchoice.vo.OftenCategory;
 
 @Mapper
 public interface OftenCategoryMapper {
 
-	Often getOftenById(String id);
+	List<OftenCategory> getAllCategories();
+	Often getOftenCategoryById(String id);
 }
