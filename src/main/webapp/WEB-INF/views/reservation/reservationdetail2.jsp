@@ -18,7 +18,7 @@
     align-items: center;
     flex-direction: column;
 }
-
+ 
 .reservationinfo {
 	width: 600px;
     height: 300px;
