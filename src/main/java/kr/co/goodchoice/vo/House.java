@@ -27,4 +27,5 @@ public class House {
 	private String coverImageName;	// 숙소 커버 이미지
 	private String motel;			// 모텔 여부
 	private int regionId;			// 지역번호
+	//private String facilityNo		// 편의시설 번호 예)(1, 2, 3, 4) 
 }

@@ -39,12 +39,13 @@ public class HostFormService {
 		house.setAddPeopleInfo(form1.getAddCost());
 		house.setParkInfo(form1.getParking());
 		house.setBasicInfo(form1.getEtc());
+		//편의시설 house_facility insert house_no, facility_no
 		
 		String address = form1.getAddress1();
 		String[] addressArray = address.split(" ");
+		
 		Region region = regionMapper.getRegion(addressArray[0], addressArray[1]);	
 		house.setRegionId(region.getId());
-		
 	
 		List<MultipartFile> pictures = form1.getHousePictures();
 		MultipartFile coverMultipartFile = pictures.get(0);
@@ -52,15 +53,26 @@ public class HostFormService {
 		
 		hostFormMapper.insertHouse(house);
 		
-
-		List<Integer> facilities = form1.getFacilities();
-		for (int facilityNo : facilities) {
-			HouseFacilities houseFacilities = new HouseFacilities();
-			houseFacilities.setHouseNo(house.getNo());
-			houseFacilities.setFacilitiesNo(facilityNo);
-			
-			//houseFacilitiesMapper.insertHouseFacilities(houseFacilities)
-		}
+		/*
+		1. house getNo를 가져올 수 없음
+		2. for문이 여러번 돌아야 함. 그래서 더 좋은 방법이 있음
+		3. 그래서 house 테이블을 facilitiesNo추가 ex(1, 2, 3, 4)
+		4. select * from house where house_no = 1
+		house.getfacilitiesNo = 1, 2, 3, 4
+		위에를 select문을 이용하여 where in을 통해서 가져올 것
+			ex)select facility_type from facilities where facility_no in (1,2,3,4)
+		5. 
+		* 해야할 일
+		* 1. 위의 것을 팀원들한테 말하고 테이블을 바꾼다
+		* 2. 등록하는 페이지 facilities 전체 리스트 가져와서 뿌리기
+		*/
+//		List<String> facilities = form1.getFacilities();
+//		for (String facilityNo : facilities) {
+//			HouseFacilities houseFacilities = new HouseFacilities();
+//			houseFacilities.setHouseNo(house.getNo());
+//			houseFacilities.setFacilitiesNo(facilityNo);
+//			houseFacilitiesMapper.insertHouseFacilities(houseFacilities)
+//		}
 //		
 //		
 //		loginUser.setHost("Y");

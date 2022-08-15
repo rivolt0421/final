@@ -1,5 +1,7 @@
 package kr.co.goodchoice.web.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,6 +26,7 @@ public class HostHouseFormController {
 	// 호스트 소개작성
 	@GetMapping(path = "/form1")
 	public String form1(Model model) {
+		//hostFormService.select * from facilities
 		return "host/form1";
 	}
 	
@@ -33,11 +36,13 @@ public class HostHouseFormController {
 			HostHouseRegisterForm1 hostHouseRegisterForm1, 
 			RedirectAttributes redirectAttributes) {
 		
+		//List<String> list = hostHouseRegisterForm1.getFacilities();
+		//String str = String.join(",", list);
+		redirectAttributes.addFlashAttribute("hostHouseRegisterForm1", hostHouseRegisterForm1);
+		
 		System.out.println(hostHouseRegisterForm1);
 		
 		hostFormService.insertForm1(hostHouseRegisterForm1, loginUser);
-		
-		redirectAttributes.addFlashAttribute("hostHouseRegisterForm1", hostHouseRegisterForm1);
 		
 		return "redirect:/form1";
 	}

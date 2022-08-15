@@ -17,7 +17,7 @@ public class HostHouseRegisterForm1 {
 	private String address1;		// 우편찾기 주소
 	private String address2;		// 나머지 주소
 	private List<MultipartFile> housePictures;	// 숙소 사진
-	private List<Integer> facilities;		// 편의시설
+	private List<String> facilities;		// 편의시설
 	private String open;			// 업주 실명 및 사진 공개
 	private String hostName;		// 업주 이름
 	private MultipartFile hostPicture;		// 업주 사진
