@@ -98,4 +98,21 @@ public class HomeController {
 		return "redirect:/";
 	}
 	
+	@GetMapping(path ="more/notice")
+	public String notice() {
+		
+		return "more/notice";
+	}
+	
+	@GetMapping(path ="more/faq")
+	public String faq() {
+		
+		return "more/faq";
+	}
+	
+	@GetMapping(path ="more/inquiry")
+	public String inquiry() {
+		
+		return "more/inquiry";
+	}
 }

@@ -20,11 +20,9 @@
                   더보기
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">공지사항</a></li>
-                  <li><a class="dropdown-item" href="#">이벤트</a></li>
-                  <li><a class="dropdown-item" href="#">자주 묻는 질문</a></li>
-                  <li><a class="dropdown-item" href="#">1:1 문의</a></li>
-                  <li><a class="dropdown-item" href="#">약관 및 정책</a></li>
+                  <li><a class="dropdown-item" href="/more/notice">공지사항</a></li>
+                  <li><a class="dropdown-item" href="/more/faq">자주 묻는 질문</a></li>
+                  <li><a class="dropdown-item" href="/more/inquiry">1:1 문의</a></li>
                 </ul>
               </li>
 			  <c:if test="${empty LOGIN_USER }">
