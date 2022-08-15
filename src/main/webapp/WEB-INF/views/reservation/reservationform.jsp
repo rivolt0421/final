@@ -125,8 +125,7 @@ td {
 				<hr>
 
 					<!-- 쿠폰적용 모달 -->
-					<div class="modal fade" id="couponModal" tabindex="-1"
-						aria-labelledby="couponModalLabel" aria-hidden="true">
+					<div class="modal fade" id="couponModal" tabindex="-1" aria-labelledby="couponModalLabel" aria-hidden="true">
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<div class="modal-header">
@@ -171,21 +170,19 @@ td {
 						<option value="cellphone"> 휴대폰결제
 					</select>
 				</form>
+				<br>
+				<!--  약관 동의 영역 -->
+				<div>
+					<div class="mb-2"><input class="form-check-input" type="checkbox" value="selectall" name="check" id="flexCheckDefault" onclick='selectAll(this)'><strong class="ms-2">전체 동의</strong>(필수)</div>
+					<div class="mb-2"><input class="form-check-input" type="checkbox" value="cancel" name="check" id="flexCheckDefault"><a href=""  class="ms-2" id="link-open-cancel-modal">숙소이용규칙 및 취소/환불규정 동의</a>(필수)</div>
+					<div class="mb-2"><input class="form-check-input" type="checkbox" value="info" name="check" id="flexCheckDefault"><a href=""  class="ms-2" id="link-open-info-modal">개인정보 수집 및 이용 동의</a>(필수)</div>
+					<div class="mb-2"><input class="form-check-input" type="checkbox" value="infoSending" name="check" id="flexCheckDefault"><a href=""  class="ms-2" id="link-open-infoSending-modal">개인정보 제 3자 제공 동의</a>(필수)</div>
+				</div>
 			</div>
-			<br>
-			<!--  약관 동의 영역 -->
-			<div>
-				<form action="">
-				<input type="checkbox" name="rule" value="agreeall" checked><strong>전체 동의</strong>(필수)<br>
-				<input type="checkbox" name="rule" value="cancel"><a href="#exampleModal">숙소이용규칙 및 취소/환불규정 동의</a>(필수)<br>
-				<input type="checkbox" name="rule" value="info"><a href="">개인정보 수집 및 이용 동의</a>(필수)<br>
-				<input type="checkbox" name="rule" value="infoSending"><a href="">개인정보 제 3자 제공 동의</a>(필수)
-				</form>
-			</div>
+			
 
 				<!-- 숙소 이용 규칙 및 취소/환불 규정 동의 모달 -->
-				<div class="modal fade" id="cancelModal" tabindex="-1"
-					aria-labelledby="cancelModalLabel" aria-hidden="true">
+				<div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="cancelModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 						<div class="modal-content">
 							<div class="modal-header">
@@ -194,36 +191,33 @@ td {
 									aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
-							<h6>이용규칙</h6>
-							<ul>
-								<li>최대 인원 초과시 입실 불가합니다.</li>
-								<li>정원 기준 요금 외 인원 추가 요금은 현장결제입니다.</li>
-								<li>제공 이미지는 배정된 객실과 다를 수 있습니다.</li>
-								<li>제공 정보는 숙소의 사정에 따라 변경될 수 있습니다.</li>
-								<li>미성년자는 보호자 동반시 투숙이 가능합니다.</li>
-								<li>체크인 시 배정의 경우, 객실과 베드타입을 보장하지 않습니다.</li>
-								<li>객실 타입에 시간이 별도 기재된 경우, 체크인/체크아웃 시간이 상이할 수 있습니다.</li>
-								<li>조식, 인원, 침구, 침대 등 추가는 예약하신 숙소로 요청 및 결제 가능합니다.</li>
-								<li>업체 현장에서 객실 컨디션 및 서비스로 인해 발생된 분쟁은 여기어때에서 책임지지 않습니다.</li>
-							</ul>
-							<h6>취소/환불 규정</h6>
-							<ul>
-								<li>숙소 사정에 의해 취소 발생시 전액 환불이 가능합니다.</li>
-								<li>예약 상품 별 숙소 정보에 기재된 취소, 환불 규정을 반드시 확인 후 이용해주시기 바랍니다.</li>
-								<li>예약 이후의 취소는 취소/환불 규정에 의거하여 적용됩니다.</li>
-								<li>취소,변경 불가 상품은 규정과 상관없이 취소, 변경이 불가합니다.</li>
-								<li>당일 결제를 포함한 체크인 당일 취소는 취소, 변경이 불가합니다.</li>
-								<li>단! 숙소의 객실정보가 수시로 변경될 수 있으며 이로 인한 불이익은 여기어때가 책임지지 않습니다.</li>
-							</ul>
+								<h6>이용규칙</h6>
+								<br>
+								<p>최대 인원 초과시 입실 불가합니다.</p>
+								<p>정원 기준 요금 외 인원 추가 요금은 현장결제입니다.</p>
+								<p>제공 이미지는 배정된 객실과 다를 수 있습니다.</p>
+								<p>제공 정보는 숙소의 사정에 따라 변경될 수 있습니다.</p>
+								<p>미성년자는 보호자 동반시 투숙이 가능합니다.</p>
+								<p>체크인 시 배정의 경우, 객실과 베드타입을 보장하지 않습니다.</p>
+								<p>객실 타입에 시간이 별도 기재된 경우, 체크인/체크아웃 시간이 상이할 수 있습니다.</p>
+								<p>조식, 인원, 침구, 침대 등 추가는 예약하신 숙소로 요청 및 결제 가능합니다.</p>
+								<p>업체 현장에서 객실 컨디션 및 서비스로 인해 발생된 분쟁은 여기어때에서 책임지지 않습니다.</p>
+								<br>
+								<h6>취소/환불 규정</h6>
+								<br>
+								<p>숙소 사정에 의해 취소 발생시 전액 환불이 가능합니다.</p>
+								<p>예약 상품 별 숙소 정보에 기재된 취소, 환불 규정을 반드시 확인 후 이용해주시기 바랍니다.</p>
+								<p>예약 이후의 취소는 취소/환불 규정에 의거하여 적용됩니다.</p>
+								<p>취소,변경 불가 상품은 규정과 상관없이 취소, 변경이 불가합니다.</p>
+								<p>당일 결제를 포함한 체크인 당일 취소는 취소, 변경이 불가합니다.</p>
+								<p>단! 숙소의 객실정보가 수시로 변경될 수 있으며 이로 인한 불이익은 여기어때가 책임지지 않습니다.</p>
 							</div>
-							
 						</div>
 					</div>
 				</div>
 
 				<!-- 개인정보 수집 및 이용 동의 모달 -->
-				<div class="modal fade" id="infoModal" tabindex="-1"
-					aria-labelledby="infoModalLabel" aria-hidden="true">
+				<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 						<div class="modal-content">
 							<div class="modal-header">
@@ -232,7 +226,7 @@ td {
 									aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
-								<table>
+								<table class="table">
 								<tr>
 									<th>구분</th>
 									<th>수집/이용 목적</th>
@@ -248,21 +242,19 @@ td {
 									<td>전자상거래 상 소비자 보호에 관한 법률에 따라 5년간 보관</td>
 								</tr>
 								<tr>
-									<td>위 동의 내용을 거부하실 수 있으나, 동의를 거부하실 경우 서비스를 이용하실 수 없습니다.</td>
+									<td colspan='4'>위 동의 내용을 거부하실 수 있으나, 동의를 거부하실 경우 서비스를 이용하실 수 없습니다.</td>
 								</tr>
 								<tr>
-									<td>개인정보 처리와 관련된 상세내용은 '개인정보처리방침'을 참고</td>
+									<td colspan='4'>개인정보 처리와 관련된 상세내용은 '개인정보처리방침'을 참고</td>
 								</tr>
 								</table>
 							</div>
-							
 						</div>
 					</div>
 				</div>
 				
 				<!-- 개인정보 제 3자 제공 동의 -->
-				<div class="modal fade" id="infoSendingModal" tabindex="-1"
-					aria-labelledby="infoSendingModalLabel" aria-hidden="true">
+				<div class="modal fade" id="infoSendingModal" tabindex="-1"	aria-labelledby="infoSendingModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 						<div class="modal-content">
 							<div class="modal-header">
@@ -271,7 +263,7 @@ td {
 									aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
-								<table>
+								<table class="table">
 								<tr>
 									<th>제공받는 자</th>
 									<th>제공 목적</th>
@@ -285,18 +277,16 @@ td {
 									<td>예약서비스 제공 완료 후 6개월</td>
 								</tr>
 								<tr>
-									<td>위 동의 내용을 거부하실 수 있으나, 동의를 거부하실 경우 서비스를 이용하실 수 없습니다.</td>
+									<td colspan='4'>위 동의 내용을 거부하실 수 있으나, 동의를 거부하실 경우 서비스를 이용하실 수 없습니다.</td>
 								</tr>
 								<tr>
-									<td>개인정보 처리와 관련된 상세내용은 '개인정보처리방침'을 참고</td>
+									<td colspan='4'>개인정보 처리와 관련된 상세내용은 '개인정보처리방침'을 참고</td>
 								</tr>
 								</table>
 							</div>
-							
 						</div>
 					</div>
 				</div>
-				
 			</div>
 		
 		
@@ -383,5 +373,39 @@ td {
 		
 	</div>
 </div>
+<script type="text/javascript">
+
+	function selectAll(selectAll)  {
+		  const checkboxes 
+		       = document.getElementsByName('check');
+		  
+		  checkboxes.forEach((checkbox) => {
+		    checkbox.checked = selectAll.checked;
+		  })
+		}
+
+
+
+	let cancelModal = new bootstrap.Modal(document.getElementById("cancelModal"));
+		
+	$("#link-open-cancel-modal").click(function() {
+		cancelModal.show();
+		return false;
+	})
+	
+	let infoModal = new bootstrap.Modal(document.getElementById("infoModal"));
+		
+	$("#link-open-info-modal").click(function() {
+		infoModal.show();
+		return false;
+	})
+	
+	let infoSendingModal = new bootstrap.Modal(document.getElementById("infoSendingModal"));
+		
+	$("#link-open-infoSending-modal").click(function() {
+		infoSendingModal.show();
+		return false;
+	})
+</script>
 </body>
 </html>

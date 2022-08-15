@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ReservationDetailController2 {
 
 	@GetMapping(path = "/reservationdetail2")
-	public String reservationform() {
+	public String reservationdetail() {
 		return "reservation/reservationdetail2";
 	}
 }
