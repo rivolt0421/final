@@ -3,8 +3,8 @@
 <mapper namespace="kr.co.goodchoice.mapper.OftenCategoryMapper">
 	
 	<!-- Often getOftenById(String id); -->
-	<select id="getOftenById" parameterType="string">
-		select *
+	<select id="getOftenById" parameterType="string" resultType="OftenCategory">
+		select often_id as id, often_type as type
 		from often_question_categories
 		where often_id = #{value}
 	</select>
