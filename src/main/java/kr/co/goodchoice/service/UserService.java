@@ -9,13 +9,35 @@ import kr.co.goodchoice.exception.OnlineApplicationException;
 import kr.co.goodchoice.mapper.UserMapper;
 import kr.co.goodchoice.vo.User;
 import kr.co.goodchoice.web.form.UserRegisterForm;
+import lombok.extern.slf4j.Slf4j;
 
-
+@Slf4j
 @Service
 public class UserService {
 
 	@Autowired
 	private UserMapper userMapper;
+	
+	/**
+	 * 카카오 로그인으로 획득한 사용자정보로 로그인처리를 수행한다.<p>
+	 * 카카오 로그인은 회원가입 절차없이 카카오 로그인 API로 획득한 정보를 데이터베이스에 저장한다.<p>
+	 * 카카오 로그인으로 우리 서비스를 한 번이라도 사용한 사용자는 사용자 정보가 데이터베이스에 이미 저장되어 있다.
+	 * @param user 카카오 로그인으로 획득한 사용자 정보
+	 * @return 사용자 정보
+	 */
+	public User loginWithKakao(String email, String name) {
+		User user = userMapper.getUserByEmail(email);
+		log.info("카카오 로그인 아이디로 조회한 유저 정보: " + user);
+		
+		if (user == null) {
+			user = new User();
+			user.setEmail(email);
+			user.setName(name);
+			userMapper.insertUser(user);
+			log.info("카카오 로그인 신규 사용자 정보 등록 완료: " + user.getEmail() + ", " + user.getName());
+		}
+		return user;
+	}
 	
 	public User getUserInfo(int userNo) {
 		return userMapper.getUserByNo(userNo);
