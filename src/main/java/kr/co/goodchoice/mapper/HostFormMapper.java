@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Mapper;
 import kr.co.goodchoice.vo.HostHouseStatusCategories;
 import kr.co.goodchoice.vo.HostHouseTypeCategories;
 import kr.co.goodchoice.vo.House;
+
 @Mapper
 public interface HostFormMapper {
 
