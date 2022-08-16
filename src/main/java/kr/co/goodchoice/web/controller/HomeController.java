@@ -15,10 +15,13 @@ import org.springframework.web.bind.support.SessionStatus;
 
 import kr.co.goodchoice.exception.OnlineApplicationException;
 import kr.co.goodchoice.service.UserService;
+import kr.co.goodchoice.utils.SessionUtils;
 import kr.co.goodchoice.vo.User;
 import kr.co.goodchoice.web.form.UserRegisterForm;
+import lombok.extern.slf4j.Slf4j;
 
 @Controller
+@Slf4j
 @SessionAttributes("LOGIN_USER")
 public class HomeController {
 
@@ -91,6 +94,20 @@ public class HomeController {
 //		return "redirect:/";
 //	}
 	
+	// 카카오 로그인 요청을 처리한다.
+		@PostMapping("/kakao-login")
+		public String loginWithKakao(String email, String name) {
+			
+			
+			User savedUser = userService.loginWithKakao(email, name);
+			
+			SessionUtils.addAttribute("LOGIN_USER", savedUser);
+			
+			log.info("카카오 로그인 완료");
+			
+			return "redirect:/";
+		}
+	
 	@GetMapping(path = "/logout")
 	public String logout(SessionStatus sessionStatus) {
 		sessionStatus.setComplete();
@@ -98,4 +115,22 @@ public class HomeController {
 		return "redirect:/";
 	}
 	
+	@GetMapping(path ="more/notice")
+	public String notice() {
+		
+		return "more/notice";
+	}
+	
+	@GetMapping(path ="more/faq")
+	public String faq() {
+		
+		return "more/faq";
+	}
+	
+	@GetMapping(path ="more/inquiry")
+	public String inquiry() {
+		
+		return "more/inquiry";
+	}
+
 }
