@@ -27,7 +27,7 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 <div class="container">
 	<!-- 호스트 필수 정보 입력폼 -->
 	<div class="list">
-        <form method="post" action="updateHouseInfo1" class="pt-4 mt-4">
+        <form method="post" action="updateHouseInfo1" class="pt-4 mt-4" enctype="multipart/form-data">
 			<ul>
 		        <li>[소개 작성] 은 게스트하우스 전체를 소개하는 기능입니다. (사진, 이벤트 정보, 오시는 길 등)</li>
 		        <li>우측 물음표를 클릭하시면 앱에서 어떻게 표시되는지 확인이 가능합니다.</li>
@@ -87,7 +87,13 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 								<p class="fs-6">* 첫 이미지가 메인 이미지이며 드래그를 통해 순서 변경이 가능합니다.</p>
 							</div>
 							<div>
-								<button type="file" class="btn btn-danger" name="housePictures">이미지 추가</button>
+								<div>
+									<input type="file" name="housePictures"  class="form-control w-50 mb-2" />
+									<input type="file" name="housePictures"  class="form-control w-50 mb-2"/>
+									<input type="file" name="housePictures"  class="form-control w-50 mb-2"/>
+									<input type="file" name="housePictures"  class="form-control w-50 mb-2"/>
+									<input type="file" name="housePictures"  class="form-control w-50 mb-2"/>
+								</div>
 							</div>
 						</td>
 						<td style="border-left-style: hidden;"  class="align-middle">
@@ -107,130 +113,130 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 							<div class="row mb-3">
 								<div class="col-sm-auto">
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck1">
-										<label class="" for="gridCheck1">주방/식당</label>
+										<input class="form-check-input" name="facilities" type="checkbox" value="1">
+										<label class="" for="">주방/식당</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck2">
-										<label class="" for="gridCheck2">엘리베이터</label>
+										<input class="form-check-input" name="facilities" type="checkbox" value="2">
+										<label class="" for="">엘리베이터</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck3">
-										<label class="" for="gridCheck3">에어컨</label>
+										<input class="form-check-input" name="facilities" type="checkbox" value="3">
+										<label class="" for="">에어컨</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck4">
-										<label class="" for="gridCheck4">드라이기</label>
+										<input class="form-check-input" name="facilities" type="checkbox" value="4">
+										<label class="" for="">드라이기</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck5">
-										<label class="" for="gridCheck5">반려견동반</label>
+										<input class="form-check-input" name="facilities" type="checkbox" value="5">
+										<label class="" for="">반려견동반</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck6">
-										<label class="" for="gridCheck6">프린터사용</label>
+										<input class="form-check-input" name="facilities" type="checkbox" value="6">
+										<label class="" for="">프린터사용</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck7">
-										<label class="" for="gridCheck7">카페</label>
+										<input class="form-check-input" name="facilities" type="checkbox" value="7">
+										<label class="" for="">카페</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck8">
-										<label class="" for="gridCheck8">카드결제</label>
-									</div>
-								</div>
-								<div class="col-sm-auto">
-									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck9">
-										<label class="" for="gridCheck9">세탁기</label>
-									</div>
-									<div class="form-check">
-										<input class="form-check-input"name="facilities" type="checkbox" id="gridCheck10">
-										<label class="" for="gridCheck10">주차장</label>
-									</div>
-									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck11">
-										<label class="" for="gridCheck11">냉장고</label>
-									</div>
-									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck12">
-										<label class="" for="gridCheck12">다리미</label>
-									</div>
-									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck13">
-										<label class="" for="gridCheck13">짐보관가능</label>
-									</div>
-									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck14">
-										<label class="" for="gridCheck14">무료주차</label>
-									</div>
-									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck15">
-										<label class="" for="gridCheck15">전자레인지</label>
-									</div>
-									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck16">
-										<label class="" for="gridCheck16">TV</label>
+										<input class="form-check-input" name="facilities" type="checkbox" value="8">
+										<label class="" for="">카드결제</label>
 									</div>
 								</div>
 								<div class="col-sm-auto">
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck25">
-										<label class="" for="gridChec25">건조기</label>
+										<input class="form-check-input" name="facilities" type="checkbox" value="9">
+										<label class="" for="">세탁기</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck26">
-										<label class="" for="gridCheck26">와이파이</label>
+										<input class="form-check-input"name="facilities" type="checkbox" value="10">
+										<label class="" for="">주차장</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck27">
-										<label class="" for="gridCheck27">객실샤워실</label>
+										<input class="form-check-input" name="facilities" type="checkbox" value="11">
+										<label class="" for="">냉장고</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck28">
-										<label class="" for="gridCheck28">조식포함</label>
+										<input class="form-check-input" name="facilities" type="checkbox" value="12">
+										<label class="" for="">다리미</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck29">
-										<label class="" for="gridCheck29">공용PC</label>
+										<input class="form-check-input" name="facilities" type="checkbox" value="13">
+										<label class="" for="">짐보관가능</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck30">
-										<label class="" for="gridCheck30">BBQ</label>
+										<input class="form-check-input" name="facilities" type="checkbox" value="14">
+										<label class="" for="">무료주차</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck31">
-										<label class="" for="gridCheck31">취사가능</label>
+										<input class="form-check-input" name="facilities" type="checkbox" value="15">
+										<label class="" for="">전자레인지</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" name="facilities" type="checkbox" value="16">
+										<label class="" for="">TV</label>
 									</div>
 								</div>
 								<div class="col-sm-auto">
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck32">
-										<label class="" for="gridChec32">탈수기</label>
+										<input class="form-check-input" name="facilities" type="checkbox" value="17">
+										<label class="" for="">건조기</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck33">
-										<label class="" for="gridCheck33">용실용품</label>
+										<input class="form-check-input" name="facilities" type="checkbox" value="18">
+										<label class="" for="">와이파이</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck34">
-										<label class="" for="gridCheck34">욕조</label>
+										<input class="form-check-input" name="facilities" type="checkbox" value="19">
+										<label class="" for="">객실샤워실</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck35">
-										<label class="" for="gridCheck35">객실내흡연</label>
+										<input class="form-check-input" name="facilities" type="checkbox" value="20">
+										<label class="" for="">조식포함</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck36">
-										<label class="" for="gridCheck36">개인사물함</label>
+										<input class="form-check-input" name="facilities" type="checkbox" value="21">
+										<label class="" for="">공용PC</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck37">
-										<label class="" for="gridCheck37">라운지</label>
+										<input class="form-check-input" name="facilities" type="checkbox" value="22">
+										<label class="" for="">BBQ</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" id="gridCheck38">
-										<label class="" for="gridCheck38">개인콘센트</label>
+										<input class="form-check-input" name="facilities" type="checkbox" value="23">
+										<label class="" for="">취사가능</label>
+									</div>
+								</div>
+								<div class="col-sm-auto">
+									<div class="form-check">
+										<input class="form-check-input" name="facilities" type="checkbox" value="24">
+										<label class="" for="">탈수기</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" name="facilities" type="checkbox" value="25">
+										<label class="" for="">용실용품</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" name="facilities" type="checkbox" value="26">
+										<label class="" for="">욕조</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" name="facilities" type="checkbox" value="27">
+										<label class="" for="">객실내흡연</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" name="facilities" type="checkbox" value="28">
+										<label class="" for="">개인사물함</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" name="facilities" type="checkbox" value="29">
+										<label class="" for="">라운지</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" name="facilities" type="checkbox" value="30">
+										<label class="" for="">개인콘센트</label>
 									</div>
 								</div>
 							</div>
@@ -250,7 +256,7 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 						</th>
 						<td>
 							<div class="form-check">
-								<input class="form-check-input" name="open" type="checkbox" id="hostName">
+								<input class="form-check-input" name="open" type="checkbox" value="Y">
 								<label class="pb-3" for="hostName">업주 실명 및 업주 사진 노출</label>
 							</div>
 							<div class="row mb-3">
@@ -261,7 +267,9 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 							</div>
 							<div class="row mb-3">
 								<div class="col-sm-1">업주 사진</div>
-								<button type="file" name="hostPicture" class="btn btn-danger col-2 ms-2">이미지 추가</button>
+								<div class="col-sm-5">
+									<input type="file" name="hostPicture" class="form-control">
+								</div>
 							</div>
 							<div class="row mb-3">
 								<div style="color: black;" class="col-sm-auto">사진 등록 예시</div>
@@ -302,7 +310,7 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 						<td>
 							<div class="form">
 		                    	<textarea class="form-control textarea" rows="6" name="findWay" placeholder="주요 버스터미널이나 기차역 혹은 공항 등에서 숙소까지 찾아가는 방법을 자세히 기재해 주세요."></textarea>
-		                    	<span id="trafficInfo" class="float-right">(<span id="count">0</span>/<span id="max">1000</span>)</span>
+		                    	<span id="surroundInfo" class="float-right">(<span id="count">0</span>/<span id="max">1000</span>)</span>
 		                    </div>
 					  		<p class="mt-3">
 								<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#exampleWay" aria-expanded="false" aria-controls="exampleWay">
@@ -383,7 +391,7 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 						<td>
 							<div class="form-layer mt-2">
 								<div class="form-body">
-									<textarea class="form-control textarea" rows="6" name="houseDetail" placeholder="숙소 내 이용규칙이 있을 경우 기재해주세요."></textarea>
+									<textarea class="form-control textarea" rows="6" name="Introduce" placeholder="숙소 내 이용규칙이 있을 경우 기재해주세요."></textarea>
 								</div>
 							</div>
 						</td>
@@ -409,7 +417,7 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 						<th class="text-center align-middle">한줄평</th>
 						<td>
 							<div class="">
-		                        <input type="text" class="form-control" name="summary" maxlength="32" placeholder="숙소의 장점을 부각시켜 게스트에게 어필할 수 있는 한 줄을 기재해주세요. [32자 내외]" value="">
+		                        <input type="text" class="form-control" name="appralsal" maxlength="32" placeholder="숙소의 장점을 부각시켜 게스트에게 어필할 수 있는 한 줄을 기재해주세요. [32자 내외]" value="">
 		                    </div>
 						</td>
 						<td style="border-left-style: hidden;"  class="align-middle">
