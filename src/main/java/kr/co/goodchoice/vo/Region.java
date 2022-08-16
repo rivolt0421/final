@@ -9,9 +9,10 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@Alias("HouseFacilities")
-public class HouseFacilities {
+@Alias("Region")
+public class Region {
 
-	private int houseNo;		// 숙소 번호
-	private int facilitiesNo;	// 편의시설 번호
+	private int id;
+	private String province;
+	private String name;
 }
