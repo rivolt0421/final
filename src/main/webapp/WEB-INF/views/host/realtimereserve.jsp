@@ -41,15 +41,80 @@
 				<div class="tab-content" id="myTabContent">
 				  <div class="tab-pane fade show active" id="enter-tab-pane" role="tabpanel" aria-labelledby="enter-tab" tabindex="0">
 				  	<!-- 입실 예정 -->
-				  ...
+				  	<div class="m-3">
+				  		<table class="table">
+				  			<thead>
+				  				<tr>
+				  					<th>입실예정일</th>
+				  					<th>객실명</th>
+				  					<th>예약자명</th>
+				  					<th>연락처</th>
+				  					<th>취소여부</th>
+				  				</tr>
+				  			</thead>
+				  			<tbody>
+				  				<tr>
+				  					<td>2022-08-20</td>
+				  					<td>디럭스 트윈</td>
+				  					<td>홍길동</td>
+				  					<td>010-1111-1111</td>
+				  					<td>예약완료</td>
+				  				</tr>
+				  			</tbody>
+				  		</table>
+				  	</div>
 				  </div>
 				  <div class="tab-pane fade" id="leaving-tab-pane" role="tabpanel" aria-labelledby="leaving-tab" tabindex="0">
 				  	<!-- 퇴실예정 -->
-				  ...
+				  	<div>
+				  		<table class="table">
+				  			<thead>
+				  				<tr>
+				  					<th>입실일자</th>
+				  					<th>퇴실일자</th>
+				  					<th>객실명</th>
+				  					<th>예약자명</th>
+				  					<th>연락처</th>
+				  					<th>퇴실여부</th>
+				  				</tr>
+				  			</thead>
+				  			<tbody>
+				  				<tr>
+				  					<td>2022-08-15</td>
+				  					<td>2022-08-17</td>
+				  					<td>스탠다드 더블</td>
+				  					<td>임소연</td>
+				  					<td>010-2222-2222</td>
+				  					<td>퇴실 대기</td>
+				  				</tr>
+				  			</tbody>
+				  		</table>
+				  	</div>
 				  </div>
 				  <div class="tab-pane fade" id="cancel-tab-pane" role="tabpanel" aria-labelledby="cancel-tab" tabindex="0">
 				  	<!-- 취소된 예약 -->
-				  ...
+				  	<div>
+				  		<table class="table">
+				  			<thead>
+				  				<tr>
+				  					<th>예약일자</th>
+				  					<th>객실명</th>
+				  					<th>예약자명</th>
+				  					<th>연락처</th>
+				  					<th>환불여부</th>
+				  				</tr>
+				  			</thead>
+				  			<tbody>
+				  				<tr>
+				  					<td>2022-08-15</td>
+				  					<td>디럭스 트윈</td>
+				  					<td>아무개</td>
+				  					<td>010-3333-3333</td>
+				  					<td>환불 대기</td>
+				  				</tr>
+				  			</tbody>
+				  		</table>
+				  	</div>
 				  </div>
 				  <div class="tab-pane fade" id="check-tab-pane" role="tabpanel" aria-labelledby="check-tab" tabindex="0">
 				  	<!-- 예약 확인 -->
