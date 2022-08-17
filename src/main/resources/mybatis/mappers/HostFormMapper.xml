@@ -27,5 +27,6 @@
 		values
 		(#{no}, #{name}, #{introduce}, #{appralsal}, #{address}, #{surroundInfo}, #{notice}, #{basicInfo}, #{addPeopleInfo}, #{parkInfo}, #{coverImageName}, #{regionId})
 	</insert>
-	
+
 </mapper>
+		

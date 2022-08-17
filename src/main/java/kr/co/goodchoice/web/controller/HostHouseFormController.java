@@ -36,8 +36,6 @@ public class HostHouseFormController {
 			HostHouseRegisterForm1 hostHouseRegisterForm1, 
 			RedirectAttributes redirectAttributes) {
 		
-		//List<String> list = hostHouseRegisterForm1.getFacilities();
-		//String str = String.join(",", list);
 		redirectAttributes.addFlashAttribute("hostHouseRegisterForm1", hostHouseRegisterForm1);
 		
 		System.out.println(hostHouseRegisterForm1);
