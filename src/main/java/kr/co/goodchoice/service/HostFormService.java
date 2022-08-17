@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import kr.co.goodchoice.mapper.HostFormMapper;
+import kr.co.goodchoice.mapper.HouseFacilitiesMapper;
 import kr.co.goodchoice.mapper.RegionMapper;
 import kr.co.goodchoice.mapper.UserMapper;
 import kr.co.goodchoice.vo.House;
@@ -27,6 +28,9 @@ public class HostFormService {
 	
 	@Autowired
 	RegionMapper regionMapper;
+	
+	@Autowired
+	HouseFacilitiesMapper houseFacilitiesMapper;
 	
 	public void insertForm1(HostHouseRegisterForm1 form1, User loginUser) {
 		House house = new House();
@@ -53,10 +57,30 @@ public class HostFormService {
 		
 		hostFormMapper.insertHouse(house);
 		
+		List<String> facilities = form1.getFacilities();
+		for (String facilityNo : facilities) {
+			facilityMapper.insert(Integer.parseInt(facilityNo), house.getNo());
+		}
+		
+		
 		/*
-		1. house getNo를 가져올 수 없음
-		2. for문이 여러번 돌아야 함. 그래서 더 좋은 방법이 있음
-		3. 그래서 house 테이블을 facilitiesNo추가 ex(1, 2, 3, 4)
+		 * interface FacilityMapper {
+		 * 		void insertFacility(@Param("no") int no, @Param("houseNo") int houseNo)
+		 * }
+		 * 
+		 * <mapper namespace="kr.co.....FacilityMapper">
+		 * 		<insert id="insertFacility">
+		 * 			insert into facility (house_no, facilities_no)
+		 * 			values (#{houseNo}, #{no})
+		 * 		</insert>
+		 * </mapper>
+		 * 
+		 */
+		
+		/*
+		1. setHouseNo(house.getNo)를 가져오기 힘듬
+		2. for문이 여러번 돌아야 함... 더 좋은 방법이 있는 것 같음!
+		3. house 테이블에 facilitiesNo추가해서 문자열로 가져오기 ex(1, 2, 3, 4)
 		4. select * from house where house_no = 1
 		house.getfacilitiesNo = 1, 2, 3, 4
 		위에를 select문을 이용하여 where in을 통해서 가져올 것
