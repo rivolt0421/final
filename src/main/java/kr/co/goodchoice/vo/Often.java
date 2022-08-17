@@ -14,7 +14,7 @@ import lombok.ToString;
 @Alias("Often")
 public class Often {
 	private String no;
-	private String id;
+	private OftenCategory oftenCategory;
 	private String title;
 	private String content;
 	private Date createdDate;
