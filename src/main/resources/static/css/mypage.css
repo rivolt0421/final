@@ -154,10 +154,10 @@
 .mypage .pw_input__title .title__uinfo{float:left;color: rgba(0,0,0,0.56);}
 .mypage .pw_input .pw_input__btns-wrap{display:block; overflow:hidden; margin-bottom: 50px;padding-right: 110px;}
 .mypage .pw_input .pw_input__btns-wrap .btns-wrap__edit-btn{display:block; border:solid 1px #ccc;}
-.mypage .pw_input .pw_input__btns-wrap.modifying .btns-wrap__edit-btn{display:none;}
+/* .mypage .pw_input .pw_input__btns-wrap.modifying .btns-wrap__edit-btn{display:none;} */
 .mypage .pw_input .pw_input__btns-wrap.modifying .btns-wrap__cancel-btn,
 .mypage .pw_input .pw_input__btns-wrap.modifying .btns-wrap__submit-btn{display:block;}
-.mypage .pw_input__btns-wrap button{display:none;float:left;margin-right: 5%;width: 47%; height: 42px;border-radius: 4px;font-size: 15px;color: rgba(0,0,0,0.87);text-align: center;box-sizing: border-box;vertical-align: top; background-color:#fff;}
+.mypage .pw_input__btns-wrap button{float:left;margin-right: 5%;width: 47%; height: 42px;border-radius: 4px;font-size: 15px;color: rgba(0,0,0,0.87);text-align: center;box-sizing: border-box;vertical-align: top; background-color:#fff;}
 .mypage .pw_input__btns-wrap .btns-wrap__submit-btn{border: none;background: #ff0055;background: -moz-linear-gradient(top, #ff0055 0%, #e62243 100%);background: -webkit-linear-gradient(top, #ff0055 0%,#e62243 100%);color:#fff; background: linear-gradient(to bottom, #ff0055 0%,#e62243 100%);}
 .mypage .pw_input__btns-wrap .btns-wrap__cancel-btn{border: solid 1px #ccc; background:none; box-sizing:none;}
 .mypage .pw_input__btns-wrap button:last-child{margin-right: 0px;}
