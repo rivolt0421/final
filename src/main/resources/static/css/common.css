@@ -340,7 +340,7 @@ header,.roll{position:relative;background:#f7323f}
 	.recommend_srch .chain{padding-top:0}
 	.recommend_srch .chain ul li{}
 	.recommend_srch .chain ul li a{height:auto;line-height:px}
-	.sub_wrap{width:1024px !important;margin:0 auto 0 auto;padding-bottom:50px} /* Fix GNB 대응 */
+	.sub_wrap{width:1024px !important;margin:0 auto 0 auto;} /* Fix GNB 대응 */
 	.srch_bar .wrap_inp button{display:none;}
 } /* Media query Close */
 
@@ -373,7 +373,7 @@ header,.roll{position:relative;background:#f7323f}
 	.early_top .bg_kong_2:after,
 	.early_top .bg_kong_3:after{display:none;}
 
-	.sub_top_wrap {height:211px;background:#f7323f;}
+	.sub_top_wrap {height:240px;background:#f7323f;}
 	.sub_top{width:1024px;height:211px;margin:0 auto;padding-top:72px;border-radius:0;}
 	.sub_top h2{display:block;margin:21px 0 0 31px;font-size:38px;font-weight:normal;letter-spacing:-1px;color:#fff}
 	.sub_top .area{position:relative;top:21px;height:auto;;}

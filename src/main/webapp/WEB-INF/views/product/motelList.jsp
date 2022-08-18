@@ -6,23 +6,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <title>Insert title here</title>
 <!-- css -->
-
-<!-- script -->
-<script src="/script/common.js"></script>
-<!-- fontawesome -->
-<script src="https://kit.fontawesome.com/4f71b1e252.js" crossorigin="anonymous"></script>
+<link href="/css/list.css" rel="stylesheet" />
+<link href="/css/list1.css" rel="stylesheet" />
 </head>
 <body>
 
+<%@include file="../common/nav.jsp" %>
 <!-- Wrap -->
-<div class="wrap">
-
-    <%@include file="../common/nav.jsp" %>
-
+<div class="wrap show">
         <!-- Sub Top -->
         <div class="sub_top_wrap">
             <div class="sub_top bg_kong_1">
@@ -170,9 +163,10 @@
         <a href="https://www.goodchoice.kr/product/detail?ano=1697&adcno=1&sel_date=2022-08-15&sel_date2=2022-08-16"
             data-ano="1697" data-adcno="1" data-alat="37.55638875" data-alng="126.9376814" data-distance="0.129" data-affiliate="1">
             <p class="pic">
-                <img class="lazy align"
+                <img class="lazy align" loading="lazy"
                      data-original="//image.goodchoice.kr/resize_1000X500x0/adimg_new/1697/1028/ca0c9f3e8bdcdf61ab2e1e3fe030e3f7.jpg"
-                     src="//image.goodchoice.kr/images/web_v3/bg_trans.png" alt="신촌 호텔 루씨르" />
+                     src="/images/houseImgs/houseImg-1000.jpg" alt="신촌 호텔 루씨르"
+                     style="margin-top: -159px; display: block;"/>
             </p>
             <div class="stage gra_black_vertical">
                 <div class="evt_info"><span>숙박 이용 시 양말, 렌즈통세척액서비스 제공</span></div>                <div class="name">
@@ -188,6 +182,29 @@
                     <p>대실&nbsp;<span class="build_badge" style="color: rgba(255,255,255,1); background-color: rgba(248,113,111,1);">예약</span>&nbsp;<b>30,000원</b></p><p>숙박&nbsp;<span class="build_badge" style="color: rgba(255,255,255,1); background-color: rgba(248,113,111,1);">예약</span>&nbsp;<b>65,000원</b></p>                </div>
             </div>
         </a>
+      </li>
+      <li class="list_2 adcno1">
+        <a href="https://www.goodchoice.kr"
+            data-ano="1697" data-adcno="1" data-alat="37.55638875" data-alng="126.9376814" data-distance="0.129" data-affiliate="1">
+            <p class="pic">
+                <img class="lazy align"
+                     data-original="//image.goodchoice.kr/resize_1000X500x0/adimg_new/1697/1028/ca0c9f3e8bdcdf61ab2e1e3fe030e3f7.jpg"
+                     src="/images/houseImgs/houseImg-1002.jpg" alt="신촌 호텔 루씨르"
+                     style="margin-top: -159px; display: block;"/>
+            </p>
+            <div class="stage gra_black_vertical">
+                <div class="evt_info"><span>숙박 이용 시 양말, 렌즈통세척액서비스 제공</span></div>                <div class="name">
+                                        <strong>신촌 호텔 루씨르</strong>
+                    <p class="score">
+                        <em>9.2</em>&nbsp;<span>추천해요</span>&nbsp;(2572)                    </p>
+                    <p>
+                        서대문구 창천동                    </p>
+                </div>
+                <div class="price">
+                    <div class="map_html">
+                        <p>대실&nbsp;<span class="build_badge" style="color: rgba(255,255,255,1); background-color: rgba(248,113,111,1);">예약</span>&nbsp;<b>30,000원</b></p><p>숙박&nbsp;<span class="build_badge" style="color: rgba(255,255,255,1); background-color: rgba(248,113,111,1);">예약</span>&nbsp;<b>65,000원</b></p>                    </div>
+                    <p>대실&nbsp;<span class="build_badge" style="color: rgba(255,255,255,1); background-color: rgba(248,113,111,1);">예약</span>&nbsp;<b>30,000원</b></p><p>숙박&nbsp;<span class="build_badge" style="color: rgba(255,255,255,1); background-color: rgba(248,113,111,1);">예약</span>&nbsp;<b>65,000원</b></p>                </div>
+            </div>        </a>
       </li>
     </ul>
   </div>
@@ -206,6 +223,10 @@
 <!-- 상단으로 -->
 <button class="btn_go_top" onclick="moveTop();">상단으로</button>
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/script/common.js"></script>
+<script src="/script/product.js"></script>
+<script src="https://kit.fontawesome.com/4f71b1e252.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,6 +1,9 @@
 HELP.md
 target/
 bin/
+src/main/resources/static/images/houseImgs
+src/main/resources/static/images/reviewImgs
+src/main/resources/static/images/roomImgs
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/

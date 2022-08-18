@@ -17,8 +17,8 @@ public class House {
 	private String introduce;		// 숙소 소개글(form1에선 숙소이용규칙으로 연결)
 	private String appralsal;		// 한줄평
 	private String address;			// 숙소 주소
-	private int latitude;			// 숙소 위도
-	private int logintude;			// 숙소 경도
+	private double latitude;			// 숙소 위도
+	private double longtitude;			// 숙소 경도
 	private String surroundInfo;	// 숙소 주변 정보
 	private String notice;			// 숙소 공지사항
 	private String basicInfo;		// 숙소 확인사항
