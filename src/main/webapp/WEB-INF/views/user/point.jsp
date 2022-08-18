@@ -44,7 +44,7 @@
         <div>
             <div class="point_show gra_red">
                 <span>사용 가능 포인트</span>
-                <strong id="point-page-show">0 P</strong>
+                <strong id="point-page-show"> P</strong>
             </div>
 
             <ul class="point_list"></ul>

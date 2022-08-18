@@ -2,6 +2,7 @@ package kr.co.goodchoice.service;
 
 
 import org.springframework.beans.BeanUtils;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -67,8 +68,14 @@ public class UserService {
 		}
 		return user;
 	}
-		
 	
+	public void updateUser(User user) {
+		User originalUser = userMapper.getUserByNo(user.getNo());
+		originalUser.setNickname(user.getNickname());
+		originalUser.setName(user.getName());
+		
+		userMapper.updateUser(originalUser);
+	}
 	
 }
 
