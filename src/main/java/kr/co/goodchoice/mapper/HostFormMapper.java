@@ -1,13 +1,12 @@
 package kr.co.goodchoice.mapper;
 
-
-
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Mapper;
 
 import kr.co.goodchoice.vo.HostHouseStatusCategories;
 import kr.co.goodchoice.vo.HostHouseTypeCategories;
 import kr.co.goodchoice.vo.House;
+import kr.co.goodchoice.vo.HouseImage;
 
 @Mapper
 public interface HostFormMapper {
@@ -17,7 +16,6 @@ public interface HostFormMapper {
 	void insertHostHouseStatusCategories(HostHouseStatusCategories hostHouseStatusCategories);
 	void insertHostHouseTypeCategories(HostHouseTypeCategories hostHouseTypeCategories);
 	
-	// form1(숙소)의 편의시설 등록
-	void insertFacilities(@Param("no") int no, @Param("facilities") String facilities);
-	void insertHouseFacilities(@Param("no") int no, @Param("houseNo") int houseNo);
+	// form1(숙소) 숙소 이미지 파일첨부 등록
+	void insertHouseImage(HouseImage image);
 }

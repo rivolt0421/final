@@ -9,6 +9,7 @@ import kr.co.goodchoice.vo.HouseFacilities;
 @Mapper
 public interface FacilitiesMapper {
 
-	void insertFacilities(@Param("no") int no, @Param("facilities") String facilities);
-	void insertHouseFacilities(@Param("no") int no, @Param("houseNo") int houseNo);
+	// 편의시설 등록
+	void insertFacilities(@Param("facilitiesNo") int facilitiesNo, @Param("facilitiesType") String facilitiesType);
+	void insertHouseFacilities(@Param("facilitiesNo") int facilitiesNo, @Param("houseNo") int houseNo);
 }
