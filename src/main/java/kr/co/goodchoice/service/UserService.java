@@ -29,7 +29,7 @@ public class UserService {
 		User user = userMapper.getUserByEmail(email);
 		log.info("카카오 로그인 아이디로 조회한 유저 정보: " + user);
 		
-		if (user == null) {
+		if (user == null) {	
 			user = new User();
 			user.setEmail(email);
 			user.setName(name);
