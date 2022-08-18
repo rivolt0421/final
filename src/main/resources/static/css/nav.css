@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import "variables.css";
 @import "common.css";
-@import "main.css";
 
 nav {
 	height: 70px;
