@@ -9,6 +9,6 @@ import lombok.ToString;
 @ToString
 public class Facilities {
 
-	private String no;
-	private String type;
+	private String no;		// 편의시설 번호
+	private String type;	// 편의시설 이름
 }
