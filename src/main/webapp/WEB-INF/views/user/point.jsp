@@ -40,21 +40,39 @@
 	        </ul>
    	  </div>
 		<div class="right">
-        <input type="hidden" name="page" value="1">
-        <div>
-            <div class="point_show gra_red">
-                <span>사용 가능 포인트</span>
-                <strong id="point-page-show"> P</strong>
-            </div>
-
-            <ul class="point_list"></ul>
-        </div>
-
-        <!-- 리스트 없을시 -->
-        <div class="list_none" style="display: block;">
-            적립한 포인트가 없습니다<br>
-        </div>
-    </div>
+	        <input type="hidden" name="page" value="1">
+	        <div>
+	            <div class="point_show gra_red">
+	                <span>사용 가능 포인트</span>
+	                <strong id="point-page-show"> P</strong>
+	            </div>
+	
+	            <ul class="point_list"></ul>
+	        </div>
+	
+	        <!-- 리스트 없을시 -->
+	        <div class="list_none" style="display: block;">
+	            적립한 포인트가 없습니다<br>
+	        </div>
+	        
+	        <!-- 리스트 있을시 -->
+			<section class="points-list">
+				<div class="points-list__year-month">21년 04월</div> 
+				<div class="points-list-item">
+					<div class="points-list-item__wrap">
+						<p class="points-list-item__name">
+				            회원가입 축하
+				        </p> 
+				        <p class="points-list-item__issued-date">
+				            21.04.16
+				        </p>
+				        </div> 
+				        <div class="points-list-item__wrap"><p class="points-list-item__balance"></p>
+				            +10 P
+				        </div>
+			        </div>
+		        </section>
+    	</div>
 	</div>
 </div>
 <%@ include file="../common/footer.jsp" %>
