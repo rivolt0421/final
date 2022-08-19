@@ -52,37 +52,7 @@
 					<tbody class="fs-6">
 						<tr>
 							<td class="text-center">115</td>
-							<td><a href="/noticedetail">[공지] 2022년 소상공인 온라인 기획전 <대한민국 동행세일 여행페스타> 모집</a></td>
-							<td class="text-center">2022/07/29</td>
-						</tr>
-						<tr>
-							<td class="text-center">115</td>
-							<td>[공지] 2022년 소상공인 온라인 기획전 <대한민국 동행세일 여행페스타> 모집</td>
-							<td class="text-center">2022/07/29</td>
-						</tr>
-						<tr>
-							<td class="text-center">115</td>
-							<td>[공지] 2022년 소상공인 온라인 기획전 <대한민국 동행세일 여행페스타> 모집</td>
-							<td class="text-center">2022/07/29</td>
-						</tr>
-						<tr>
-							<td class="text-center">115</td>
-							<td>[공지] 2022년 소상공인 온라인 기획전 <대한민국 동행세일 여행페스타> 모집</td>
-							<td class="text-center">2022/07/29</td>
-						</tr>
-						<tr>
-							<td class="text-center">115</td>
-							<td>[공지] 2022년 소상공인 온라인 기획전 <대한민국 동행세일 여행페스타> 모집</td>
-							<td class="text-center">2022/07/29</td>
-						</tr>
-						<tr>
-							<td class="text-center">115</td>
-							<td>[공지] 2022년 소상공인 온라인 기획전 <대한민국 동행세일 여행페스타> 모집</td>
-							<td class="text-center">2022/07/29</td>
-						</tr>
-						<tr>
-							<td class="text-center">115</td>
-							<td>[공지] 2022년 소상공인 온라인 기획전 <대한민국 동행세일 여행페스타> 모집</td>
+							<td><a href="/noticedetail?no=">[공지] 2022년 소상공인 온라인 기획전 <대한민국 동행세일 여행페스타> 모집</a></td>
 							<td class="text-center">2022/07/29</td>
 						</tr>
 					</tbody>
