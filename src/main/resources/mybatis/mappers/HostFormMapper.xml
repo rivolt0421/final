@@ -14,6 +14,9 @@
 		<result column="HOUSE_ADD_PEOPLE_INFO" property="addPeopleInfo"/> <!-- 추가 요금 -->
 		<result column="HOUSE_PARK_INFO" property="parkInfo"/> <!-- 주차장 정보 -->
 		<result column="HOUSE_COVER_IMAGE_NAME" property="coverImageName"/> <!-- 업체 이미지 -->
+		<result column="HOUSE_HOST_COMMENT" property="comment"/> <!-- 주인장 소개글 -->
+		<result column="HOUSE_FINDWAY" property="findway"/> <!-- 오시는 길 -->
+		<result column="HOUSE_ETC" property="etc"/> <!-- 기타 및 확인사항 -->
 	</resultMap>
 	
 	<!-- void insertHouse(House house); -->
@@ -23,9 +26,9 @@
 			from dual
 		</selectKey>
 		insert into House
-		(HOUSE_NO, HOUSE_NAME, HOUSE_INTRODUCE, APPRAISAL, HOUSE_ADDRESS, HOUSE_SURROUND_INFO, HOUSE_NOTICE, HOUSE_BASIC_INFO, HOUSE_ADD_PEOPLE_INFO, HOUSE_PARK_INFO, HOUSE_COVER_IMAGE_NAME, REGION_ID)
+		(HOUSE_NO, HOUSE_NAME, HOUSE_INTRODUCE, APPRAISAL, HOUSE_ADDRESS, HOUSE_SURROUND_INFO, HOUSE_NOTICE, HOUSE_BASIC_INFO, HOUSE_ADD_PEOPLE_INFO, HOUSE_PARK_INFO, HOUSE_COVER_IMAGE_NAME, REGION_ID, HOUSE_HOST_COMMENT, HOUSE_FINDWAY, HOUSE_ETC)
 		values
-		(#{no}, #{name}, #{introduce}, #{appralsal}, #{address}, #{surroundInfo}, #{notice}, #{basicInfo}, #{addPeopleInfo}, #{parkInfo}, #{coverImageName}, #{regionId})
+		(#{no}, #{name}, #{introduce}, #{appralsal}, #{address}, #{surroundInfo}, #{notice}, #{basicInfo}, #{addPeopleInfo}, #{parkInfo}, #{coverImageName}, #{regionId}, #{comment}, #{findway}, #{etc})
 	</insert>
 
 </mapper>

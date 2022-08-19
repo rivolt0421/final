@@ -13,8 +13,8 @@ import lombok.ToString;
 public class HouseImage {
 
 	private int ImageNo;
-	private House houseNo;
-	private Rooms roomNo;
-	private RoomsMotel motelRoomNo;
+	private int houseNo;
+	private Integer roomNo;
+	private Integer motelRoomNo;
 	private String houseImageName;
 }
