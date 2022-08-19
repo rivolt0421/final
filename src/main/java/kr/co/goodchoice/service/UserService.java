@@ -39,6 +39,24 @@ public class UserService {
 		}
 		return user;
 	}
+	/**
+	 * 페이스북 로그인으로 획득한 사용자정보로 로그인처리를 수행한다.<p>
+	 * @param user 페이스북 로그인으로 획득한 사용자 정보
+	 * @return 사용자 정보
+	 */
+	public User loginWithFacebook(String email, String name) {
+		User user = userMapper.getUserByEmail(email);
+		log.info("페이스북 로그인 아이디로 조회한 유저 정보: " + user);
+		
+		if (user == null) {	
+			user = new User();
+			user.setEmail(email);
+			user.setName(name);
+			userMapper.insertUser(user);
+			log.info("페이스북 로그인 신규 사용자 정보 등록 완료: " + user.getEmail() + ", " + user.getName());
+		}
+		return user;
+	}
 	
 	public User getUserInfo(int userNo) {
 		return userMapper.getUserByNo(userNo);

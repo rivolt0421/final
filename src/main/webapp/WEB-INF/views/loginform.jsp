@@ -23,14 +23,19 @@
         <section>
             <form id="loginform" action="login" autocomplete="off" method="post" novalidate="novalidate">
                 <!-- <input type="hidden" name="yeogi_token" value="7ba93dd2dd16200552a9e9af321c4b01"> -->
+                <c:if test="${param.fail eq 'invalid' }">
+	        		<div class="alert alert-danger">
+	        			<strong>로그인 실패</strong> 아이디 혹은 비밀번호가 올바르지 않습니다.
+	        		</div>
+        		</c:if>
                 <div class="fix_title">
                     <strong class="logo"><a href="/">굿초이스</a></strong>
                 </div>
                 <button type="button" id="kakao-login-btn" class="btn_start btn_kakao" data-device-type="W">
                     <span><i class="fa-solid fa-comment"></i>카카오톡으로 로그인</span>
                 </button>
-                <button type="button" id="facebook-login-btn" class="btn_start btn_fb">
-                    <span><i class="fa-brands fa-facebook"></i>Facebook으로 로그인</span>
+                <button type="button" id="facebook-login-btn" class="btn_start btn_fb" onclick="fnFbCustomLogin();">
+                    <span href="javascript:void(0)"><i class="fa-brands fa-facebook"></i>Facebook으로 로그인</span>
                 </button>
                 <a href="#" id="naver_id_login" class="btn_start btn_naver">
                     <span><i class="fa-solid fa-n"></i>네이버로 로그인</span>
@@ -61,6 +66,14 @@
 	    		카카오 로그인 인증이 완료되면 사용자정보를 전달받아서 아래 폼 입력필드에 설정하고, 폼을 서버로 제출한다.
     	 	--%>
 	    	<form id="form-kakao-login" method="post" action="kakao-login">
+	    		<input type="hidden" name="name" />
+	    		<input type="hidden" name="email" />
+	    	</form>
+            <%--
+	    		페이스북 로그인 서비스가 제공하는 사용자 정보를 서버로 제출할 때 사용하는 폼과 폼 입력요소다.
+	    		페이스북 로그인 인증이 완료되면 사용자정보를 전달받아서 아래 폼 입력필드에 설정하고, 폼을 서버로 제출한다.
+    	 	--%>
+	    	<form id="form-facebook-login" method="post" action="facebook-login">
 	    		<input type="hidden" name="name" />
 	    		<input type="hidden" name="email" />
 	    	</form>
@@ -106,8 +119,6 @@ $(function() {
 						
 						$('#form-kakao-login input[name=name]').val(account.profile.nickname);
 						$('#form-kakao-login input[name=email]').val(account.email);
-						/* $('#form-kakao-login input[name=age]').val(account.age_range);
-						$('#form-kakao-login input[name=gender]').val(account.gender); */
 						
 						// 사용자 정보가 포함된 폼을 서버로 제출한다.
 						document.querySelector("#form-kakao-login").submit()
@@ -125,6 +136,45 @@ $(function() {
 		});		
 	})
 })
+
+//기존 로그인 상태를 가져오기 위해 Facebook에 대한 호출
+function statusChangeCallback(res){
+	statusChangeCallback(response);
+}
+
+function fnFbCustomLogin(){
+	FB.login(function(response) {
+		if (response.status === 'connected') {
+			FB.api('/me', 'get', {fields: 'name,email'}, function(r) {
+				console.log(r.name, r.email);
+				// 사용자 정보를 가져와서 폼에 추가한다.
+				$("#form-facebook-login input[name=name]").val(r.name);
+				$("#form-facebook-login input[name=email]").val(r.email);
+				
+				// 사용자 정보가 포함된 폼을 서버로 제출한다.
+				$("#form-facebook-login").trigger("submit");
+			})
+		} else if (response.status === 'not_authorized') {
+			// Facebook에 로그인했지만 앱에는 로그인하지 않음
+			alert('앱에 로그인해야 이용가능한 기능입니다.');
+		} else {
+			// Facebook에 로그인하지 않았으므로 이 앱에 로그인했는지 여부는 확실하지 않음
+			alert('페이스북에 로그인해야 이용가능한 기능입니다.');
+		}
+	}, {scope: 'public_profile,email'});
+}
+
+window.fbAsyncInit = function() {
+	FB.init({
+		appId      : '392252833047866', // 앱 ID
+		cookie     : true,
+		xfbml      : true,
+		version    : 'v10.0'
+	});
+	FB.AppEvents.logPageView();   
+};
 </script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v10.0&appId=392252833047866" nonce="SiOBIhLG"></script>
+
 </body>
 </html>
