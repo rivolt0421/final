@@ -25,8 +25,12 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 </style>
 </head>
 <body>
+<%@ include file="common/nav.jsp" %>
 <div class="container">
 	<!-- 마이페이지 입력폼 -->
+	<main class="row border shadow mb-3 rounded">
+		<%@ include file="common/registerprogress.jsp" %>
+	</main>
 	<div class="list">
 		<form method="post" action="updateMyInfo" class="pt-4 mt-4">
 			<table class="table table-bordered">
