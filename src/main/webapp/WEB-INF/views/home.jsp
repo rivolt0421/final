@@ -12,10 +12,51 @@
 <!-- css -->
 <link href="/css/home.css" rel="stylesheet">
 <link href="/css/swiper.css" rel="stylesheet">
+
+<!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
 <!-- script -->
 <script src="/script/common.js"></script>
 <!-- fontawesome -->
 <script src="https://kit.fontawesome.com/4f71b1e252.js" crossorigin="anonymous"></script>
+
+<!-- Demo styles -->
+<style>
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
 </head>
 <body>
 <%@ include file="common/nav.jsp" %>
@@ -60,12 +101,16 @@
 		<!-- EVENT -->
 		<div class="event_main">
 			<h2>이벤트</h2>
-			<section class="swiper-container swiper-container-horizontal">
-				<ul class="swiper-wrapper" style="transform: translate3d(-3848px, 0px, 0px); transition-duration: 0ms;"><li class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="3" style="width: 962px;"><a href="/more/eventView/608?page=0"><img src="//image.goodchoice.kr/images/cms/home_img/3c13f7bf4ea5ef67729fa285aca7896f.jpg" alt="페이백 50﹪ 쿠폰 이벤트"></a></li>
-					<li class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="0" style="width: 962px;"><a href="/more/eventView/2478?page=0"><img src="//image.goodchoice.kr/images/cms/home_img/c7a053a0f982569dbbdb86e7b07f37c8.png" alt="경북 동해안 오선지 대바겐세일"></a></li><li class="swiper-slide" data-swiper-slide-index="1" style="width: 962px;"><a href="/more/eventView/2327?page=0"><img src="//image.goodchoice.kr/images/cms/home_img/fbaabc9a7da7a4f20e1b43c44da60b34.jpg" alt="올여름 100만원 쿠폰어때"></a></li><li class="swiper-slide swiper-slide-prev" data-swiper-slide-index="2" style="width: 962px;"><a href="/more/eventView/2335?page=0"><img src="//image.goodchoice.kr/images/cms/home_img/67223336700c3b16456fe8279cac2bcc.png" alt="총 2천만원 경품 싹-다 드림!"></a></li><li class="swiper-slide swiper-slide-active" data-swiper-slide-index="3" style="width: 962px;"><a href="/more/eventView/608?page=0"><img src="//image.goodchoice.kr/images/cms/home_img/3c13f7bf4ea5ef67729fa285aca7896f.jpg" alt="페이백 50﹪ 쿠폰 이벤트"></a></li>				<li class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0" style="width: 962px;"><a href="/more/eventView/2478?page=0"><img src="//image.goodchoice.kr/images/cms/home_img/c7a053a0f982569dbbdb86e7b07f37c8.png" alt="경북 동해안 오선지 대바겐세일"></a></li></ul>
-				<!-- Add Pagination swiper 적용해보기 -->
-				<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></div>
-			</section>
+			    <div class="swiper mySwiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="//image.goodchoice.kr/images/cms/home_img/3c13f7bf4ea5ef67729fa285aca7896f.jpg" ></div>
+						<div class="swiper-slide"><img src="//image.goodchoice.kr/images/cms/home_img/418956ddf9e4354daabea5f81c63b7e3.jpg" ></div>
+						<div class="swiper-slide"><img src="//image.goodchoice.kr/images/cms/home_img/67223336700c3b16456fe8279cac2bcc.png" ></div>
+						<div class="swiper-slide"><img src="//image.goodchoice.kr/images/cms/home_img/bb4e3dec46c76672638e8c42bb3da6e5.png" ></div>
+						<div class="swiper-slide"><img src="//image.goodchoice.kr/images/cms/home_img/fbaabc9a7da7a4f20e1b43c44da60b34.jpg" ></div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>	
 		</div>
 		<!-- //EVENT -->
 
@@ -108,5 +153,27 @@
             </div>   
         </footer>
 	</div>
+	<!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
 </body>
 </html>
