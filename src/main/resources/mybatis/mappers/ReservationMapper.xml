@@ -19,7 +19,7 @@
 	</resultMap>
 	
 	<!-- List<Reservation> getReservations(); -->
-	<select id="Reservations" resultMap="RerservationResultMap">
+	<select id="Reservations" resultMap="ReservationResultMap">
 		select *
 		from reservations
 	</select>
