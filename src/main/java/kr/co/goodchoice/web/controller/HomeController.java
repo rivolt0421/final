@@ -95,18 +95,32 @@ public class HomeController {
 //	}
 	
 	// 카카오 로그인 요청을 처리한다.
-		@PostMapping("/kakao-login")
-		public String loginWithKakao(String email, String name) {
-			
-			
-			User savedUser = userService.loginWithKakao(email, name);
-			
-			SessionUtils.addAttribute("LOGIN_USER", savedUser);
-			
-			log.info("카카오 로그인 완료");
-			
-			return "redirect:/";
-		}
+	@PostMapping("/kakao-login")
+	public String loginWithKakao(String email, String name) {
+		
+		
+		User savedUser = userService.loginWithKakao(email, name);
+		
+		SessionUtils.addAttribute("LOGIN_USER", savedUser);
+		
+		log.info("카카오 로그인 완료");
+		
+		return "redirect:/";
+	}
+	
+	// 페이스북 로그인 요청을 처리한다.
+	@PostMapping("/facebook-login")
+	public String loginWithFacebook(String email, String name) {
+		
+		
+		User savedUser = userService.loginWithFacebook(email, name);
+		
+		SessionUtils.addAttribute("LOGIN_USER", savedUser);
+		
+		log.info("페이스북 로그인 완료");
+		
+		return "redirect:/";
+	}
 	
 	@GetMapping(path = "/logout")
 	public String logout(SessionStatus sessionStatus) {
