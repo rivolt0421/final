@@ -23,7 +23,7 @@ public class HostHouseRegisterForm1 {
 	private MultipartFile hostPicture;			// 업주 사진
 	private String comment;						// 주인장 소개글
 	private String findWay;						// 찾아오는 길
-	private String surroundInfo;				// 주변 정보
+	private String trafficInfo;					// 주변 정보
 	private String introduce;					// 숙소이용규칙
 	private String appralsal;					// 한줄평
 	private String eventTitle;					// 이벤트 타이틀

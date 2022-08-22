@@ -28,8 +28,31 @@
 		insert into House
 		(HOUSE_NO, HOUSE_NAME, HOUSE_INTRODUCE, APPRAISAL, HOUSE_ADDRESS, HOUSE_SURROUND_INFO, HOUSE_NOTICE, HOUSE_BASIC_INFO, HOUSE_ADD_PEOPLE_INFO, HOUSE_PARK_INFO, HOUSE_COVER_IMAGE_NAME, REGION_ID, HOUSE_HOST_COMMENT, HOUSE_FINDWAY, HOUSE_ETC)
 		values
-		(#{no}, #{name}, #{introduce}, #{appralsal}, #{address}, #{surroundInfo}, #{notice}, #{basicInfo}, #{addPeopleInfo}, #{parkInfo}, #{coverImageName}, #{regionId}, #{comment}, #{findway}, #{etc})
+		(#{no}, #{name}, #{introduce}, #{appralsal}, #{address}, #{surroundInfo}, #{notice}, #{basicInfo}, #{addPeopleInfo}, #{parkInfo}, #{coverImageName}, #{regionId}, #{hostComment}, #{findWay}, #{etc})
 	</insert>
 
+
+	<!-- void insertHouseImage(HouseImage image); 
+		HOUSE_IMAGE_NO
+		HOUSE_NO
+		ROOM_NO
+		MOTEL_ROOM_NO
+		HOUSE_IMAGE_NAME
+		
+		private int imageNo;
+		private int houseNo;
+		private Integer roomNo;
+		private Integer motelRoomNo;
+		private String houseImageName;
+
+	-->
+	<insert id="insertHouseImage" parameterType="HouseImage">
+		<selectKey keyProperty="imageNo" resultType="int" order="BEFORE">
+			select house_image_seq.nextval 
+			from dual
+		</selectKey>
+		insert into house_image (house_image_no, house_no, house_image_name)
+		values (#{imageNo}, #{houseNo}, #{houseImageName})
+	</insert>
 </mapper>
 		

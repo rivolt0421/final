@@ -12,7 +12,7 @@ import lombok.ToString;
 @Alias("HouseImage")
 public class HouseImage {
 
-	private int ImageNo;
+	private int imageNo;
 	private int houseNo;
 	private Integer roomNo;
 	private Integer motelRoomNo;

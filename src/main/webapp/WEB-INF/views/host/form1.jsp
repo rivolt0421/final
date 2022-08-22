@@ -24,9 +24,13 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 </style>
 </head>
 <body>
+<%@ include file="common/nav.jsp" %>
 <div class="container">
 	<!-- 호스트 필수 정보 입력폼 -->
 	<div class="list">
+		<main class="row border shadow mb-3 rounded">
+			<%@ include file="common/registerprogress.jsp" %>
+		</main>
         <form method="post" action="updateHouseInfo1" class="pt-4 mt-4" enctype="multipart/form-data">
 			<ul>
 		        <li>[소개 작성] 은 게스트하우스 전체를 소개하는 기능입니다. (사진, 이벤트 정보, 오시는 길 등)</li>
@@ -50,16 +54,16 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 							<div class="row mb-3">
 								<div class="col-sm-1">업체명</div>
 								<div class="col-sm-5">
-									<input class="form-control" type="text" name="aname" placeholder="업체명을 입력하세요." value="">
+									<input class="form-control" type="text" name="aname" placeholder="업체명을 입력하세요." value="${f.aname }">
 								</div>
 							</div>
 							<div class="row mb-3">
 								<div class="col-sm-1">업체주소</div>
 								<span class="col-sm-5">
-									<input class="form-control" id="inputRoadAddress" type="text" name="address1" readonly placeholder="업체 주소를 입력하세요." value="">
+									<input class="form-control" id="inputRoadAddress" type="text" name="address1" readonly placeholder="업체 주소를 입력하세요." value="${f.address1 }">
 								</span>
 								<div class="col-2">
-									<input class="form-control" id="inputRoadAddress1" type="text" name="address2" placeholder="나머지 주소를 입력하세요." value="" />
+									<input class="form-control" id="inputRoadAddress1" type="text" name="address2" placeholder="나머지 주소를 입력하세요." value="${f.address2 }" />
 								</div>
 								<input type="button" class="btn btn-danger col-1" onclick="daumAddress()" value="주소검색" />
 							</div>
@@ -88,11 +92,11 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 							</div>
 							<div>
 								<div>
-									<input type="file" name="housePictures"  class="form-control w-50 mb-2" />
-									<input type="file" name="housePictures"  class="form-control w-50 mb-2"/>
-									<input type="file" name="housePictures"  class="form-control w-50 mb-2"/>
-									<input type="file" name="housePictures"  class="form-control w-50 mb-2"/>
-									<input type="file" name="housePictures"  class="form-control w-50 mb-2"/>
+									<input type="file" name="housePictures" class="form-control w-50 mb-2" />
+									<input type="file" name="housePictures" class="form-control w-50 mb-2"/>
+									<input type="file" name="housePictures" class="form-control w-50 mb-2"/>
+									<input type="file" name="housePictures" class="form-control w-50 mb-2"/>
+									<input type="file" name="housePictures" class="form-control w-50 mb-2"/>
 								</div>
 							</div>
 						</td>
@@ -255,33 +259,14 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 							(호스트 소개)
 						</th>
 						<td>
-							<div class="form-check">
-								<input class="form-check-input" name="open" type="checkbox" value="Y">
-								<label class="pb-3" for="hostName">업주 실명 및 업주 사진 노출</label>
-							</div>
 							<div class="row mb-3">
 								<div class="col-sm-1 pt-2">업주 실명</div>
 								<div class="col-sm-5">
-									<input class="form-control" type="text" name="hostName" placeholder="실명을 입력하세요." value="">
+									<input class="form-control" type="text" name="hostName" placeholder="실명을 입력하세요." value="${f.hostName }">
 								</div>
-							</div>
-							<div class="row mb-3">
-								<div class="col-sm-1">업주 사진</div>
-								<div class="col-sm-5">
-									<input type="file" name="hostPicture" class="form-control">
-								</div>
-							</div>
-							<div class="row mb-3">
-								<div style="color: black;" class="col-sm-auto">사진 등록 예시</div>
-								<div class="col-auto">
-									<span style="color: red;">· 한 개의 이미지만 업로드 할 수 있습니다.</span>
-									<br>
-									<span style="color: red;">· 사진 권장사이즈 : 300 * 300</span>
-								</div>
-								<img class="col-2" alt="이미지" src="">
 							</div>
 							<div class="">
-		                    	<textarea class="form-control textarea-layer" rows="6" name="comment" placeholder="사장님의 특이 경력 혹은 사장님만의 재밌는 이야기가 있다면 게스트들에 소개해주세요. 게스트는 숙소의 시설과 위치, 서비스는 물론, 사장님이 어떤 분인지도 관심이 있답니다."></textarea>
+		                    	<textarea class="form-control textarea-layer" rows="6" name="comment" placeholder="사장님의 특이 경력 혹은 사장님만의 재밌는 이야기가 있다면 게스트들에 소개해주세요. 게스트는 숙소의 시설과 위치, 서비스는 물론, 사장님이 어떤 분인지도 관심이 있답니다.">${f.comment }</textarea>
 		                     	<span id="remainComment" class="float-right">(<span id="count">0</span>/<span id="max">1000</span>)</span>
 		                    </div>
 		                   <p class="mt-3">
@@ -309,8 +294,8 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 						</th>
 						<td>
 							<div class="form">
-		                    	<textarea class="form-control textarea" rows="6" name="findWay" placeholder="주요 버스터미널이나 기차역 혹은 공항 등에서 숙소까지 찾아가는 방법을 자세히 기재해 주세요."></textarea>
-		                    	<span id="surroundInfo" class="float-right">(<span id="count">0</span>/<span id="max">1000</span>)</span>
+		                    	<textarea class="form-control textarea" rows="6" name="findWay" placeholder="주요 버스터미널이나 기차역 혹은 공항 등에서 숙소까지 찾아가는 방법을 자세히 기재해 주세요.">${f.findWay }</textarea>
+		                    	<span id="findWay" class="float-right">(<span id="count">0</span>/<span id="max">1000</span>)</span>
 		                    </div>
 					  		<p class="mt-3">
 								<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#exampleWay" aria-expanded="false" aria-controls="exampleWay">
@@ -357,12 +342,9 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 								</span>
 							</div>
 							<div class="form-layer mt-2">
-								<div class="form-body col-10">
-									<input type="text" class="form-control mt-2" name="trafficInfo" placeholder="숙소 주변의 명소를 홍보하여 주세요. 교통, 관광, 쇼핑 명소부터 게스트하우스까지의 소요시간을 예시 문구를 참고하여 작성해 주시면 게스트들이 예약할 때 큰 도움이 됩니다." value="">
-									<input type="text" class="form-control mt-2" name="trafficInfo" placeholder="숙소 주변의 명소를 홍보하여 주세요. 교통, 관광, 쇼핑 명소부터 게스트하우스까지의 소요시간을 예시 문구를 참고하여 작성해 주시면 게스트들이 예약할 때 큰 도움이 됩니다." value="">
-									<input type="text" class="form-control mt-2" name="trafficInfo" placeholder="숙소 주변의 명소를 홍보하여 주세요. 교통, 관광, 쇼핑 명소부터 게스트하우스까지의 소요시간을 예시 문구를 참고하여 작성해 주시면 게스트들이 예약할 때 큰 도움이 됩니다." value="">
-								</div>
-							</div>
+		                    	<textarea class="form-control textarea" rows="6" name="trafficInfo" placeholder="숙소 주변의 명소를 홍보하여 주세요. 교통, 관광, 쇼핑 명소부터 게스트하우스까지의 소요시간을 예시 문구를 참고하여 작성해 주시면 게스트들이 예약할 때 큰 도움이 됩니다.">${f.trafficInfo }</textarea>
+		                    	<span id="trafficInfo" class="float-right">(<span id="count">0</span>/<span id="max">1000</span>)</span>
+		                    </div>
 							<p class="mt-3">
 								<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#exampleAround" aria-expanded="false" aria-controls="exampleAround">
 								예시 문구 및 화면 보기
@@ -391,7 +373,7 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 						<td>
 							<div class="form-layer mt-2">
 								<div class="form-body">
-									<textarea class="form-control textarea" rows="6" name="Introduce" placeholder="숙소 내 이용규칙이 있을 경우 기재해주세요."></textarea>
+									<textarea class="form-control textarea" rows="6" name="Introduce" placeholder="숙소 내 이용규칙이 있을 경우 기재해주세요.">${f.introduce }</textarea>
 								</div>
 							</div>
 						</td>
@@ -417,7 +399,7 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 						<th class="text-center align-middle">한줄평</th>
 						<td>
 							<div class="">
-		                        <input type="text" class="form-control" name="appralsal" maxlength="32" placeholder="숙소의 장점을 부각시켜 게스트에게 어필할 수 있는 한 줄을 기재해주세요. [32자 내외]" value="">
+		                        <input type="text" class="form-control" name="appralsal" maxlength="32" placeholder="숙소의 장점을 부각시켜 게스트에게 어필할 수 있는 한 줄을 기재해주세요. [32자 내외]" value="${f.appralsal }">
 		                    </div>
 						</td>
 						<td style="border-left-style: hidden;"  class="align-middle">
@@ -432,9 +414,9 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 						<th class="text-center align-middle">이벤트 정보</th>
 						<td>
 							<div class="">
-		                        <input type="text" class="form-control" name="eventTitle" placeholder="업체 이미지에 표시되는 대표적인 이벤트 한줄을 남겨주세요." value="">
+		                        <input type="text" class="form-control" name="eventTitle" placeholder="업체 이미지에 표시되는 대표적인 이벤트 한줄을 남겨주세요." value="${eventTitle }">
 		                        <br>
-		                        <textarea class="form-control textarea" rows="6" id="event" name="eventContent" placeholder="게스트하우스 주관의 이벤트 정보를 기재해주세요."></textarea>
+		                        <textarea class="form-control textarea" rows="6" id="event" name="eventContent" placeholder="게스트하우스 주관의 이벤트 정보를 기재해주세요.">${f.eventContent }</textarea>
 		                    </div>
 		                    <p class="mt-3">
 								<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="exampleEvent" aria-expanded="false" aria-controls="exampleEvent">
@@ -471,7 +453,7 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 						<th class="text-center align-middle">현장 요금<br>추가 정보</th>
 						<td>
 							<div class="">
-								<textarea class="form-control textarea" rows="6" name="addCost" placeholder="숙소에서 제공되는 숙박비 외의 유료 서비스가 있을 경우 가격정보와 함께 항목을 기재해주세요."></textarea>
+								<textarea class="form-control textarea" rows="6" name="addCost" placeholder="숙소에서 제공되는 숙박비 외의 유료 서비스가 있을 경우 가격정보와 함께 항목을 기재해주세요.">${f.addCost}</textarea>
 		                    </div>
 		                    <p class="mt-3">
 								<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="exampleAdd" aria-expanded="false" aria-controls="exampleAdd">
@@ -497,7 +479,7 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 						<th class="text-center align-middle">주차장 정보</th>
 						<td>
 							<div class="">
-								<textarea class="form-control textarea" rows="6" name="parking" placeholder="숙소에서 제공되는 숙박비 외의 유료 서비스가 있을 경우 가격정보와 함께 항목을 기재해주세요."></textarea>
+								<textarea class="form-control textarea" rows="6" name="parking" placeholder="숙소에서 제공되는 주차장 정보를 기재해주세요.">${f.parking }</textarea>
 		                    </div>
 						</td>
 						<td style="border-left-style: hidden;"></td>
@@ -507,7 +489,7 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 						<th class="text-center align-middle">확인 사항<br>및 기타</th>
 						<td>
 							<div class="form-layer">
-								<textarea class="form-control textarea" rows="6" name="etc" placeholder="기재된 숙소 정보 외에 게스트 숙지 사항을 기재해주세요."></textarea>
+								<textarea class="form-control textarea" rows="6" name="etc" placeholder="기재된 숙소 정보 외에 게스트 숙지 사항을 기재해주세요.">${f.etc}</textarea>
 		                    </div>
 		                    <p class="mt-3">
 								<button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#exampleCheck" aria-expanded="false" aria-controls="exampleCheck">

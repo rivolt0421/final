@@ -45,15 +45,20 @@ public class HostFormService {
 	
 	public void insertForm1(HostHouseRegisterForm1 form1, User loginUser)  {
 		House house = new House();
-		house.setName(form1.getAname());
-		house.setAddress(form1.getAddress1());
-		house.setAddress(form1.getAddress2());
-		house.setSurroundInfo(form1.getSurroundInfo());
-		house.setIntroduce(form1.getIntroduce());
-		house.setAppralsal(form1.getAppralsal());
-		house.setAddPeopleInfo(form1.getAddCost());
-		house.setParkInfo(form1.getParking());
-		house.setBasicInfo(form1.getEtc());
+		HouseEvent houseEvent = new HouseEvent();
+		house.setName(form1.getAname());				// 숙소명
+		house.setAddress(form1.getAddress1() + " " + form1.getAddress2());			// 주소(나머지 입력)
+		house.setName(form1.getHostName());				// 업주 이름
+		house.setHostComment(form1.getComment());		// 주인장 소개글
+		house.setFindWay(form1.getFindWay());			// 오시는 길
+		house.setSurroundInfo(form1.getTrafficInfo());	// 주변정보
+		house.setIntroduce(form1.getIntroduce());		// 이용규칙
+		house.setAppralsal(form1.getAppralsal());		// 한줄평
+		houseEvent.setEventTitle(form1.getEventTitle());// 이벤트 제목
+		houseEvent.setEventContent(form1.getEventContent());// 이벤트 내용
+		house.setAddPeopleInfo(form1.getAddCost());		// 현장 추가 요금
+		house.setParkInfo(form1.getParking());			// 주차장 정보
+		house.setEtc(form1.getEtc());					// 확인 및 기타사항
 		
 		String address = form1.getAddress1();
 		String[] addressArray = address.split(" ");
