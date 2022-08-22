@@ -177,38 +177,32 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 									<span class="col-2">업태</span>	
 									<div class="col-auto">
 										<div class="form-check">
-											<input class="form-check-input" name="businessConditions" type="checkbox" id="gridCheck1">
+											<input class="form-check-input" name="businessConditions" type="checkbox" value="a">
 											<label class="" for="gridCheck1">숙박</label>
 										</div>
 										<div class="form-check">
-											<input class="form-check-input" name="businessConditions" type="checkbox" id="gridCheck2">
+											<input class="form-check-input" name="businessConditions" type="checkbox" value="b">
 											<label class="" for="gridCheck2">음식</label>
 										</div>
 									</div>
 									<div class="col-auto">
 										<div class="form-check">
-											<input class="form-check-input" name="businessConditions" type="checkbox" id="gridCheck3">
+											<input class="form-check-input" name="businessConditions" type="checkbox" value="c">
 											<label class="" for="gridCheck3">기타</label>
 										</div>
 										<div class="form-check">
-											<input class="form-check-input" name="businessConditions" type="checkbox" id="gridCheck4">
+											<input class="form-check-input" name="businessConditions" type="checkbox" value="d">
 											<label class="" for="gridCheck4">서비스</label>
 										</div>
 									</div>
 									<div class="col-auto">
 										<div class="form-check">
-											<input class="form-check-input" name="businessConditions" type="checkbox" id="gridCheck5">
+											<input class="form-check-input" name="businessConditions" type="checkbox" value="e">
 											<label class="" for="gridCheck5">음식 및 숙박</label>
 										</div>
 										<div class="form-check">
-											<input class="form-check-input" name="businessConditions" type="checkbox" id="gridCheck6">
+											<input class="form-check-input" name="businessConditions" type="checkbox" value="f">
 											<label class="" for="gridCheck6">부동산</label>
-										</div>
-									</div>
-									<div class="col-auto">
-										<div class="form-check">
-											<input class="form-check-input" name="businessConditions" type="checkbox" id="gridCheck7">
-											<input class="form-control w-50" name="businessConditions" type="text" id="gridCheck7">
 										</div>
 									</div>
 								</div>
@@ -217,80 +211,26 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 									<span class="col-2">업종</span>	
 									<div class="col-auto">
 										<div class="form-check">
-											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck1">
-											<label class="" for="gridCheck1">민박</label>
-										</div>
-										<div class="form-check">
-											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck2">
-											<label class="" for="gridCheck2">기타</label>
-										</div>
-										<div class="form-check">
-											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck3">
-											<label class="" for="gridCheck3">호스텔</label>
-										</div>
-										<div class="form-check">
-											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck4">
-											<label class="" for="gridCheck4">호텔</label>
+											<input class="form-check-input" name="businessTypes" type="checkbox" value="1">
+											<label class="" for="">모텔</label>
 										</div>
 									</div>
 									<div class="col-auto">
 										<div class="form-check">
-											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck5">
-											<label class="" for="gridCheck5">외국인도시민박</label>
-										</div>
-										<div class="form-check">
-											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck6">
-											<label class="" for="gridCheck6">여관</label>
-										</div>
-										<div class="form-check">
-											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck7">
-											<label class="" for="gridCheck7">모텔</label>
-										</div>
-										<div class="form-check">
-											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck8">
-											<label class="" for="gridCheck8">관광호텔</label>
+											<input class="form-check-input" name="businessTypes" type="checkbox" value="2">
+											<label class="" for="">호텔</label>
 										</div>
 									</div>
 									<div class="col-auto">
 										<div class="form-check">
-											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck9">
-											<label class="" for="gridCheck9">게스트하우스</label>
-										</div>
-										<div class="form-check">
-											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck10">
-											<label class="" for="gridCheck10">숙박</label>
-										</div>
-										<div class="form-check">
-											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck11">
-											<label class="" for="gridCheck11">관광</label>
-										</div>
-										<div class="form-check">
-											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck12">
-											<label class="" for="gridCheck12">일반여행</label>
+											<input class="form-check-input" name="businessTypes" type="checkbox" value="3">
+											<label class="" for="">펜션</label>
 										</div>
 									</div>
 									<div class="col-auto">
 										<div class="form-check">
-											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck13">
-											<label class="" for="gridCheck13">한옥체험</label>
-										</div>
-										<div class="form-check">
-											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck14">
-											<label class="" for="gridCheck14">펜션</label>
-										</div>
-										<div class="form-check">
-											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck15">
-											<label class="" for="gridCheck15">임대</label>
-										</div>
-										<div class="form-check">
-											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck16">
-											<label class="" for="gridCheck16">무인텔</label>
-										</div>
-									</div>
-									<div class="col-auto">
-										<div class="form-check">
-											<input class="form-check-input" name="businessTypes" type="checkbox" id="gridCheck7">
-											<input class="form-control w-50" type="text" id="gridCheck7">
+											<input class="form-check-input" name="businessTypes" type="checkbox" value="4">
+											<label class="" for="">게스트하우스</label>
 										</div>
 									</div>
 								</div>

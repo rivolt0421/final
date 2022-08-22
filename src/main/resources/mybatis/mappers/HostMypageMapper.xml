@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.co.goodchoice.mapper.HostMypageMapper">
+
+	<resultMap type="User" id="UserResultMap">
+		<id column="USER_NO" property=""/>
+		<result column="USER_NAME" property=""/>
+		<result column="USER_EMAIL" property=""/>
+		<result column="USER_PASSWORD" property=""/>
+		<result column="USER_TEL" property=""/>
+		<result column="USER_NICKNAME" property=""/>
+		<result column="USER_POINT" property=""/>
+		<result column="USER_CREATED_DATE" property=""/>
+		<result column="USER_UPDATED_DATE" property=""/>
+		<result column="USER_DISABLED" property=""/>
+		<result column="USER_HOST" property=""/>
+	</resultMap>
+
+	<!-- user정보 가져오기 -->
+	<!-- void getHost (User user); -->
+	
+	<!-- 은행 정보 입력하기 -->
+	<!-- void inserBank (Bank bank); -->
+	
+	<!-- 업태 정보 입력하기 -->
+	<!-- void inserStatusCtegories(HostHouseStatusCategories status); -->
+	
+	<!-- 업종 정보 입력하기 -->
+	<!-- void inserTypeCtegories(HostHouseTypeCategories type); -->
+	
+</mapper>
