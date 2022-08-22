@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.co.goodchoice.mapper.ReservationMapper">
+	<resultMap type="Reservation" id="ReservationResultMap">
+		<id column="reservation_no" property="no"/>
+		<result column="user_no" property="userNo"/>
+		<result column="house_no" property="houseNo"/>
+		<result column="room_no" property="roomNo"/>
+		<result column="motel_room_no" property="motelRoomNo"/>
+		<result column="motel_room_reservation_type" property="motelRoomReservationType"/>
+		<result column="reservation_checkin_date" property="checkInType"/>
+		<result column="reservation_checkout_date" property="checkOutType"/>
+		<result column="reservation_price" property="price"/>
+		<result column="reservation_payment_price" property="payment_price"/>
+		<result column="room_name" property="roomName"/>
+		<result column="reservation_canceled" property="canceled"/>
+		<result column="cancel_reason" property="cancelReason"/>
+		<result column="cancel_commission" property="cancelCommission"/>
+	</resultMap>
+	
+	<!-- List<Reservation> getReservations(); -->
+	<select id="Reservations" resultMap="RerservationResultMap">
+		select *
+		from reservations
+	</select>
+	
+	<!-- Notice getReservationByUserNo(int userNo); -->
+	<select id="getNoticeByNo" resultMap="ReservationResultMap">
+		select *
+		from reservations
+		where user_no = #{value}
+	</select>
+</mapper>
