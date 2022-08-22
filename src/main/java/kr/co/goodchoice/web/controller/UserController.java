@@ -57,10 +57,10 @@ public class UserController {
 		return "user/couponbox";
 	}
 	
-	@GetMapping(path ="/reservation")
-	public String reservation() {
-		
-		return "user/reservation";
-	}
+//	@GetMapping(path ="/reservation")
+//	public String reservation() {
+//		
+//		return "user/reservation";
+//	}
 	
 }

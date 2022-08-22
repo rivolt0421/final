@@ -16,16 +16,18 @@
 		<result column="reservation_canceled" property="canceled"/>
 		<result column="cancel_reason" property="cancelReason"/>
 		<result column="cancel_commission" property="cancelCommission"/>
+		<result column="house_name" property="houseName"/>
+		
 	</resultMap>
 	
 	<!-- List<Reservation> getReservations(); -->
-	<select id="Reservations" resultMap="RerservationResultMap">
+	<select id="getReservations" resultMap="ReservationResultMap">
 		select *
 		from reservations
 	</select>
 	
-	<!-- Notice getReservationByUserNo(int userNo); -->
-	<select id="getNoticeByNo" resultMap="ReservationResultMap">
+	<!-- Reservation getReservationByUserNo(int userNo); -->
+	<select id="getReservationByUserNo" resultMap="ReservationResultMap">
 		select *
 		from reservations
 		where user_no = #{value}
