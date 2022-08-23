@@ -1,3 +1,12 @@
 @charset "UTF-8";
 .sub_top_wrap{background:url('/images/list_wallpaper_01.jpg') 50% 70% no-repeat;background-size:100% auto}
 .list_wrap{float:none;width:635px;margin:40px auto 0 auto;}
+nav {
+	background-color: transparent;
+}
+.nav-link {
+	color : rgba(255,255,255,0.85);
+}
+.nav-link:focus, .nav-link:hover {
+    color: #fff;
+}

@@ -31,6 +31,15 @@ function srch_close() {
 	$('nav .srch_bar').val("");
 }
 
+function close_layer(){ // close_layer 클래스 닫기
+
+	$('.bg_dimm').fadeOut(150);
+	$('.layer').fadeOut(150);
+	$('.close_layer').fadeOut(150);
+	$('.marker_fix').remove();
+	$('.pop_map').removeClass('location_reset');
+}
+
 $(function(){
 	$(window).scroll(function(){
 		nav_change()

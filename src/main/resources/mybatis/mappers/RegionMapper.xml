@@ -7,5 +7,11 @@
 		where REGION_PROVINCE = #{province}
 		and REGION_NAME = #{name}
 	</select>
+	
+	<select id="getAllRegions" resultType="Region">
+		select *
+		from regions
+		order by region_province
+	</select>
 
 </mapper>

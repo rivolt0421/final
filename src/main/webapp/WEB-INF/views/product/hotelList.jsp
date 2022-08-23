@@ -5,12 +5,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <title>Insert title here</title>
-<link href="/css/list.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="/css/product.css" rel="stylesheet" />
 <link href="/css/list2.css" rel="stylesheet" />
+<link rel="stylesheet" href="/css/daterangepicker.min.css">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/4f71b1e252.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+<script type="text/javascript" src="/script/jquery.daterangepicker.min.js"></script>
+<script src="/script/common.js"></script>
+<script src="/script/productList.js"></script>
+<!-- <script type="text/javascript" src="https://www.goodchoice.kr/js/service/product.search.js?rand=1660711669" ></script> -->
+
 </head>
 <body>
 
@@ -147,23 +158,91 @@
 				<!-- //Area -->
 
 				<!-- Filter -->
-				<div class="filter_wrap">
-					<div class="fix_title">
-						상세조건<button type="button" onclick="filter_close();">닫기</button>
-					</div>
+					<div class="filter_wrap">
+						<div class="fix_title">
+							상세조건
+							<button type="button" onclick="filter_close();">닫기</button>
+						</div>
 
-					<section class="date_wrap">
-						<h3>날짜</h3>
-						<div class="btn_date"><span class="date_view"><b></b><em>&nbsp;·&nbsp;1박</em></span></div>
-					</section>
+						<section class="date_wrap">
+							<h3>날짜</h3>
+							<div class="btn_date">
+								<span id="datepicker" class="date_view">8.23 ~ 8.26</span><em
+									id="date_days">&nbsp;·&nbsp;7박</em>
+							</div>
+						</section>
 
-					<h3>상세조건</h3>
-					<div class="btn_wrap">
-						<button type="button" onclick="window.location.href='https://www.goodchoice.kr/product/search/2/2012?sel_date=2022-08-24&sel_date2=2022-08-25'">초기화</button>
-						<button type="submit">적용</button>
+						<h3>상세조건</h3>
+						<div class="btn_wrap">
+							<button type="button"
+								onclick="window.location.href='https://www.goodchoice.kr/product/search/2/2012?sel_date=2022-08-24&sel_date2=2022-08-25'">초기화</button>
+							<button type="submit">적용</button>
+						</div>
+						<section>
+							<strong>숙소 유형</strong>
+							<ul>
+								<li><input type="checkbox" id="grade_0" name="grade[]"
+									class="inp_chk" value="STAR5" /><label for="grade_0"
+									class="label_chk">호텔·리조트</label></li>
+								<li><input type="checkbox" id="grade_0" name="grade[]"
+									class="inp_chk" value="STAR5" /><label for="grade_0"
+									class="label_chk">펜션</label></li>
+								<li><input type="checkbox" id="grade_0" name="grade[]"
+									class="inp_chk" value="STAR5" /><label for="grade_0"
+									class="label_chk">게스트하우스</label></li>
+							</ul>
+						</section>
+						<section>
+							<input type="hidden" id="persons" name="persons" value="0"><strong>인원</strong>
+							<div class="cnt_people" data-min="2" data-max="10" data-def="2">
+								<button type="button" class="disable dn">-</button>
+								<span>2</span>
+								<button type="button" class=" up">+</button>
+							</div>
+						</section>
+						<section>
+							<strong>베드 타입</strong>
+							<div class="room_type">
+								<p>
+									<input type="checkbox" class="inp_room_01" name="bed_type[0]"
+										id="bed_type_S" value="S" /><label for="bed_type_S"
+										class="label_room_01">싱글</label>
+								</p>
+								<p>
+									<input type="checkbox" class="inp_room_02" name="bed_type[1]"
+										id="bed_type_D" value="D" /><label for="bed_type_D"
+										class="label_room_02">더블</label>
+								</p>
+								<p>
+									<input type="checkbox" class="inp_room_03" name="bed_type[2]"
+										id="bed_type_T" value="T" /><label for="bed_type_T"
+										class="label_room_03">트윈</label>
+								</p>
+								<p>
+									<input type="checkbox" class="inp_room_04" name="bed_type[3]"
+										id="bed_type_O" value="O" /><label for="bed_type_O"
+										class="label_room_04">온돌</label>
+								</p>
+							</div>
+						</section>
+						<section>
+							<strong>공용시설
+								<button type="button">모두 보기</button>
+							</strong>
+							<ul class="hide_type half">
+								<li><input type="checkbox" id="tmino_0" name="tmino[]"
+									class="inp_chk" value="41" /><label for="tmino_0"
+									class="label_chk">주방/식당</label></li>
+								<li><input type="checkbox" id="tmino_1" name="tmino[]"
+									class="inp_chk" value="42" /><label for="tmino_1"
+									class="label_chk">세탁기</label></li>
+								<li><input type="checkbox" id="tmino_2" name="tmino[]"
+									class="inp_chk" value="44" /><label for="tmino_2"
+									class="label_chk">건조기</label></li>
+							</ul>
+						</section>
 					</div>
-                    <section><ul><li><input type="checkbox" id="reserve_0" name="reserve[]"  class="inp_chk" value="2" /><label for="reserve_0" class="label_chk">예약 가능</label></li><li><input type="checkbox" id="promotion_1" name="promotion[]"  class="inp_chk" value="Y" /><label for="promotion_1" class="label_chk">프로모션</label></li></ul></section><section><strong>호텔·리조트 유형</strong><ul><li><input type="checkbox" id="grade_0" name="grade[]"  class="inp_chk" value="STAR5" /><label for="grade_0" class="label_chk">5성급</label></li><li><input type="checkbox" id="grade_1" name="grade[]"  class="inp_chk" value="S1" /><label for="grade_1" class="label_chk">특1급</label></li><li><input type="checkbox" id="grade_2" name="grade[]"  class="inp_chk" value="S" /><label for="grade_2" class="label_chk">특급</label></li></ul></section><section><input type="hidden" id="persons" name="persons" value=""><strong>인원</strong><div class="cnt_people" data-min="2" data-max="10" data-def="2"><button type="button" class="disable dn">-</button><span>2</span><button type="button" class=" up">+</button></div></section><section><strong>베드 타입</strong><div class="room_type"><p><input type="checkbox" class="inp_room_01" name="bed_type[0]" id="bed_type_S" value="S" /><label for="bed_type_S" class="label_room_01">싱글</label></p><p><input type="checkbox" class="inp_room_02" name="bed_type[1]" id="bed_type_D" value="D" /><label for="bed_type_D" class="label_room_02">더블</label></p><p><input type="checkbox" class="inp_room_03" name="bed_type[2]" id="bed_type_T" value="T" /><label for="bed_type_T" class="label_room_03">트윈</label></p><p><input type="checkbox" class="inp_room_04" name="bed_type[3]" id="bed_type_O" value="O" /><label for="bed_type_O" class="label_room_04">온돌</label></p></div></section><section><strong>공용시설<button type="button">모두 보기</button></strong><ul class="hide_type half"><li><input type="checkbox" id="tmino_0" name="tmino[]"  class="inp_chk" value="41" /><label for="tmino_0" class="label_chk">피트니스</label></li><li><input type="checkbox" id="tmino_1" name="tmino[]"  class="inp_chk" value="42" /><label for="tmino_1" class="label_chk">수영장</label></li><li><input type="checkbox" id="tmino_2" name="tmino[]"  class="inp_chk" value="44" /><label for="tmino_2" class="label_chk">사우나</label></li><li><input type="checkbox" id="tmino_3" name="tmino[]"  class="inp_chk" value="45" /><label for="tmino_3" class="label_chk">골프장</label></li><li><input type="checkbox" id="tmino_4" name="tmino[]"  class="inp_chk" value="46" /><label for="tmino_4" class="label_chk">레스토랑</label></li><li><input type="checkbox" id="tmino_5" name="tmino[]"  class="inp_chk" value="112" /><label for="tmino_5" class="label_chk">엘레베이터</label></li><li><input type="checkbox" id="tmino_6" name="tmino[]"  class="inp_chk" value="137" /><label for="tmino_6" class="label_chk">라운지</label></li><li><input type="checkbox" id="tmino_7" name="tmino[]"  class="inp_chk" value="138" /><label for="tmino_7" class="label_chk">공용PC</label></li><li><input type="checkbox" id="tmino_8" name="tmino[]"  class="inp_chk" value="139" /><label for="tmino_8" class="label_chk">BBQ</label></li><li><input type="checkbox" id="tmino_9" name="tmino[]"  class="inp_chk" value="141" /><label for="tmino_9" class="label_chk">카페</label></li><li><input type="checkbox" id="tmino_10" name="tmino[]"  class="inp_chk" value="184" /><label for="tmino_10" class="label_chk">공용스파</label></li><li><input type="checkbox" id="tmino_11" name="tmino[]"  class="inp_chk" value="186" /><label for="tmino_11" class="label_chk">족구장</label></li><li><input type="checkbox" id="tmino_12" name="tmino[]"  class="inp_chk" value="187" /><label for="tmino_12" class="label_chk">세미나실</label></li><li><input type="checkbox" id="tmino_13" name="tmino[]"  class="inp_chk" value="188" /><label for="tmino_13" class="label_chk">편의점</label></li><li><input type="checkbox" id="tmino_14" name="tmino[]"  class="inp_chk" value="189" /><label for="tmino_14" class="label_chk">노래방</label></li><li><input type="checkbox" id="tmino_15" name="tmino[]"  class="inp_chk" value="190" /><label for="tmino_15" class="label_chk">주방/식당</label></li><li><input type="checkbox" id="tmino_16" name="tmino[]"  class="inp_chk" value="192" /><label for="tmino_16" class="label_chk">세탁기</label></li><li><input type="checkbox" id="tmino_17" name="tmino[]"  class="inp_chk" value="193" /><label for="tmino_17" class="label_chk">건조기</label></li><li><input type="checkbox" id="tmino_18" name="tmino[]"  class="inp_chk" value="194" /><label for="tmino_18" class="label_chk">탈수기</label></li><li><input type="checkbox" id="tmino_19" name="tmino[]"  class="inp_chk" value="195" /><label for="tmino_19" class="label_chk">주차장</label></li><li><input type="checkbox" id="tmino_20" name="tmino[]"  class="inp_chk" value="196" /><label for="tmino_20" class="label_chk">취사가능</label></li><li><input type="checkbox" id="tmino_21" name="tmino[]"  class="inp_chk" value="333" /><label for="tmino_21" class="label_chk">공용샤워실</label></li><li><input type="checkbox" id="tmino_22" name="tmino[]"  class="inp_chk" value="335" /><label for="tmino_22" class="label_chk">온천</label></li><li><input type="checkbox" id="tmino_23" name="tmino[]"  class="inp_chk" value="334" /><label for="tmino_23" class="label_chk">스키장</label></li></ul></section><section><strong>객실 내 시설<button type="button">모두 보기</button></strong><ul class="hide_type half"><li><input type="checkbox" id="tmino_24" name="tmino[]"  class="inp_chk" value="43" /><label for="tmino_24" class="label_chk">객실스파</label></li><li><input type="checkbox" id="tmino_25" name="tmino[]"  class="inp_chk" value="50" /><label for="tmino_25" class="label_chk">미니바</label></li><li><input type="checkbox" id="tmino_26" name="tmino[]"  class="inp_chk" value="47" /><label for="tmino_26" class="label_chk">와이파이</label></li><li><input type="checkbox" id="tmino_27" name="tmino[]"  class="inp_chk" value="49" /><label for="tmino_27" class="label_chk">욕실용품</label></li><li><input type="checkbox" id="tmino_28" name="tmino[]"  class="inp_chk" value="197" /><label for="tmino_28" class="label_chk">TV</label></li><li><input type="checkbox" id="tmino_29" name="tmino[]"  class="inp_chk" value="198" /><label for="tmino_29" class="label_chk">에어컨</label></li><li><input type="checkbox" id="tmino_30" name="tmino[]"  class="inp_chk" value="199" /><label for="tmino_30" class="label_chk">냉장고</label></li><li><input type="checkbox" id="tmino_31" name="tmino[]"  class="inp_chk" value="200" /><label for="tmino_31" class="label_chk">객실샤워실</label></li><li><input type="checkbox" id="tmino_32" name="tmino[]"  class="inp_chk" value="201" /><label for="tmino_32" class="label_chk">욕조</label></li><li><input type="checkbox" id="tmino_33" name="tmino[]"  class="inp_chk" value="202" /><label for="tmino_33" class="label_chk">드라이기</label></li><li><input type="checkbox" id="tmino_34" name="tmino[]"  class="inp_chk" value="203" /><label for="tmino_34" class="label_chk">다리미</label></li><li><input type="checkbox" id="tmino_35" name="tmino[]"  class="inp_chk" value="204" /><label for="tmino_35" class="label_chk">전기밥솥</label></li></ul></section><section><strong>기타<button type="button">모두 보기</button></strong><ul class="hide_type half"><li><input type="checkbox" id="tmino_36" name="tmino[]"  class="inp_chk" value="54" /><label for="tmino_36" class="label_chk">반려견동반</label></li><li><input type="checkbox" id="tmino_37" name="tmino[]"  class="inp_chk" value="51" /><label for="tmino_37" class="label_chk">조식포함</label></li><li><input type="checkbox" id="tmino_38" name="tmino[]"  class="inp_chk" value="52" /><label for="tmino_38" class="label_chk">객실내흡연</label></li><li><input type="checkbox" id="tmino_39" name="tmino[]"  class="inp_chk" value="53" /><label for="tmino_39" class="label_chk">발렛파킹</label></li><li><input type="checkbox" id="tmino_40" name="tmino[]"  class="inp_chk" value="134" /><label for="tmino_40" class="label_chk">금연</label></li><li><input type="checkbox" id="tmino_41" name="tmino[]"  class="inp_chk" value="55" /><label for="tmino_41" class="label_chk">객실내취사</label></li><li><input type="checkbox" id="tmino_42" name="tmino[]"  class="inp_chk" value="131" /><label for="tmino_42" class="label_chk">프린터사용</label></li><li><input type="checkbox" id="tmino_43" name="tmino[]"  class="inp_chk" value="132" /><label for="tmino_43" class="label_chk">짐보관가능</label></li><li><input type="checkbox" id="tmino_44" name="tmino[]"  class="inp_chk" value="133" /><label for="tmino_44" class="label_chk">개인사물함</label></li><li><input type="checkbox" id="tmino_45" name="tmino[]"  class="inp_chk" value="136" /><label for="tmino_45" class="label_chk">무료주차</label></li><li><input type="checkbox" id="tmino_46" name="tmino[]"  class="inp_chk" value="205" /><label for="tmino_46" class="label_chk">픽업가능</label></li><li><input type="checkbox" id="tmino_47" name="tmino[]"  class="inp_chk" value="206" /><label for="tmino_47" class="label_chk">캠프파이어</label></li><li><input type="checkbox" id="tmino_48" name="tmino[]"  class="inp_chk" value="207" /><label for="tmino_48" class="label_chk">카드결제</label></li><li><input type="checkbox" id="tmino_49" name="tmino[]"  class="inp_chk" value="336" /><label for="tmino_49" class="label_chk">장애인편의시설</label></li></ul></section>				</div>
-				<!-- //Filter -->
+					<!-- //Filter -->
 
 				<!-- List -->
 				<div class="list_wrap">
@@ -188,7 +267,8 @@
             <p class="pic">
                 <img class="lazy align"
                      data-original="//image.goodchoice.kr/resize_1000X500x0/affiliate/2016/05/24/5743dc3ba2a91.jpg"
-                     src="//image.goodchoice.kr/images/web_v3/bg_trans.png" alt="라까사호텔 서울" />
+                     src="/images/houseImgs/houseImg-1001.jpg" alt="라까사호텔 서울"
+                     style="margin-top: -159px; display: block;"/>
             </p>
             <div class="stage gra_black_vertical">
                                 <div class="name">
@@ -311,18 +391,10 @@
 
 <!-- Page Script -->
 
-<script type="text/javascript" src="https://www.goodchoice.kr/js/service/datepick.js?rand=1660711669" ></script>
-
 <!-- <script type="text/javascript" src="https://www.goodchoice.kr/js/service/product.js?rand=1660711669" ></script> -->
-<script type="text/javascript" src="https://www.goodchoice.kr/js/service/product.search.js?rand=1660711669" ></script>
 <!-- <script type="text/javascript" src="https://www.goodchoice.kr/js/service/product.list.js?rand=1660711669" ></script> -->
 
 
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="/script/common.js"></script>
-<script src="/script/product.js"></script>
-<script src="https://kit.fontawesome.com/4f71b1e252.js" crossorigin="anonymous"></script>
 </body>
 </html>

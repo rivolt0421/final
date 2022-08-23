@@ -139,28 +139,28 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 /* Room - Radio (싱글) */
 input[type=checkbox].inp_room_01 {position:absolute;z-index:-1000;left:-1000px;overflow:hidden;clip:rect(0 0 0 0);height:1px;width:1px;margin:-1px;padding:0;border:0}
 input[type=checkbox].inp_room_01 + label.label_room_01 {position:relative;width:76px;padding:28px 0 0 0;height:46px;display:inline-block;background-repeat:no-repeat;background-position: 0 0;font-size:13px;line-height:normal;color:rgba(0,0,0,0.87);vertical-align:top;cursor:pointer;text-align:center}
-input[type=checkbox].inp_room_01 + label.label_room_01:after{display:inline-block;content:"";position:absolute;top:0;left:50%;width:48px;height:24px;margin:0 0 0 -24px;background:url('//image.goodchoice.kr/images/web_v3/ico_room.png') 0 0 no-repeat;background-size:192px auto}
+input[type=checkbox].inp_room_01 + label.label_room_01:after{display:inline-block;content:"";position:absolute;top:0;left:50%;width:48px;height:24px;margin:0 0 0 -24px;background:url('/images/ico_room.png') 0 0 no-repeat;background-size:192px auto}
 input[type=checkbox].inp_room_01:checked + label.label_room_01:after{background-position:0 -24px}
 input[type=checkbox].inp_room_01:checked + label{color:rgba(242,17,76,0.87);}
 
 /* Room - Radio (더블) */
 input[type=checkbox].inp_room_02 {position:absolute;z-index:-1000;left:-1000px;overflow:hidden;clip:rect(0 0 0 0);height:1px;width:1px;margin:-1px;padding:0;border:0}
 input[type=checkbox].inp_room_02 + label.label_room_02 {position:relative;width:76px;padding:28px 0 0 0;height:46px;display:inline-block;background-repeat:no-repeat;background-position: 0 0;font-size:13px;line-height:normal;color:rgba(0,0,0,0.87);vertical-align:top;cursor:pointer;text-align:center}
-input[type=checkbox].inp_room_02 + label.label_room_02:after{display:inline-block;content:"";position:absolute;top:0;left:50%;width:48px;height:24px;margin:0 0 0 -24px;background:url('//image.goodchoice.kr/images/web_v3/ico_room.png') -48px 0 no-repeat;background-size:192px auto}
+input[type=checkbox].inp_room_02 + label.label_room_02:after{display:inline-block;content:"";position:absolute;top:0;left:50%;width:48px;height:24px;margin:0 0 0 -24px;background:url('/images/ico_room.png') -48px 0 no-repeat;background-size:192px auto}
 input[type=checkbox].inp_room_02:checked + label.label_room_02:after{background-position:-48px -24px}
 input[type=checkbox].inp_room_02:checked + label{color:rgba(242,17,76,0.87);}
 
 /* Room - Radio (트윈) */
 input[type=checkbox].inp_room_03 {position:absolute;z-index:-1000;left:-1000px;overflow:hidden;clip:rect(0 0 0 0);height:1px;width:1px;margin:-1px;padding:0;border:0}
 input[type=checkbox].inp_room_03 + label.label_room_03 {position:relative;width:76px;padding:28px 0 0 0;height:46px;display:inline-block;background-repeat:no-repeat;background-position: 0 0;font-size:13px;line-height:normal;color:rgba(0,0,0,0.87);vertical-align:top;cursor:pointer;text-align:center}
-input[type=checkbox].inp_room_03 + label.label_room_03:after{display:inline-block;content:"";position:absolute;top:0;left:50%;width:48px;height:24px;margin:0 0 0 -24px;background:url('//image.goodchoice.kr/images/web_v3/ico_room.png') -96px 0 no-repeat;background-size:192px auto}
+input[type=checkbox].inp_room_03 + label.label_room_03:after{display:inline-block;content:"";position:absolute;top:0;left:50%;width:48px;height:24px;margin:0 0 0 -24px;background:url('/images/ico_room.png') -96px 0 no-repeat;background-size:192px auto}
 input[type=checkbox].inp_room_03:checked + label.label_room_03:after{background-position:-96px -24px}
 input[type=checkbox].inp_room_03:checked + label{color:rgba(242,17,76,0.87);}
 
 /* Room - Radio (온돌) */
 input[type=checkbox].inp_room_04 {position:absolute;z-index:-1000;left:-1000px;overflow:hidden;clip:rect(0 0 0 0);height:1px;width:1px;margin:-1px;padding:0;border:0}
 input[type=checkbox].inp_room_04 + label.label_room_04 {position:relative;width:76px;padding:28px 0 0 0;height:46px;display:inline-block;background-repeat:no-repeat;background-position: 0 0;font-size:13px;line-height:normal;color:rgba(0,0,0,0.87);vertical-align:top;cursor:pointer;text-align:center}
-input[type=checkbox].inp_room_04 + label.label_room_04:after{display:inline-block;content:"";position:absolute;top:0;left:50%;width:48px;height:24px;margin:0 0 0 -24px;background:url('//image.goodchoice.kr/images/web_v3/ico_room.png') -144px 0 no-repeat;background-size:192px auto}
+input[type=checkbox].inp_room_04 + label.label_room_04:after{display:inline-block;content:"";position:absolute;top:0;left:50%;width:48px;height:24px;margin:0 0 0 -24px;background:url('/images/ico_room.png') -144px 0 no-repeat;background-size:192px auto}
 input[type=checkbox].inp_room_04:checked + label.label_room_04:after{background-position:-144px -24px}
 input[type=checkbox].inp_room_04:checked + label{color:rgba(242,17,76,0.87);}
 

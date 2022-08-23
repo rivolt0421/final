@@ -1,15 +1,6 @@
 @charset "UTF-8";
 @import "nav.css";
 
-nav {
-	background-color: transparent;
-}
-.nav-link {
-	color : rgba(255,255,255,0.85);
-}
-.nav-link:focus, .nav-link:hover {
-    color: #fff;
-}
 /* 추천 */
 .recommend_wrap{padding-top:48px;}
 .recommend_wrap.bg_area_02,
@@ -35,7 +26,7 @@ nav {
 .room_residue{display:block;position:relative;height:40px;padding-right:12px;border-bottom:1px solid rgba(0,0,0,0.08);background:rgb(250,250,250);text-align:right}
 .room_residue span{display:inline-block;position:absolute;top:0;left:16px;height:40px;line-height:40px}
 .room_residue input{position:relative;top:7px}
-.sub_top_wrap{background:url('/images/list_wallpaper.jpg') 50% 70% no-repeat;background-size:100% auto}
+/* .sub_top_wrap{background:url('/images/list_wallpaper.jpg') 50% 70% no-repeat;background-size:100% auto}*/
 .bg_area_01 .sub_top_wrap{background:url('//image.goodchoice.kr/images/web_v3/recommend_1.jpg') 50% 70% no-repeat;background-size:100% auto}
 .bg_area_02 .sub_top_wrap{background:url('//image.goodchoice.kr/images/web_v3/recommend_2.jpg') 50% 30% no-repeat;background-size:100% auto}
 .bg_area_03 .sub_top_wrap{margin-bottom:8px;background:url('//image.goodchoice.kr/images/web_v3/recommend_3.jpg') 50% 90% no-repeat;background-size:100% auto}

@@ -8,7 +8,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
 <title>Insert title here</title>
 <!-- css -->
-<link href="/css/list.css" rel="stylesheet" />
+<link href="/css/product.css" rel="stylesheet" />
 <link href="/css/list1.css" rel="stylesheet" />
 </head>
 <body>
@@ -226,7 +226,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="/script/common.js"></script>
-<script src="/script/product.js"></script>
+<script src="/script/productList.js"></script>
 <script src="https://kit.fontawesome.com/4f71b1e252.js" crossorigin="anonymous"></script>
 </body>
 </html>
