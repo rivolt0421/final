@@ -14,10 +14,11 @@
 	<select id="getNotices" resultMap="NoticeResultMap">
 		select *
 		from notice
+		order by notice_no desc
 	</select>
 	
-	<!-- Notice getNoticeByNo(int no); -->
-	<select id="getNoticeByNo" resultMap="NoticeResultMap">
+	<!-- Notice getNoticeByNo(int noticeNo); -->
+	<select id="getNoticeByNo" parameterType="int" resultMap="NoticeResultMap">
 		select *
 		from notice
 		where notice_no = #{value}

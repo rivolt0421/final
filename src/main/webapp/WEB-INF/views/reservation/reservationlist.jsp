@@ -19,10 +19,10 @@
 
 <style>
 .container {
-	display: flex;
+	display: block;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    margin-left:30%; margin-top:0%; height:auto; 
 }
 
 .reservation {
@@ -31,13 +31,15 @@
 	padding: 1%;
     margin: 1%;
     margin-bottom: 70px;
+    
 }
 
 .card {
 	width: 25rem;
-	height: 20vw;
+	height: 30vw;
     object-fit: cover;
     text-align: center;
+    height:auto;
 }
 
 .confirmation {
@@ -83,7 +85,8 @@
 				<div class="card">
 				  <img src="?.png" alt="room">
 				  	<span class="confirmation">예약확정</span>
-				    <h4><b>(숙소명칭)</b></h4>
+				    <h4><b>${reservation.houseName }</b></h4>
+				    <p>체크인: ${reservation.checkInDate } (*)박</p>
 				    <p>체크인: (**.** *요일 **:00) (*)박</p>
 				  </div>
 			</div>
@@ -93,7 +96,8 @@
 				<div class="card">
 				  <img src="?.png" alt="room">
 				  	<span class="useandcancel">이용완료</span>
-				    <h4><b>(숙소명칭)</b></h4>
+				    <h4><b>${reservation.houseName }</b></h4>
+				    <p>${reservation.checkInDate } - ${reservation.checkOutDate } (*)박</p>
 				    <p>(**.** *요일) - (**.** *요일) (*)박</p>
 				    <br>
 				    <a href=""><p style="color:green">다시 예약</p></a>
@@ -105,12 +109,14 @@
 				<div class="card">
 				  <img src="?.png" alt="room">
 				  	<span class="useandcancel">예약취소</span>
-				    <h4><b>(숙소명칭)</b></h4>
+				    <h4><b>${reservation.houseName }</b></h4>
+				    <p>${reservation.checkInDate } - ${reservation.checkOutDate } (*)박</p>
 				    <p>(**.** *요일) - (**.** *요일) (*)박</p>
 				    <br>
 				    <a href=""><p style="color:green">다시 예약</p></a>
 				 </div>
 			</div>
+			
 		</div>
 	</div>
 </div>

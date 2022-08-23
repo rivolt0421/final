@@ -9,10 +9,10 @@ import kr.co.goodchoice.vo.Reservation;
 @Mapper
 public interface ReservationMapper {
 
-		// reservation 리스트
-		List<Reservation> getReservations();
-		// reservationList userId로 
-		Reservation getReservationByUserId(String id);
+	// reservation 리스트
+	List<Reservation> getReservations();
+	// reservationList userId로 
+	Reservation getReservationByUserNo(int userNo);
 	
 
 }

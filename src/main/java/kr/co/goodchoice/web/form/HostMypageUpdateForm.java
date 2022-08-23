@@ -11,9 +11,9 @@ import lombok.ToString;
 @ToString
 public class HostMypageUpdateForm {
 
-	private String phone1;
-	private String phone2;
-	private String phone3;
+	private String phone1;						
+	private String phone2;						
+	private String phone3;						
 	private String tel1;
 	private String tel2;
 	private String tel3;

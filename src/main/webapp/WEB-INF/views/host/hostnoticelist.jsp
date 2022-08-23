@@ -50,11 +50,23 @@
 						</tr>
 					</thead>
 					<tbody class="fs-6">
-						<tr>
-							<td class="text-center">115</td>
-							<td><a href="/noticedetail?no=">[공지] 2022년 소상공인 온라인 기획전 <대한민국 동행세일 여행페스타> 모집</a></td>
-							<td class="text-center">2022/07/29</td>
-						</tr>
+					<c:choose>
+						<c:when test="${empty notices }">
+							<tr>
+								<td colspan="3" class="text-center">공지사항이 존재하지 않습니다.</td>
+							</tr>
+						</c:when>
+						<c:otherwise>
+							<c:forEach var="notice" items="${notices }">
+								<tr>
+									<td>${notice.no }</td>
+									<td>${notice.title }</td>
+									<td>${notice.createdDate }</td>
+								</tr>
+							</c:forEach>
+						</c:otherwise>
+					</c:choose>
+						
 					</tbody>
 				</table>
 			</div>
