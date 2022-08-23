@@ -22,7 +22,7 @@ public class ReserveHistoryController {
 		}
 		
 		List<List<Reservation>> data = List.of(
-				
+			
 		);
 		
 		model.addAttribute("rows", CommonUtils.generateRows(date, data));

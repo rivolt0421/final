@@ -14,7 +14,6 @@
 	<select id="getNotices" resultMap="NoticeResultMap">
 		select *
 		from notice
-		order by notice_no desc
 	</select>
 	
 	<!-- Notice getNoticeByNo(int noticeNo); -->
