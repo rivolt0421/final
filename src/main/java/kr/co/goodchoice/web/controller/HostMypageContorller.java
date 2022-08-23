@@ -1,10 +1,15 @@
 package kr.co.goodchoice.web.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import kr.co.goodchoice.annotation.LoginUser;
+import kr.co.goodchoice.service.HostMypageService;
+import kr.co.goodchoice.vo.User;
 import kr.co.goodchoice.web.form.HostMypageUpdateForm;
 
 @Controller
@@ -17,7 +22,11 @@ public class HostMypageContorller {
 	}
 
 	@PostMapping("/updateMyInfo")
-	public String updateMyInfo(HostMypageUpdateForm hostMypageUpdateForm) {
+	public String updateMyInfo(@LoginUser User loginUser,
+			HostMypageUpdateForm hostMypageUpdateForm,
+			RedirectAttributes redirectAttributes) {
+		
+		redirectAttributes.addFlashAttribute("h", hostMypageUpdateForm);
 		
 		System.out.println(hostMypageUpdateForm);
 		
