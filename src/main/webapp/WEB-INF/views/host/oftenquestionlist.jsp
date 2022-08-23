@@ -69,21 +69,20 @@
 		  			</thead>
 		  			<tbody>
 		  			<c:choose>
-		  				<c:when test="${empty often }">
+		  				<c:when test="${empty oftens }">
 		  					<tr>
 		  						<td colspan="3" class="text-center">등록된 질문이 없습니다.</td>
 		  					</tr>
 		  				</c:when>
-		  				<c:otherwise>
-		  					
-		  				</c:otherwise>
-				  			<c:forEach var="often" items="${often }">
+		  				<c:otherwise>		  					
+				  			<c:forEach var="often" items="${oftens }">
 				  				<tr>
 				  					<td></td>
 				  					<td>${often.oftenCategory.id }</td>
 				  					<td>${often.title }</td>
 				  				</tr>
 				  			</c:forEach>
+		  				</c:otherwise>
 		  			</c:choose>
 		  			</tbody>
 				  </table>
