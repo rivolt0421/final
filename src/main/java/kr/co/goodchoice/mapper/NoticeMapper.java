@@ -12,5 +12,5 @@ public interface NoticeMapper {
 	// notice 리스트
 	List<Notice> getNotices();
 	// 공지 번호로 
-	Notice getNoticeByNo(int no);
+	Notice getNoticeByNo(int noticeNo);
 }

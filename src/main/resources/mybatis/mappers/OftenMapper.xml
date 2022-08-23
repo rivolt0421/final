@@ -25,4 +25,12 @@
 		from often_questions
 		where often_id = #{value}
 	</select>
+	
+	<!-- List<Often> getOftensByCategoryId(String oftenId); -->
+	<select id="getOftensByCategoryId">
+		select o.often_no, o.often_title, o.often_content, o.created_date, o.updated_date
+		from often_questions o, often_question_categories c
+		where o.often_id = c.often_id
+		and o.often_id = #{value}
+	</select>
 </mapper>

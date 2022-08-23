@@ -30,11 +30,7 @@ public class HostHomeController {
 		return  "host/realtimereserve";
 	}
 	
-	// 예약 내역
-	@GetMapping(path = "/reserve")
-	public String reserve() {
-		return "host/reservehistory";
-	}
+	
 	
 	// 공지사항 디테일
 	@GetMapping(path = "/noticedetail")
