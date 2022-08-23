@@ -17,9 +17,9 @@ import lombok.Setter;
 public class Point {
 
 	private int no;
-	private int userNo;
-	private int paymentNo;
-	private String historyReason;
+	private User user;
+	private Payment payment;
+	private String reason;
 	private int amount;
 	private Date createdDate;
 	

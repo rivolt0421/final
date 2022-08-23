@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.co.goodchoice.mapper.PaymentMapper">
+
+	<resultMap type="Payment" id="PaymentResultMap">
+		<id column="payment_no" property="no"/>
+		<result column="reservation_no" property="reservationNo" />
+		<result column="payment_status" property="status" />
+		<result column="payment_method" property="method" />
+		<result column="reservation_price" property="reservationPrice" />
+		<result column="used_point" property="usedPoint" />
+		<result column="user_coupon_no" property="userCouponNo" />
+		<result column="coupon_discount" property="couponDiscount" />
+		<result column="total_discount_price" property="totalDiscountPrice" />
+		<result column="total_payment_price" property="totalPayment_price" />
+		<result column="deposit_point" property="depositPoint" />
+		<result column="payment_created_date" property="createdDate" />
+		<result column="payment_updated_date" property="updatedDate" />
+	</resultMap>
+
+
+	
+</mapper>

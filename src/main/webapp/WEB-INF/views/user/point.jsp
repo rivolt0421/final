@@ -26,53 +26,55 @@
 <div class="wrap show">
 	<div class="sub_top_wrap">
 		<div class="sub_top bg_kong_2">
-			<h2>내정보</h2>
+			<h2>내정보 </h2>
 		</div>
 	</div>
 	
-	<div id="content" class="sub_wrap my_wrap">
-	    <div class="side">
-	        <ul style="padding-left: 0rem;">
-	            <li><a class="active" href="/user/point" style="text-decoration: none;">포인트</a></li>
-	            <li><a class="" href="/user/couponbox" style="text-decoration: none;">쿠폰함</a></li>
-	            <li><a class="" href="/user/reservation" style="text-decoration: none;">예약 내역</a></li>
-	            <li><a class="" href="/user/myinfo" style="text-decoration: none;">내 정보 관리</a></li>
-	        </ul>
-   	  </div>
-		<div class="right">
-	        <input type="hidden" name="page" value="1">
-	        <div>
-	            <div class="point_show gra_red">
-	                <span>사용 가능 포인트</span>
-	                <strong id="point-page-show"> P</strong>
-	            </div>
-	
-	            <ul class="point_list"></ul>
-	        </div>
-	
-	        <!-- 리스트 없을시 -->
-	        <div class="list_none" style="display: block;">
-	            적립한 포인트가 없습니다<br>
-	        </div>
-	        
-	        <!-- 리스트 있을시 -->
-			<section class="points-list">
-				<div class="points-list__year-month">21년 04월</div> 
-				<div class="points-list-item">
-					<div class="points-list-item__wrap">
-						<p class="points-list-item__name">
-				            회원가입 축하
-				        </p> 
-				        <p class="points-list-item__issued-date">
-				            21.04.16
-				        </p>
-				        </div> 
-				        <div class="points-list-item__wrap"><p class="points-list-item__balance"></p>
-				            +10 P
-				        </div>
-			        </div>
+		<div id="content" class="sub_wrap my_wrap">
+		    <div class="side">
+		        <ul style="padding-left: 0rem;">
+		            <li><a class="active" href="/user/point" style="text-decoration: none;">포인트</a></li>
+		            <li><a class="" href="/user/couponbox" style="text-decoration: none;">쿠폰함</a></li>
+		            <li><a class="" href="/user/reservation" style="text-decoration: none;">예약 내역</a></li>
+		            <li><a class="" href="/user/myinfo" style="text-decoration: none;">내 정보 관리</a></li>
+		        </ul>
+	   	 	</div>
+			<div class="right">
+		        <input type="hidden" name="page" value="1">
+		        <div>
+		            <div class="point_show gra_red">
+		                <span>사용 가능 포인트</span>
+		                <strong id="point-page-show"><!-- 현재가지고있는 포인트 --> P</strong>
+		            </div>
+		
+		            <ul class="point_list"></ul>
+		        </div>
+		
+		        <!-- 리스트 없을시 -->
+		        <div class="list_none" style="display: block;">
+		            적립한 포인트가 없습니다<br>
+		        </div>
+		        
+		        <!-- 리스트 있을시 -->
+		        <section class="points-list">	
+					<div class="points-list__year-month">21년 08월</div>
+					<div class="points-list-item">
+						<div class="points-list-item__wrap">
+							<p class="points-list-item__name">${point.reason } </p>
+							<p class="points-list-item__issued-date"> 22. 08. 01 </p>
+						</div>
+						<div class="points-list-item__wrap">
+						<p class="points-list-item__balance text-red">
+	            			+10 P
+	            		</p> 
+	            		<p class="points-list-item__expiry-date font-weight--b">
+	            			21.09.01까지 
+	            		</p>
+	            		</div>				
+					</div>
 		        </section>
-    	</div>
+	        
+    		</div>
 	</div>
 </div>
 <%@ include file="../common/footer.jsp" %>
