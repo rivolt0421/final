@@ -570,5 +570,6 @@ function daumAddress() {
 </script>
 <script type="text/javascript">
 </script>
+<%@ include file="common/footer.jsp" %>
 </body>
 </html>

@@ -9,6 +9,8 @@ public interface HostMypageMapper {
 
 	// user정보 가져오기
 	void getHost (User user);
+	// user정보 email로 가져오기
+	User getUserByEmail(String email);
 	
 	// 은행 정보 입력하기
 	void inserBank (Bank bank);

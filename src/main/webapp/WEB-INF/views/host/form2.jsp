@@ -24,8 +24,12 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 </style>
 </head>
 <body>
+<%@ include file="common/nav.jsp" %>
 <div class="container">
 <div class="list">
+	<main class="row border shadow mb-3 rounded">
+		<%@ include file="common/registerprogress.jsp" %>
+	</main>
 	<ul>
 		<li>[이용규칙관리] 는 업체 공통적인 정책을 기입하는 란입니다. (체크인, 체크아웃, 성수기 설정 등)</li>
 		<li>우측 물음표를 클릭하시면 앱에서 어떻게 표시되는지 확인이 가능합니다.</li>
@@ -133,5 +137,6 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 </div>
 <script type="text/javascript">
 </script>
+<%@ include file="common/footer.jsp" %>
 </body>
 </html>

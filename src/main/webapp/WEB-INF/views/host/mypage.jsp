@@ -44,7 +44,7 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 						<td>
 							<div class="row">
 								<div class="col-2">이메일</div>
-								<div class="col-5">(가입자 이메일)</div>
+								<div class="col-5" name="email">(가입자 이메일)</div>
 							</div>
 							<div class="row pt-2 mt-2">
 	                            <div class="col-2 pt-2">휴대폰 번호</div>
@@ -246,5 +246,6 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 		</form>
 	</div>
 </div>
+<%@ include file="common/footer.jsp" %>
 </body>
 </html>
