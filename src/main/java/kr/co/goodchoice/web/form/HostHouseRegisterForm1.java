@@ -31,4 +31,11 @@ public class HostHouseRegisterForm1 {
 	private String addCost;						// 현장 추가 요금 안내
 	private String parking;						// 주차장 정보
 	private String etc;							// 기타 사항
+	
+	public boolean contains(String value) {
+		if (facilities == null) {
+			return false;
+		}
+		return facilities.contains(value);
+	}
 }

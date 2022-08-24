@@ -46,9 +46,9 @@ public class HostFormService {
 	public void insertForm1(HostHouseRegisterForm1 form1, User loginUser)  {
 		House house = new House();
 		HouseEvent houseEvent = new HouseEvent();
+		User user = new User();
 		house.setName(form1.getAname());				// 숙소명
 		house.setAddress(form1.getAddress1() + " " + form1.getAddress2());			// 주소(나머지 입력)
-		house.setName(form1.getHostName());				// 업주 이름
 		house.setHostComment(form1.getComment());		// 주인장 소개글
 		house.setFindWay(form1.getFindWay());			// 오시는 길
 		house.setSurroundInfo(form1.getTrafficInfo());	// 주변정보
@@ -108,6 +108,10 @@ public class HostFormService {
 //		HouseEvent houseEvent = new HouseEvent();
 //		houseEvent.setEventTitle(form1.getEventTitle());
 //		houseEvent.setEventContent(form1.getEventContent());
+		
+		
+		// user.setName(loginUser.getName());				// 업주 이름
+		// house_business_info 테이블에 house_no, user_no, type_no, status_no 등 을 입력한다.
 		
 	}
 }

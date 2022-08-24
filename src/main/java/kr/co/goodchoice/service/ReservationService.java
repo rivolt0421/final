@@ -31,9 +31,9 @@ public class ReservationService {
 		return reservationMapper.getReservationByUserNo(userNo);
 	}
 	
-	public Reservation getReservationDetail(int no) {
-		return reservationMapper.getReservationByNo(no);
-	}
+//	public Reservation getReservationDetail(int no) {
+//		return reservationMapper.getReservationByNo(no);
+//	}
 	
 	
 }
