@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.co.goodchoice.mapper.PointMapper">
+
+	<resultMap type="Point" id="PointResultMap">
+		<id column="point_history_no" property="no"/>
+		<result column="point_history_reason" property="reason" />
+		<result column="point_amount" property="amount" />
+		<result column="point_history_created_date" property="createdDate" />
+		<association property="user" column="user_no" select="kr.co.goodchoice.mapper.UserMapper.getUserByNo"></association>
+		<!-- <association property="payment" column="payment_no" select="kr.co.goodchoice.mapper.PaymentMapper.getPaymentByNo"></association> -->
+	</resultMap>
+	
+	<!-- void addPoint(Point point); -->
+	<insert id="addPoint" parameterType="Point">
+		insert into user_point_histories
+			(point_history_no, user_no, point_history_reason, point_amount
+			<if test="payment == null">
+			)
+			</if>
+			<if test="payment != null">
+			, payment_no)
+			</if>
+		
+		values
+			(point_history_seq.nextval, #{user.no}, #{reason}, #{amount}
+			<if test="payment == null">
+			)
+			</if>
+			<if test="payment != null">
+			, #{payment.no})
+			</if>
+	</insert>
+	
+	<!-- List<Point> getPointsByUserNo(int userNo); -->
+	<select id="getPointsByUserNo" parameterType="int" resultMap="PointResultMap">
+		select *
+		from user_point_histories
+		where user_no = #{value}
+		order by point_history_no desc
+	</select>
+	
+</mapper>

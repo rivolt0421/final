@@ -29,6 +29,7 @@ public class UserController {
 		return "user/myinfo";
 	}
 	
+	
 	@PostMapping(path = "/changeNickName")
 	public String changeNickName(@RequestParam("nickName") String nickName, @LoginUser User loginUser) {
 		loginUser.setNickname(nickName);
