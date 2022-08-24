@@ -1,6 +1,58 @@
 @charset "UTF-8";
 @import "nav.css";
 
+/* 모달 */
+#logout_cancle {
+	height: 48px;
+    padding: 0 10px;
+    border: none;
+    background: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(0,0,0,0.56);
+}
+
+#logout {
+	height: 48px;
+    padding: 0 10px;
+    border: none;
+    background: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(2,134,118) !important;
+}
+
+.text {
+	padding: 20px 24px;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.modal .btn_wrap {
+    padding-right: 10px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    text-align: right;
+}
+
+
+.modal{ 
+  position:fixed; width:100%; height:100%; background: rgba(0,0,0,0.8); top:0; left:0; display:none;
+}
+
+
+.modal_content{
+  	position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    z-index: 430 !important;
+    bottom: inherit !important;
+    width: 280px;
+    margin: 0 0 0 -140px;
+    background: #fff;
+    border-radius: 4px;
+}
+
+
 /* Point 포인트 */
 .point_show{padding-bottom:38px;color:#fff;text-align:center;}
 .point_show span{display:block;padding:45px 0 2px 0;font-size:16px;}
@@ -10,6 +62,77 @@
 .point_list li span{display:block;padding-top:3px;font-size:13px;color:rgba(0,0,0,0.57);}
 .point_list li p{position:absolute;top:50%;right:0;margin:-7px 0 0 0;font-size:16px;font-weight:bold;}
 .point_list li:last-child{border-bottom:none;}
+
+.points-list__year-month {
+    margin-bottom: 23px;
+    flex: 1 0 100%;
+    color: #9aa9b8;
+    line-height: 1.22;
+}
+
+.points-list__year-month {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.points-list-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0 0 26px;
+    cursor: default;
+}
+
+.points-list-item__wrap:first-child {
+    flex: 1 1 50%;
+}
+
+.points-list-item__name {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 19px;
+    max-height: 38px;
+    margin-bottom: 8px;
+    color: rgba(0,0,0,.8);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+ .points-list-item__issued-date {
+    flex: 0 0 16px;
+    color: rgba(0,0,0,.32);
+    line-height: 16px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.points-list-item__wrap:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 50%;
+    text-align: right;
+}
+
+.points-list-item__balance.text-red {
+    color: #f45858;
+    vertical-align: top;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.points-list-item__expiry-date {
+    text-align: right;
+    flex: 0 0 16px;
+    color: rgba(0,0,0,.32);
+    line-height: 16px;
+    font-size: 13px;
+}
 
 @media all and (min-width:1024px){
 	.my_wrap{padding-top:54px;}
@@ -47,6 +170,8 @@
 	.watch_list li a div strong{display:block;padding:3px 0 4px 0;font-size:18px}
 	.list_none{background:none;padding-top:125px;font-size:20px;font-weight:bold;}
 }
+
+
 
 /* 쿠폰함 */
 .my_coupon{background:#e8e8e8;}

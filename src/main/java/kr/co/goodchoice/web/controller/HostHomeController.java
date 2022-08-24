@@ -12,11 +12,6 @@ public class HostHomeController {
 		return "host/hosthome";
 	}
 	
-	// 호스트 공지사항
-	@GetMapping(path = "/hostnotice")
-	public String hostnotice() {
-		return "host/hostnoticelist";
-	}
 	
 	// 호스트 자주묻는 질문
 	@GetMapping(path = "/hostquestion")

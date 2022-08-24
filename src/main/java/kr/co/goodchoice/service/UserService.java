@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kr.co.goodchoice.exception.OnlineApplicationException;
+import kr.co.goodchoice.mapper.PointMapper;
 import kr.co.goodchoice.mapper.UserMapper;
+import kr.co.goodchoice.vo.Point;
 import kr.co.goodchoice.vo.User;
 import kr.co.goodchoice.web.form.UserRegisterForm;
 import lombok.extern.slf4j.Slf4j;
@@ -18,6 +20,9 @@ public class UserService {
 
 	@Autowired
 	private UserMapper userMapper;
+	
+	@Autowired
+	private PointMapper pointMapper;
 	
 	/**
 	 * 카카오 로그인으로 획득한 사용자정보로 로그인처리를 수행한다.<p>
@@ -73,7 +78,15 @@ public class UserService {
 		BeanUtils.copyProperties(userRegisterForm, user);
 		
 		
-		userMapper.insertUser(user);		
+		userMapper.insertUser(user);	
+		
+		Point ph = new Point();
+		ph.setUser(user);
+		ph.setReason("적립");
+		ph.setAmount(1000);
+		
+		pointMapper.addPoint(ph);
+		
 	}
 
 	public User login(String email, String password) {

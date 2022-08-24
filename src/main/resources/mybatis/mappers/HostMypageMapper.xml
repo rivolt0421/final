@@ -3,24 +3,48 @@
 <mapper namespace="kr.co.goodchoice.mapper.HostMypageMapper">
 
 	<resultMap type="User" id="UserResultMap">
-		<id column="USER_NO" property=""/>
-		<result column="USER_NAME" property=""/>
-		<result column="USER_EMAIL" property=""/>
-		<result column="USER_PASSWORD" property=""/>
-		<result column="USER_TEL" property=""/>
-		<result column="USER_NICKNAME" property=""/>
-		<result column="USER_POINT" property=""/>
-		<result column="USER_CREATED_DATE" property=""/>
-		<result column="USER_UPDATED_DATE" property=""/>
-		<result column="USER_DISABLED" property=""/>
-		<result column="USER_HOST" property=""/>
+		<id column="USER_NO" property="no"/>
+		<result column="USER_NAME" property="name"/>
+		<result column="USER_EMAIL" property="email"/>
+		<result column="USER_TEL" property="tel"/>
+		<result column="USER_HOST" property="host"/>
+	</resultMap>
+	
+	<resultMap type="Bank" id="BankResultMap">
+		<id column="USER_NO" property="userNo"/>
+		<result column="BANK_NAME" property="name"/>
+		<result column="BANK_NUMBER" property="number"/>
+		<result column="BANK_USER" property="user"/>
+	</resultMap>
+	
+	<resultMap type="HostHouseStatusCategories" id="statusResultMap">
+		<result column="STATUS_ID" property="statusId"/>
+		<result column="STATUS_NAME" property="statusName"/>
+	</resultMap>
+	
+	<resultMap type="HostHouseTypeCategories" id="typeResultMap">
+		<result column="TYPE_ID" property="typeId"/>
+		<result column="TYPE_NAME" property="typeName"/>
 	</resultMap>
 
 	<!-- user정보 가져오기 -->
 	<!-- void getHost (User user); -->
 	
+	<!-- User getUserByEmail(String email); -->
+	<select id="getUserByEmail" parameterType="string" resultMap="UserResultMap">
+		select user_email
+		from final_users
+		where user_email = #{value}
+	</select>
+	
 	<!-- 은행 정보 입력하기 -->
 	<!-- void inserBank (Bank bank); -->
+	<insert id="inserBank" parameterType="Bank">
+		insert into user_bank
+			(USER_NO, BANK_NAME, BANK_NUMBER, BANK_USER)
+		values
+			(#{userNo}, #{name}, #{number}, #{user}
+	</insert>
 	
 	<!-- 업태 정보 입력하기 -->
 	<!-- void inserStatusCtegories(HostHouseStatusCategories status); -->

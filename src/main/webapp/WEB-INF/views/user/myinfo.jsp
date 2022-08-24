@@ -138,9 +138,22 @@
 
 		<div class="bot_btn">
 			<p>여기어때를 이용하고 싶지 않으신가요?</p>
-			<button type="button" onclick="pop_twobtn('ell','로그아웃 하시겠습니까?','취소','로그아웃','close_layer()','logoutPro()');">로그아웃</button>
-							<button type="button"><a href="https://www.goodchoice.kr/my/withdraw">회원탈퇴</a></button>
+			<button type="button" id="logout_btn">로그아웃</button>
+			<button type="button" id="withdraw_btn">회원탈퇴</a></button>
 		</div>
+		
+			<div class="modal">
+			  <div class="modal_content">
+				  	<div class="text">
+				    	로그아웃 하시겠습니까?
+				  	</div>
+				  <div class="btn_wrap">
+					  	<button type="button" id="logout_cancle">취소</button>
+					  	<button type="button" id="logout" onclick="location.href='/logout'">로그아웃</button>
+				  </div>
+			  </div>
+			</div>
+			
 	</div>
 </div>
 <%@ include file="../common/footer.jsp" %>
@@ -166,7 +179,25 @@ $(function() {
 		$("#name_change_btn").show();
 		$("#name_change").hide();
 	});
+	
+
+	$("#logout_btn").click(function(){
+	    $(".modal").fadeIn();
+	});
+	  
+	$("#logout_cancle").click(function(){
+	    $(".modal").fadeOut();
+	});
+		  
+	$("#withdraw_btn").click(function(){
+	    $(".modal2").fadeIn();
+	});
+	
+	$("#withdraw_cancle").click(function(){
+	    $(".modal2").fadeOut();
+	});
 })
+
 </script>
 </body>
 </html>

@@ -54,9 +54,10 @@
 			<p class="confirmation">예약확정</p><!-- 예약완료/예약취소 -->
 				<table class="table">
 					<tr>
-						<th style="font-size:25px;">(예약 숙소 명칭)</th>
+						<th style="font-size:25px;">${reservation.houseName }</th>
 					</tr>
 					<tr>
+						<td style="font-size:20px;"><bold>{reservation.roomName) *박</bold></td>
 						<td style="font-size:20px;"><bold>(예약 상품 명칭, *박)</bold></td>
 					</tr>
 					<tr>
@@ -64,10 +65,12 @@
 					</tr>
 					<tr>
 						<td style="color:grey;">체크인</td>
+						<td>{reservation.checkInDate}</td>
 						<td>(**.** *요일 - **.** *요일 **:00)</td>
 					</tr>
 					<tr>
 						<td style="color:grey;">체크아웃</td>
+						<td>{reservation.checkOutDate}</td>
 						<td>(**.** *요일 - **.** *요일 **:00)</td>
 					</tr>
 					<tr>
@@ -75,18 +78,18 @@
 					</tr>
 					<tr>
 						<td style="color:grey;">예약번호</td>
-						<td>(*********)</td><!-- 9자리, 테이블 확인해야 함 -->
+						<td>{reservation.no}</td><!-- 9자리, 테이블 확인해야 함 -->
 					</tr>
 					<tr>
 						<td style="color:grey;">예약자 이름</td>
-						<td>(***)</td>
+						<td>{reservation.user.name}</td>
 					</tr>
 					<tr>
 						<td style="color:grey;">안심번호</td> <!-- 안심번호 미구현시 일반 전화번호 출력 -->
-						<td>(010-****-****)</td>
+						<td>{reservation.user.tel}</td>
 					</tr>
 					<tr>
-						<td style="color:grey; font-size:12px;">휴대본 번호 010-****-****은(는)</td>
+						<td style="color:grey; font-size:12px;">휴대본 번호 {reservation.user.tel}은(는)</td>
 					</tr>
 					<tr>
 						<td style="color:grey; font-size:12px;">안심번호로 숙소에 전송되며, 퇴실후 7일간 보관됩니다.</td>

@@ -11,9 +11,9 @@ import kr.co.goodchoice.vo.Rooms;
 
 @Service
 public class ReservationService {
-
-@Autowired
-private ReservationMapper reservationMapper;
+	
+	@Autowired
+	private ReservationMapper reservationMapper;
 	
 	public Rooms getRoomInfoByNo(int roomNo) {
 		return reservationMapper.getRoomByNo(roomNo);
@@ -23,7 +23,17 @@ private ReservationMapper reservationMapper;
 		return reservationMapper.getReservations();
 	}
 	
+//	public List<Reservation> getAllReservations(String userNo) {
+//		return reservationMapper.getReservationsByUserNo(userNo);
+//	}
+	
 	public Reservation getReservationByUserNo(int userNo) {
 		return reservationMapper.getReservationByUserNo(userNo);
 	}
+	
+	public Reservation getReservationDetail(int no) {
+		return reservationMapper.getReservationByNo(no);
+	}
+	
+	
 }

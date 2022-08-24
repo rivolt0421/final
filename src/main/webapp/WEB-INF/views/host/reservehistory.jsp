@@ -30,7 +30,7 @@
 		<!-- 캘린더 (년)월 이동바 -->
 		<div class="row">
 			<div class="col text-center" id="cal_top">
-				<input type="text" name="date"/>
+				<input type="hidden" name="date"/>
 				
 				<a href="#"><span id="prev_month">&lt; </span></a>
 				<span id="cal_year"></span>
@@ -67,16 +67,16 @@
 					<tr>
 						<!-- 달력의 맨 첫주의 앞쪽 빈칸 -->
 						<c:if test="${row.first }">
-							<c:forEach begin="1" end="${row.colspan - 1 }><td class="p-3"></td></c:forEach>
+							<c:forEach begin="1" end="${row.colspan - 1 }"><td class="p-3"></td></c:forEach>
 						</c:if>
 						
 						<!-- 달력의 데이터 칸을 채운다. -->
-						<c:forEach var="cell" items="${row.cells }">
+						<c:forEach var="cell" items="${row.cells }" varStatus="loop">
 							<td class="p-3">
 								<div><strong>
 									<fmt:formatDate value="${cell.date }" pattern="d"/>
 								</strong></div>
-								<c:forEach var="reserve" items="${cell.date }">
+								<c:forEach var="reserve" items="${cell.items }">
 									<div></div>
 								</c:forEach>
 							</td>
@@ -148,26 +148,10 @@
 				</tbody>
 			</table>
 		</div>
-		
-		<!-- <div class="row p-5">
-			<div class="col">
-				<div class="grid">
-					<div>일</div>
-					<div>월</div>
-					<div>화</div>
-					<div>수</div>
-					<div>목</div>
-					<div>금</div>
-					<div>토</div>
-				</div>
-				
-			</div>
-		</div> -->
 	</div>
 </div>
 <%@ include file="common/footer.jsp" %>
 <script type="text/javascript">
-
 	// 오늘 년도와 월 구하기
 	let currentYear = moment().format('YYYY');
 	let currentMonth = moment().format('MM');
@@ -195,7 +179,7 @@
 		let year = parseInt($("#cal_year").text());
 		let month = parseInt($("#cal_month").text());
 		
-		// 월 증가
+		// 
 		month = month + value;
 		
 		if (month == 0) {
