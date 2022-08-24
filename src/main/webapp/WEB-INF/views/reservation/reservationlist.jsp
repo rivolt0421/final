@@ -77,84 +77,95 @@
 	            <li><a class="" href="/user/myinfo" style="text-decoration: none;">내 정보 관리</a></li>
 	        </ul>
    	  	</div>
-		
-		<div class="container">
-			<div class="reservation">
-				<!--  
-				<a href="courses" data-category="" class="list-group-item list-group-item-action py-3 ${empty param.cat ? 'active' : '' }">전체 강의</a>
-				<c:forEach var="category" items="${categories }">
-					<a href="courses?cat=${category.id }" data-category="${category.id }" class="list-group-item list-group-item-action py-3 ${param.cat eq category.id ? 'active' : '' }"> ${category.name }</a>
-				</c:forEach>
-				-->
-				<p><strong>예약 내역</strong></p>
-				<!--이미지/예약상태/숙소명칭/체크인-체크아웃/기간(숙박일수)-->
-				  <img src="/resources/static/images/houseImgs/${HouseImage.houseImageName }">
-				  	<span class="confirmation">예약확정</span>
-				    <h4><b>${reservation.houseName }</b></h4>
-				    <p>체크인: ${reservation.checkInDate } (*)박</p>
-				    <p>체크인: (**.** *요일 **:00) (*)박</p>
-				  </div>
-				<!--<c:forEach items="${reservation}" var="r">
-				<div class="card">
-				<div class="card">
-				  <img src="/resources/static/images/houseImgs/${HouseImage.houseImageName }">
-				  	<span class="confirmation">예약확정</span>
-				    <h4><b>${r.houseName }</b></h4>
-				    <p>체크인: ${r.checkInDate } (*)박</p>
-				    <p>체크인: (**.** *요일 **:00) (*)박</p>
-				  </div>
-				  </c:forEach><-->
+   	  	<!--  
+		<c:choose>
+        	<c:when test="${empty reservation }">
+        		<div class="right" data-v-50bfe504=""><div class="list_none" style="display: block" data-v-50bfe504="">
+                예약 내역이 없습니다.
+                <b data-v-50bfe504="">최저가로 예약 가능한<br data-v-50bfe504="">숙소들을 지금 만나세요!</b>
+                <p data-v-50bfe504=""><a href="/" class="btn_red" data-v-50bfe504="">다양한 숙소 보러가기</a></p></div></div>
+        	</c:when>
+        <c:otherwise>
+        -->
+			<div class="container">
+				<div class="reservation">
+					<!--  
+					<a href="courses" data-category="" class="list-group-item list-group-item-action py-3 ${empty param.cat ? 'active' : '' }">전체 강의</a>
+					<c:forEach var="category" items="${categories }">
+						<a href="courses?cat=${category.id }" data-category="${category.id }" class="list-group-item list-group-item-action py-3 ${param.cat eq category.id ? 'active' : '' }"> ${category.name }</a>
+					</c:forEach>
+					-->
+					<div class="card">
+					<p><strong>예약 내역</strong></p>
+					<!--이미지/예약상태/숙소명칭/체크인-체크아웃/기간(숙박일수)-->
+					  <img src="/resources/static/images/houseImgs/${HouseImage.houseImageName }">
+					  	<span class="confirmation">예약확정</span>
+					    <h4><b>${reservation.houseName }</b></h4>
+					    <p>체크인: ${reservation.checkInDate } (*)박</p>
+					    <p>체크인: (**.** *요일 **:00) (*)박</p>
+					  </div>
+					<!--<c:forEach items="${reservation}" var="r">
+					
+					<div class="card">
+					  <img src="/resources/static/images/houseImgs/${HouseImage.houseImageName }">
+					  	<span class="confirmation">예약확정</span>
+					    <h4><b>${r.houseName }</b></h4>
+					    <p>체크인: ${r.checkInDate } (*)박</p>
+					    <p>체크인: (**.** *요일 **:00) (*)박</p>
+					  </div>
+					  </c:forEach><-->
+				</div>
+				<div class="reservation">
+					<p><strong>이용 내역</strong></p>
+					<!--이미지/예약상태/숙소명칭/체크인-체크아웃/기간(숙박일수)-->
+					<div class="card">
+					  <img src="/resources/static/images/houseImgs/${HouseImage.houseImageName }">
+					  	<span class="useandcancel">이용완료</span>
+					    <h4><b>${reservation.houseName }</b></h4>
+					    <p>${reservation.checkInDate } - ${reservation.checkOutDate } (*)박</p>
+					    <p>(**.** *요일) - (**.** *요일) (*)박</p>
+					    <br>
+					    <a href="https://localhost/product/search/2"><p style="color:green">다시 예약</p></a>
+					 </div>
+					<!--<c:forEach items="${reservation}" var="r">
+					<div class="card">
+					  <img src="/resources/static/images/houseImgs/${HouseImage.houseImageName }">
+					  	<span class="useandcancel">이용완료</span>
+					    <h4><b>${r.houseName }</b></h4>
+					    <p>${r.checkInDate } - ${r.checkOutDate } (*)박</p>
+					    <p>(**.** *요일) - (**.** *요일) (*)박</p>
+					    <br>
+					    <a href="https://localhost/product/search/2"><p style="color:green">다시 예약</p></a>
+					 </div>
+					 </c:forEach><-->
+				</div>
+				<div class="reservation">
+					<p><strong>취소 내역</strong></p>
+					<!--이미지/예약상태/숙소명칭/체크인-체크아웃/기간(숙박일수)/오늘일자로 설정된 동일 숙소의 예약링크(reservationform)-->
+					<div class="card">
+					  <img src="/resources/static/images/houseImgs/${HouseImage.houseImageName }">
+					  	<span class="useandcancel">예약취소</span>
+					    <h4><b>${reservation.houseName }</b></h4>
+					    <p>${reservation.checkInDate } - ${reservation.checkOutDate } (*)박</p>
+					    <p>(**.** *요일) - (**.** *요일) (*)박</p>
+					    <br>
+					    <a href="https://localhost/product/search/2"><p style="color:green">다시 예약</p></a>
+					 </div>
+					<!--<c:forEach items="${reservation}" var="r">
+					<div class="card">
+					  <img src="/resources/static/images/houseImgs/${HouseImage.houseImageName }">
+					  	<span class="useandcancel">예약취소</span>
+					    <h4><b>${r.houseName }</b></h4>
+					    <p>${r.checkInDate } - ${r.checkOutDate } (*)박</p>
+					    <p>(**.** *요일) - (**.** *요일) (*)박</p>
+					    <br>
+					    <a href="https://localhost/product/search/2"><p style="color:green">다시 예약</p></a>
+					 </div>
+					 
+					 </c:forEach><-->
+				</div>
 			</div>
-			<div class="reservation">
-				<p><strong>이용 내역</strong></p>
-				<!--이미지/예약상태/숙소명칭/체크인-체크아웃/기간(숙박일수)-->
-				<div class="card">
-				  <img src="/resources/static/images/houseImgs/${HouseImage.houseImageName }">
-				  	<span class="useandcancel">이용완료</span>
-				    <h4><b>${reservation.houseName }</b></h4>
-				    <p>${reservation.checkInDate } - ${reservation.checkOutDate } (*)박</p>
-				    <p>(**.** *요일) - (**.** *요일) (*)박</p>
-				    <br>
-				    <a href="https://localhost/product/search/2"><p style="color:green">다시 예약</p></a>
-				 </div>
-				<!--<c:forEach items="${reservation}" var="r">
-				<div class="card">
-				  <img src="/resources/static/images/houseImgs/${HouseImage.houseImageName }">
-				  	<span class="useandcancel">이용완료</span>
-				    <h4><b>${r.houseName }</b></h4>
-				    <p>${r.checkInDate } - ${r.checkOutDate } (*)박</p>
-				    <p>(**.** *요일) - (**.** *요일) (*)박</p>
-				    <br>
-				    <a href="https://localhost/product/search/2"><p style="color:green">다시 예약</p></a>
-				 </div>
-				 </c:forEach><-->
-			</div>
-			<div class="reservation">
-				<p><strong>취소 내역</strong></p>
-				<!--이미지/예약상태/숙소명칭/체크인-체크아웃/기간(숙박일수)/오늘일자로 설정된 동일 숙소의 예약링크(reservationform)-->
-				<div class="card">
-				  <img src="/resources/static/images/houseImgs/${HouseImage.houseImageName }">
-				  	<span class="useandcancel">예약취소</span>
-				    <h4><b>${reservation.houseName }</b></h4>
-				    <p>${reservation.checkInDate } - ${reservation.checkOutDate } (*)박</p>
-				    <p>(**.** *요일) - (**.** *요일) (*)박</p>
-				    <br>
-				    <a href="https://localhost/product/search/2"><p style="color:green">다시 예약</p></a>
-				 </div>
-				<!--<c:forEach items="${reservation}" var="r">
-				<div class="card">
-				  <img src="/resources/static/images/houseImgs/${HouseImage.houseImageName }">
-				  	<span class="useandcancel">예약취소</span>
-				    <h4><b>${r.houseName }</b></h4>
-				    <p>${r.checkInDate } - ${r.checkOutDate } (*)박</p>
-				    <p>(**.** *요일) - (**.** *요일) (*)박</p>
-				    <br>
-				    <a href="https://localhost/product/search/2"><p style="color:green">다시 예약</p></a>
-				 </div>
-				 </c:forEach><-->
-			</div>
-			
-		</div>
+		<!-- </c:otherwise>-->
 	</div>
 </div>
 <%@ include file="../common/footer.jsp" %>

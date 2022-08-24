@@ -27,6 +27,6 @@ public class Reservation {
 	private double cancelCommission;
 	private String houseName;
 	
-	private List<HouseImage> HouseImage;
+	//private List<HouseImage> HouseImage;
 	
 }

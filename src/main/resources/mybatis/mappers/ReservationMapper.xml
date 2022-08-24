@@ -17,9 +17,29 @@
 		<result column="cancel_reason" property="cancelReason"/>
 		<result column="cancel_commission" property="cancelCommission"/>
 		<result column="house_name" property="houseName"/>
-		
 	</resultMap>
 	
+	<resultMap type="User" id="ReservationWithUserResultMap" extends="ReservationResultMap">
+		<collection property="user" column="user_no" select="kr.co.hta.mapper.UserMapper.getUserByNo"></collection>
+	</resultMap>
+	
+	<!-- List<Reservation> getReservationsByUserNo(int userNo); -->
+	<select id="getReservationsByUserNo" parameterType="int" resultMap="ReservationWithUserResultMap">
+		select *
+		from reservations
+		where user_no = #{value}
+		order by user_no desc
+	</select>
+	
+	<!-- List<Reservation> getCancelReservationsByUserNo(int userNo); -->
+	<select id="getCancelReservationsByUserNo" parameterType="int" resultMap="ReservationWithUserResultMap">
+		select *
+		from reservations
+		where user_no = #{value}
+		and canceled = 'Y'
+		order by user_no desc
+	</select>
+
 	<!-- List<Reservation> getReservations(); -->
 
 	<select id="getReservations" resultMap="ReservationResultMap">
