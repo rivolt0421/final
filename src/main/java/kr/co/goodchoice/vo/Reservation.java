@@ -1,6 +1,7 @@
 package kr.co.goodchoice.vo;
 
 import java.sql.Date;
+import java.util.List;
 
 import org.apache.ibatis.type.Alias;
 
@@ -15,14 +16,17 @@ public class Reservation {
 	private int houseNo;
 	private int roomNo;
 	private int motelRoomNo;
-	private int motelReservationType;
+	private int motelRoomReservationType;
 	private Date checkInDate;
 	private Date checkOutDate;
 	private int price;
+	private int paymentPrice;
 	private String roomName;
 	private char canceled;
 	private String cancelReason;
-	private double commission;
+	private double cancelCommission;
 	private String houseName;
+	
+	private List<HouseImage> HouseImage;
 	
 }
