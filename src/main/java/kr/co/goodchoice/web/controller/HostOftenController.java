@@ -14,11 +14,11 @@ public class HostOftenController {
 	@Autowired
 	private OftenService oftenService;
 	
-	@GetMapping
+	@GetMapping(path = "/hostquestion")
 	public String home(@RequestParam(name="cat", required = false) String categoryId, Model model) {
 		model.addAttribute("categories", oftenService.getAllCategories());
-		model.addAttribute("oftens", oftenService.getOftensByCategoryId(categoryId));
+		model.addAttribute("oftens", oftenService.getAllOftens());
 		 
-		return "host/hostquestion";
+		return "host/oftenquestionlist";
 	}
 }

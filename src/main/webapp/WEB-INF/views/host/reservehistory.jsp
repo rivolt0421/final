@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ include file="../common/tags.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -76,8 +77,23 @@
 								<div><strong>
 									<fmt:formatDate value="${cell.date }" pattern="d"/>
 								</strong></div>
-								<c:forEach var="reserve" items="${cell.items }">
-									<div></div>
+								<c:forEach var="reserve" items="${cell.item.reservations }" varStatus="subLoop">
+									<div>
+										<c:choose>
+											<c:when test="${subLoop.index mod 4  eq 0}">
+												<span class="badge text-bg-primary" style="font-size: 10px;">${reserve.houseName}</span>
+											</c:when>
+											<c:when test="${subLoop.index mod 4  eq 1}">
+												<span class="badge text-bg-danger" style="font-size: 10px;">${reserve.houseName}</span>
+											</c:when>
+											<c:when test="${subLoop.index mod 4  eq 2}">
+												<span class="badge text-bg-success" style="font-size: 10px;">${reserve.houseName}</span>
+											</c:when>
+											<c:when test="${subLoop.index mod 4  eq 3}">
+												<span class="badge text-bg-warning" style="font-size: 10px;">${reserve.houseName}</span>
+											</c:when>
+										</c:choose>
+									</div>
 								</c:forEach>
 							</td>
 						</c:forEach>
@@ -91,61 +107,7 @@
 						
 					</tr>
 				</c:forEach>
-					<tr>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-					</tr>
-					<tr>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-					</tr>
-					<tr>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-					</tr>
-					<tr>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-					</tr>
-					<tr>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-					</tr>
-					<tr>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-						<td style="height: 170.98px;">x</td>
-					</tr>
-				</tbody>
+					
 			</table>
 		</div>
 	</div>

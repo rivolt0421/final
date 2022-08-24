@@ -4,12 +4,11 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
-import kr.co.goodchoice.vo.Often;
 import kr.co.goodchoice.vo.OftenCategory;
 
 @Mapper
 public interface OftenCategoryMapper {
 
 	List<OftenCategory> getAllCategories();
-	OftenCategory getCategoryById(String categoryId);
+	OftenCategory getCategoryById(String id);
 }
