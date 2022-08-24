@@ -33,4 +33,13 @@
 		from reservations
 		where user_no = #{value}
 	</select>
+	
+
+	<!-- Rooms getRoomByNo(int roonNo); -->
+	<select id="getRoomByNo" parameterType="int" resultType="Rooms">
+		select r.room_name name, h.house_name "houseNo.name", r.room_price price
+		from rooms r, house h
+		where r.house_no = h.house_no
+		and room_no = #{value}
+	</select>
 </mapper>

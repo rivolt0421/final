@@ -309,7 +309,7 @@
                                     </div>
 
                                     <button type="button"
-                                        onclick="location.href='/reservation?adcno=2&ano=57843&armgno=365709&checkin_type=2&checkin_date=2022-08-22&checkout_date=2022-08-23&sale_price=99000';"
+                                        onclick="location.href='/reservationform?roomNo=1&9&checkin_type=2&checkin=2022-08-22&checkout=2022-08-23&price=99000';"
                                         class="gra_left_right_red" style=""> 예약</button>
                                 </div>
                             </div>
@@ -397,7 +397,7 @@
                                     </div>
 
                                     <button type="button"
-                                        onclick="location.href='/reservation?adcno=2&ano=57843&armgno=365710&checkin_type=2&checkin_date=2022-08-22&checkout_date=2022-08-23&sale_price=99000';"
+                                        onclick="location.href='/reservationform?roomNo=1000&checkin=2022-08-22&checkout=2022-08-23';"
                                         class="gra_left_right_red" style=""> 예약</button>
                                 </div>
                             </div>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@include file="../common/tags.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,7 +81,7 @@ td {
 				<tr>
 					<td>구매 총액</td>
 					<td></td>
-					<td><strong>(할인 수단 적용 전 결제 금액)원</strong></td>
+					<td><strong><fmt:formatNumber value="${price*bak }" pattern="#,###"/>원 </strong></td>
 				</tr>
 				<tr>
 					<td>
@@ -297,25 +298,25 @@ td {
 						<td>숙소 이름</td>
 					</tr>
 					<tr>
-						<td>(예약 숙소 명칭)</td>
+						<td>${houseName }</td>
 					</tr>
 					<tr>
 						<td>객실타입/기간</td>
 					</tr>
 					<tr>
-						<td>(예약 객실타입/예약 기간)</td>
+						<td>${roomName }/${bak }박</td>
 					</tr>
 					<tr>
 						<td>체크인</td>
 					</tr>
 					<tr>
-						<td>(**.** *요일 **:00)</td>
+						<td><fmt:formatDate value="${checkinDate }" pattern="yyyy-MM-dd EE" />15:00</td>
 					</tr>
 					<tr>
 						<td>체크아웃</td>
 					</tr>
 					<tr>
-						<td>(**.** *요일 **:00)</td>
+						<td><fmt:formatDate value="${checkinDate }" pattern="yyyy-MM-dd EE" />11:00</td>
 					</tr>
 				</table>
 				<hr>
@@ -346,16 +347,16 @@ td {
 							</div>
 							<div class="modal-body">
 								<p>숙소명</p>
-								<p>객실 유형/숙박 일수</p>
+								<p>${roomName }/${bak }박</p>
 								<br>
 								<table class="table">
 									<tr>
 										<td>체크인</td>
-										<td>**.**</td>
+										<td><fmt:formatDate value="${checkinDate }" pattern="yyyy-MM-dd EE" />15:00</td>
 									</tr>
 									<tr>
 										<td>체크아웃</td>
-										<td>**.**</td>
+										<td><fmt:formatDate value="${checkinDate }" pattern="yyyy-MM-dd EE" />11:00</td>
 									</tr>
 								</table>
 									<p>미성년자는 보호자 동반시 투숙이 가능합니다.</p>

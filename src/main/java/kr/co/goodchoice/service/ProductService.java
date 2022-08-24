@@ -1,7 +1,8 @@
 package kr.co.goodchoice.service;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -22,7 +23,7 @@ public class ProductService {
 	
 	public Map<String, List<Region>> getRegionMap() {
 		List<Region> list = rMapper.getAllRegions();
-		Map<String, List<Region>> map = new HashMap<>();
+		Map<String, List<Region>> map = new LinkedHashMap<>();
 		
 		for (Region r : list) {
 			if (map.containsKey(r.getProvince())) {

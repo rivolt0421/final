@@ -9,7 +9,7 @@
 	</select>
 	
 	<select id="getAllRegions" resultType="Region">
-		select *
+		select REGION_ID as id, REGION_PROVINCE as province, REGION_NAME as name
 		from regions
 		order by region_province
 	</select>
