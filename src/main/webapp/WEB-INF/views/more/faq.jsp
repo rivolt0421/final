@@ -33,7 +33,7 @@
 <div id="content" class="sub_wrap my_wrap">
 	    <div class="side">
 	        <ul style="padding-left: 0rem;">
-	            <li><a class="" href="/more/notice" style="text-decoration: none;">공지사항</a></li>
+	            <li><a class="" href="/more/event" style="text-decoration: none;">이벤트</a></li>
 	            <li><a class="active" href="/more/faq" style="text-decoration: none;">자주묻는질문</a></li>
 	            <li><a class="" href="/more/inquiry" style="text-decoration: none;">1:1 문의</a></li>
 	        </ul>

@@ -56,8 +56,11 @@ public class UserController {
 
 	@GetMapping(path ="/point")
 	public String points(@LoginUser User loginUser, Model model) {
-		List<Point> point = pointservice.getMyPoints(loginUser.getNo());
-		model.addAttribute("point", point);
+		List<Point> points = pointservice.getMyPoints(loginUser.getNo());
+		model.addAttribute("points", points);
+		
+		User user = userService.getUserInfo(loginUser.getNo());
+		model.addAttribute("user", user);
 		
 		return "user/point";
 	}

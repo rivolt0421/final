@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.co.goodchoice.mapper.MoreMapper">
+
+	<resultMap type="Inquiry" id="InquiryResultMap">
+		<id column="inquiry_no" property="no"/>
+		<result column="inquiry_category" property="category"/>
+		<result column="inquiry_type" property="type"/>
+		<result column="inquiry_tel" property="tel"/>
+		<result column="inquiry_email" property="email"/>
+		<result column="inquiry_content" property="content"/>
+		<result column="inquiry_created_date" property="createdDate"/>
+		<association property="user" column="user_no" select="kr.co.goodchoice.mapper.UserMapper.getUserByNo"></association>
+	</resultMap>
+
+	<!-- void insertInquiry(Inquiry inquiry); -->
+	<insert id="insertInquiry" parameterType="Inquiry">
+		insert into inquiries
+		(inquiry_no, inquiry_category, inquiry_type, inquiry_tel, inquiry_email, inquiry_content, user_no)
+		values
+		(inquiry_seq.nextval, #{category}, #{type}, #{tel}, #{email}, #{content}, #{user.no})
+	</insert>
+	
+	<!-- List<Inquiry> getInquiriesByUserNo(int userNo); -->
+	<select id="getInquiriesByUserNo" parameterType="int" resultMap="InquiryResultMap">
+		select *
+		from inquiries
+		where user_no = #{value}
+		order by inquiry_no desc
+	</select>
+	
+	
+</mapper>
