@@ -3,7 +3,7 @@
 <style>
 	a {text-decoration: none;}
 </style>
-<footer class="bg-dark mt-5 text-white pt-3" style="height: 220px;">
+<footer class="bg-dark mt-5 text-white pt-3" style="height: 170px;">
 	<div class="container p-3">
 		<div class="mx-5">
 			<div class="row">

@@ -21,6 +21,7 @@ public class HostMypageContorller {
 		return "host/mypage";
 	}
 
+	// mypage에서 저장하기 버튼을 누르면 mypage로 남아있기
 	@PostMapping("/updateMyInfo")
 	public String updateMyInfo(@LoginUser User loginUser,
 			HostMypageUpdateForm hostMypageUpdateForm,
@@ -30,6 +31,6 @@ public class HostMypageContorller {
 		
 		System.out.println(hostMypageUpdateForm);
 		
-		return "redirect:/host/mypage";
+		return "redirect:/mypage";
 	}
 }

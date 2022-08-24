@@ -36,10 +36,10 @@
 							 숙소관리
 							</a>
 							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#">소개 작성</a></li>
-								<li><a class="dropdown-item" href="#">이용규칙 관리</a></li>
-								<li><a class="dropdown-item" href="#">객실 관리</a></li>
-								<li><a class="dropdown-item" href="#">리뷰 관리</a></li>
+								<li><a class="dropdown-item" href="/mypage">소개 작성</a></li>
+								<li><a class="dropdown-item" href="/form1">이용규칙 관리</a></li>
+								<li><a class="dropdown-item" href="/form2">객실 관리</a></li>
+								<li><a class="dropdown-item" href="/form3">리뷰 관리</a></li>
 							</ul>
 						</div>
 						<div class="dropdown">
