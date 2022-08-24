@@ -37,7 +37,6 @@
 		select *
 		from user_point_histories
 		where user_no = #{value}
-		order by point_history_no desc
 	</select>
 	
 </mapper>
