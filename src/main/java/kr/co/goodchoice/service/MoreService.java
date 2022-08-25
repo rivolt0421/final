@@ -2,6 +2,7 @@ package kr.co.goodchoice.service;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,7 @@ public class MoreService {
 	
 	@Autowired
 	private MoreMapper moreMapper;
+	
 	
 	public List<Inquiry> getMyInquiries(int userNo) {
 		return moreMapper.getInquiriesByUserNo(userNo);
@@ -33,5 +35,6 @@ public class MoreService {
 		
 		moreMapper.insertInquiry(inquiry);
 	}
+
 	
 }

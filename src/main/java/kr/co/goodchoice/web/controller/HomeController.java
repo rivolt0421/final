@@ -136,11 +136,11 @@ public class HomeController {
 		return "more/event";
 	}
 	
-	@GetMapping(path ="more/faq")
-	public String faq() {
-		
-		return "more/faq";
-	}
+//	@GetMapping(path ="more/faq")
+//	public String faq() {
+//		
+//		return "more/faq";
+//	}
 	
 //	@GetMapping(path ="more/inquiry")
 //	public String inquiry() {

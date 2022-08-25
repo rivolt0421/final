@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="../common/tags.jsp" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -48,9 +49,19 @@
         		</span>
         		<span class="tab_btn">새 문의 작성</span>
         	</div>
+        	
         	<!-- 리스트 -->
-			
 			<div class="tab_each" style="display: block;">
+			<!-- 리스트 없을때 -->
+			<c:choose>
+				<c:when test="${empty inquiries }">
+				<div class="list_none" style="display: block; background-color:#fff;">
+					등록된 1:1 문의가 없습니다.
+					<b>여기어때는 회원님들의 소중한 의견에 귀기울여<br>신속하고 정확하게 답변드리도록 하겠습니다.</b>
+				</div>
+				</c:when>
+				
+				<c:otherwise>
 				<c:forEach var="inquiry" items="${inquiries }"> 
 				<ul class="show_list open_list" id="inquiry_list">
 					<li onclick="">
@@ -67,8 +78,13 @@
 					</li>
 				</ul>
 				</c:forEach>
+				</c:otherwise>
+				
+			</c:choose>
+			
 			</div>
-	
+			
+
 	
 			<!-- 작성 -->
 			<div class="tab_each" style="display: none;">
@@ -100,14 +116,14 @@
 						<div class="phone-block">
 							<b>휴대폰 번호</b>
 							<p class="inp_wrap">
-							<input class="js-phone-number" data-type="phoneNumber" type="tel" maxlength="11" name="tel" value="" placeholder="선택사항입니다.">
+							<input class="js-phone-number" data-type="phoneNumber" type="tel" maxlength="11" name="tel" value="" placeholder="필수입력입니다. (숫자만써주세요)">
 							<button type="button" class="reset_val">초기화</button></p>
 						</div>
 
 						<div class="email-block">
 							<b>이메일</b>
 							<p class="inp_wrap">
-							<input data-email-validate="" class="js-email-string" type="email" value="" name="email" placeholder="선택사항입니다.">
+							<input data-email-validate="" class="js-email-string" type="email" value="" name="email" placeholder="필수입력입니다. 양식에 맞게써주세요">
 							<button type="button" class="reset_val">초기화</button></p>
 						</div>
 					</section>
