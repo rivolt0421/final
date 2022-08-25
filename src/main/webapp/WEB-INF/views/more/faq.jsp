@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="../common/tags.jsp" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -23,6 +24,7 @@
 <body>
 <%@ include file="../common/nav.jsp" %>
 <link href="/css/mypage.css" rel="stylesheet">
+<link href="/css/more.css" rel="stylesheet">
 <div class="wrap show">
 	<div class="sub_top_wrap">
 		<div class="sub_top bg_kong_2">
@@ -39,13 +41,32 @@
 	        </ul>
    	 	 </div>
 	<div class="right">
-        <div class="watch_wrap">
-            <div class="watch_top coupon_top">
- 
+		<div class="faq">
+	        <div class="top_link">
+	        	<li><a href="/more/faq" class="on"> TOP7</a></li>
 	        </div>
-    	</div>
+	        
+	        <div class="faq_list">
+				<strong class="title">자주 묻는 질문</strong>
+				<div class="list" style="display:block">
+					<ul>
+	                	<li>
+		                    <p class="link"><span>[숙박] 예약대기 건 예약취소하고 싶어요.</span></p>
+		                    <div class="ans">
+		                    	<div><font color="#252525" face="arial">
+		                    		<span style="font-size: 13.3333px;">
+		                    		예약취소는&nbsp; 앱/웹 &gt; 내정보 &gt; 예약/구매내역에서 직접 가능합니다.
+		                    		</span></font>
+	                    		</div>
+	                    	</div>
+               			</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 <%@ include file="../common/footer.jsp" %>
+
 </body>
 </html>
