@@ -1,10 +1,14 @@
 package kr.co.goodchoice.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
+
 import kr.co.goodchoice.vo.Bank;
-import kr.co.goodchoice.vo.HostHouseStatusCategories;
-import kr.co.goodchoice.vo.HostHouseTypeCategories;
+import kr.co.goodchoice.vo.HostBusinessInfo;
+import kr.co.goodchoice.vo.HostHouseStatusCategory;
+import kr.co.goodchoice.vo.HostHouseTypeCategory;
 import kr.co.goodchoice.vo.User;
 
+@Mapper
 public interface HostMypageMapper {
 
 	// user정보 가져오기
@@ -15,9 +19,14 @@ public interface HostMypageMapper {
 	// 은행 정보 입력하기
 	void inserBank (Bank bank);
 	
+	// 사업자 등록정보 입력하기
+	void inserBusniessInfo (HostBusinessInfo businessInfo);
+	
 	// 업태 정보 입력하기
-	void inserStatusCtegories(HostHouseStatusCategories status);
+	void inserStatusCtegory(HostHouseStatusCategory status);
+	HostHouseStatusCategory getHostHouseStatusCategoryById(String id);
 	
 	// 업종 정보 입력하기
-	void inserTypeCtegories(HostHouseTypeCategories type);
+	void inserTypeCtegory(HostHouseTypeCategory type);
+	HostHouseTypeCategory getHostHouseTypeCategoryById(String id);
 }

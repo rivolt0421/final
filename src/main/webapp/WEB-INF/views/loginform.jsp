@@ -49,7 +49,7 @@
                 <button type="button" class="reset_val">초기화</button></div>
                 <button class="btn_link gra_left_right_red" type="submit"><span>로그인</span></button>
                 <div class="link_half">
-                    <div><a href="#"><span>비밀번호 재설정</span></a></div>
+                    <div><a href="/user/findPw"><span>비밀번호 재설정</span></a></div>
                     <div><a href="/register"><span>회원가입</span></a></div>
                 </div>
             </form>

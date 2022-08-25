@@ -17,6 +17,7 @@ import kr.co.goodchoice.exception.OnlineApplicationException;
 import kr.co.goodchoice.service.UserService;
 import kr.co.goodchoice.utils.SessionUtils;
 import kr.co.goodchoice.vo.User;
+import kr.co.goodchoice.web.form.InquiryRegisterForm;
 import kr.co.goodchoice.web.form.UserRegisterForm;
 import lombok.extern.slf4j.Slf4j;
 
@@ -129,10 +130,10 @@ public class HomeController {
 		return "redirect:/";
 	}
 	
-	@GetMapping(path ="more/notice")
+	@GetMapping(path ="more/event")
 	public String notice() {
 		
-		return "more/notice";
+		return "more/event";
 	}
 	
 	@GetMapping(path ="more/faq")
@@ -141,10 +142,17 @@ public class HomeController {
 		return "more/faq";
 	}
 	
-	@GetMapping(path ="more/inquiry")
-	public String inquiry() {
-		
-		return "more/inquiry";
-	}
+//	@GetMapping(path ="more/inquiry")
+//	public String inquiry() {
+//		
+//		return "more/inquiry";
+//	}
+//	
+//	@PostMapping(path ="/inquiry")
+//	public String insertInquiry(InquiryRegsiterForm inquiryRegsiterForm) {
+//		System.out.println(inquiryRegsiterForm);
+//		
+//		return null;
+//	}
 
 }

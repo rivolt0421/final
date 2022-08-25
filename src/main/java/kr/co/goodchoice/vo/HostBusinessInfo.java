@@ -14,13 +14,14 @@ import lombok.ToString;
 @Alias("HostBusinessInfo")
 public class HostBusinessInfo {
 	
-	private House houseNo;
-	private User userNo;
-	private HostHouseStatusCategories statusId;
-	private HostHouseTypeCategories typeId;
+	private int houseNo;
+	private int userNo;
+	private HostHouseStatusCategory statusCategory;
+	private HostHouseTypeCategory typeCategory;
 	private String hostHouseName;
 	private String hostHouseUserName;
 	private int hostHouseRegisterNumber;
 	private Date hostHouseCreatedDate;
+	private String hostHousetel;
 	
 }
