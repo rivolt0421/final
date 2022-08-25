@@ -12,6 +12,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import kr.co.goodchoice.annotation.LoginUser;
 import kr.co.goodchoice.service.HostFormService;
+import kr.co.goodchoice.utils.SessionUtils;
 import kr.co.goodchoice.vo.User;
 import kr.co.goodchoice.web.form.HostHouseRegisterForm1;
 import kr.co.goodchoice.web.form.HostHouseRegisterForm2;
@@ -33,9 +34,10 @@ public class HostHouseFormController {
 	// form1에서 저장하기 버튼을 누르면 form1로 남아있는다.
 	@PostMapping("/updateHouseInfo1")
 	public String updateHouseInfo1(@LoginUser User loginUser,
-			HostHouseRegisterForm1 hostHouseRegisterForm1, 
+			HostHouseRegisterForm1 hostHouseRegisterForm1,
 			RedirectAttributes redirectAttributes) {
 		
+		//SessionUtils.addAttribute("f", hostHouseRegisterForm1);
 		redirectAttributes.addFlashAttribute("f", hostHouseRegisterForm1);
 		
 		System.out.println(hostHouseRegisterForm1);

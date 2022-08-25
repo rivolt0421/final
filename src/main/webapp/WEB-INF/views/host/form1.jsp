@@ -90,13 +90,13 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 								<p class="fs-6">* 이미지 장소는 짧게 기입해주시기 바랍니다. 예시) 전경, 로비, 주차장 등</p>
 								<p class="fs-6">* 첫 이미지가 메인 이미지이며 드래그를 통해 순서 변경이 가능합니다.</p>
 							</div>
-							<div>
-								<div>
+							<div class="row">
+								<div class="">
 									<input type="file" name="housePictures" class="form-control w-50 mb-2" />
-									<input type="file" name="housePictures" class="form-control w-50 mb-2"/>
-									<input type="file" name="housePictures" class="form-control w-50 mb-2"/>
-									<input type="file" name="housePictures" class="form-control w-50 mb-2"/>
-									<input type="file" name="housePictures" class="form-control w-50 mb-2"/>
+									<input type="file" name="housePictures" class="form-control w-50 mb-2" value="${f.housePictures }"/>
+									<input type="file" name="housePictures" class="form-control w-50 mb-2" value="${f.housePictures }"/>
+									<input type="file" name="housePictures" class="form-control w-50 mb-2" value="${f.housePictures }"/>
+									<input type="file" name="housePictures" class="form-control w-50 mb-2" value="${f.housePictures }"/>
 								</div>
 							</div>
 						</td>
@@ -117,129 +117,129 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 							<div class="row mb-3">
 								<div class="col-sm-auto">
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="1">
+										<input class="form-check-input" name="facilities" type="checkbox" value="1" ${f.contains('1') ? 'checked' : '' }>
 										<label class="" for="">주방/식당</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="2">
+										<input class="form-check-input" name="facilities" type="checkbox" value="2" ${f.contains('2') ? 'checked' : '' }>
 										<label class="" for="">엘리베이터</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="3">
+										<input class="form-check-input" name="facilities" type="checkbox" value="3" ${f.contains('3') ? 'checked' : '' }>
 										<label class="" for="">에어컨</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="4">
+										<input class="form-check-input" name="facilities" type="checkbox" value="4" ${f.contains('4') ? 'checked' : '' }>
 										<label class="" for="">드라이기</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="5">
+										<input class="form-check-input" name="facilities" type="checkbox" value="5" ${f.contains('5') ? 'checked' : '' }>
 										<label class="" for="">반려견동반</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="6">
+										<input class="form-check-input" name="facilities" type="checkbox" value="6" ${f.contains('6') ? 'checked' : '' }>
 										<label class="" for="">프린터사용</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="7">
+										<input class="form-check-input" name="facilities" type="checkbox" value="7" ${f.contains('7') ? 'checked' : '' }>
 										<label class="" for="">카페</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="8">
+										<input class="form-check-input" name="facilities" type="checkbox" value="8" ${f.contains('8') ? 'checked' : '' }>
 										<label class="" for="">카드결제</label>
 									</div>
 								</div>
 								<div class="col-sm-auto">
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="9">
+										<input class="form-check-input" name="facilities" type="checkbox" value="9" ${f.contains('9') ? 'checked' : '' }>
 										<label class="" for="">세탁기</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input"name="facilities" type="checkbox" value="10">
+										<input class="form-check-input"name="facilities" type="checkbox" value="10" ${f.contains('10') ? 'checked' : '' }>
 										<label class="" for="">주차장</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="11">
+										<input class="form-check-input" name="facilities" type="checkbox" value="11" ${f.contains('11') ? 'checked' : '' }>
 										<label class="" for="">냉장고</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="12">
+										<input class="form-check-input" name="facilities" type="checkbox" value="12" ${f.contains('12') ? 'checked' : '' }>
 										<label class="" for="">다리미</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="13">
+										<input class="form-check-input" name="facilities" type="checkbox" value="13" ${f.contains('13') ? 'checked' : '' }>
 										<label class="" for="">짐보관가능</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="14">
+										<input class="form-check-input" name="facilities" type="checkbox" value="14" ${f.contains('14') ? 'checked' : '' }>
 										<label class="" for="">무료주차</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="15">
+										<input class="form-check-input" name="facilities" type="checkbox" value="15" ${f.contains('15') ? 'checked' : '' }>
 										<label class="" for="">전자레인지</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="16">
+										<input class="form-check-input" name="facilities" type="checkbox" value="16" ${f.contains('16') ? 'checked' : '' }>
 										<label class="" for="">TV</label>
 									</div>
 								</div>
 								<div class="col-sm-auto">
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="17">
+										<input class="form-check-input" name="facilities" type="checkbox" value="17" ${f.contains('17') ? 'checked' : '' }>
 										<label class="" for="">건조기</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="18">
+										<input class="form-check-input" name="facilities" type="checkbox" value="18" ${f.contains('18') ? 'checked' : '' }>
 										<label class="" for="">와이파이</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="19">
+										<input class="form-check-input" name="facilities" type="checkbox" value="19" ${f.contains('19') ? 'checked' : '' }>
 										<label class="" for="">객실샤워실</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="20">
+										<input class="form-check-input" name="facilities" type="checkbox" value="20" ${f.contains('20') ? 'checked' : '' }>
 										<label class="" for="">조식포함</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="21">
+										<input class="form-check-input" name="facilities" type="checkbox" value="21" ${f.contains('21') ? 'checked' : '' }>
 										<label class="" for="">공용PC</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="22">
+										<input class="form-check-input" name="facilities" type="checkbox" value="22" ${f.contains('22') ? 'checked' : '' }>
 										<label class="" for="">BBQ</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="23">
+										<input class="form-check-input" name="facilities" type="checkbox" value="23" ${f.contains('23') ? 'checked' : '' }>
 										<label class="" for="">취사가능</label>
 									</div>
 								</div>
 								<div class="col-sm-auto">
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="24">
+										<input class="form-check-input" name="facilities" type="checkbox" value="24" ${f.contains('24') ? 'checked' : '' }>
 										<label class="" for="">탈수기</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="25">
+										<input class="form-check-input" name="facilities" type="checkbox" value="25" ${f.contains('25') ? 'checked' : '' }>
 										<label class="" for="">용실용품</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="26">
+										<input class="form-check-input" name="facilities" type="checkbox" value="26" ${f.contains('26') ? 'checked' : '' }>
 										<label class="" for="">욕조</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="27">
+										<input class="form-check-input" name="facilities" type="checkbox" value="27" ${f.contains('27') ? 'checked' : '' }>
 										<label class="" for="">객실내흡연</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="28">
+										<input class="form-check-input" name="facilities" type="checkbox" value="28" ${f.contains('28') ? 'checked' : '' }>
 										<label class="" for="">개인사물함</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="29">
+										<input class="form-check-input" name="facilities" type="checkbox" value="29" ${f.contains('29') ? 'checked' : '' }>
 										<label class="" for="">라운지</label>
 									</div>
 									<div class="form-check">
-										<input class="form-check-input" name="facilities" type="checkbox" value="30">
+										<input class="form-check-input" name="facilities" type="checkbox" value="30" ${f.contains('30') ? 'checked' : '' }>
 										<label class="" for="">개인콘센트</label>
 									</div>
 								</div>
@@ -414,7 +414,7 @@ font-family: 'IBM Plex Sans KR', sans-serif;
 						<th class="text-center align-middle">이벤트 정보</th>
 						<td>
 							<div class="">
-		                        <input type="text" class="form-control" name="eventTitle" placeholder="업체 이미지에 표시되는 대표적인 이벤트 한줄을 남겨주세요." value="${eventTitle }">
+		                        <input type="text" class="form-control" name="eventTitle" placeholder="업체 이미지에 표시되는 대표적인 이벤트 한줄을 남겨주세요." value="${f.eventTitle }">
 		                        <br>
 		                        <textarea class="form-control textarea" rows="6" id="event" name="eventContent" placeholder="게스트하우스 주관의 이벤트 정보를 기재해주세요.">${f.eventContent }</textarea>
 		                    </div>
