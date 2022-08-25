@@ -13,12 +13,6 @@ public class HostHomeController {
 	}
 	
 	
-	// 호스트 자주묻는 질문
-	@GetMapping(path = "/hostquestion")
-	public String hostquestion() {
-		return "host/oftenquestionlist";
-	}
-	
 	// 실시간 예약 관리
 	@GetMapping(path = "/realtimereserve")
 	public String realtimereserve( ) {

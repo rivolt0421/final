@@ -2,8 +2,48 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="kr.co.goodchoice.mapper.ReserveHistoryMapper">
 	
-	<!-- List<Reservation> getReservationByUserNo(int userNo); -->
-	<select id="getReservationByUserNo">
-		
+	<resultMap type="Reservation" id="reservationHistoryMap">
+		<id column="reservation_no" property="no"/>
+		<result column="user_no" property="userNo"/>
+		<result column="house_no" property="houseNo"/>
+		<result column="room_no" property="roomNo"/>
+		<result column="motel_room_no" property="motelNo"/>
+		<result column="motel_room_reservation_type" property="motelType"/>
+		<result column="reservation_checkin_date" property="checkinDate"/>
+		<result column="reservation_checkout_date" property="checkoutDate"/>
+		<result column="reservation_price" property="reservationPrice"/>
+		<result column="reservation_payment_price" property="paymentPrice"/>
+		<result column="room_name" property="roomName"/>
+		<result column="reservation_canceled" property="canceled"/>
+		<result column="cancel_reason" property="cancelReason"/>
+		<result column="cancel_commission" property="cancelCommission"/>
+	</resultMap>
+	
+	<resultMap type="ReservationHistoryDto" id="ReservationHistoryDtoMap">
+		<result column="day" property="day"/>
+		<collection property="reservations" ofType="Reservation">
+			<result column="house_no" property="houseNo"/>
+			<result column="room_no" property="roomNo"/>
+			<result column="house_name" property="houseName"/>
+			<result column="room_name" property="roomName"/>
+		</collection>
+	</resultMap>
+	
+	<!-- List<Reservation> getReservationByDate(Date date); -->
+	<select id="getReservationByDate" parameterType="date" resultMap="ReservationHistoryDtoMap">
+		select *
+		from   (select to_char(c.reservation_checkin_date, 'yyyy-mm-dd') checkin_date, a.house_no, c.reservation_no, a.house_name, d.room_name
+        		from house a, host_business_info b, reservations c, rooms d
+        		where c.house_no = b.house_no
+		        and a.house_no = b.house_no
+		        and a.house_no = d.house_no
+        		and c.room_no = d.room_no
+		        and b.user_no = 1
+        		and c.reservation_checkin_date >= #{value} and c.reservation_checkin_date &lt; last_day(#{value}) + 1) x,
+       			(select to_date(to_char(#{value}, 'yyyy-mm-dd'), 'yyyy-mm-dd') + level - 1 day
+        		from dual 
+		        connect by #{value} + level &lt;= last_day(#{value}) + 1) y
+		where x.checkin_date(+) = y.day
+		order by y.day
 	</select>
 </mapper>

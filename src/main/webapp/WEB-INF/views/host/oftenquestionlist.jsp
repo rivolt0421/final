@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ include file="../common/tags.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,9 +78,9 @@
 		  				<c:otherwise>		  					
 				  			<c:forEach var="often" items="${oftens }">
 				  				<tr>
-				  					<td></td>
-				  					<td>${often.oftenCategory.id }</td>
-				  					<td>${often.title }</td>
+				  					<td class="text-center">${often.no }</td>
+				  					<td class="text-center">${often.oftenCategory.type }</td>
+				  					<td><a href="" style="color: #000;">${often.title }</a></td>
 				  				</tr>
 				  			</c:forEach>
 		  				</c:otherwise>
