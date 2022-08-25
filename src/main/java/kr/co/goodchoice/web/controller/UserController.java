@@ -71,6 +71,12 @@ public class UserController {
 		return "user/couponbox";
 	}
 	
+	@GetMapping(path ="/findPw")
+	public String find() {
+		
+		return "user/findPw";
+	}
+	
 //	@GetMapping(path ="/reservation")
 //	public String reservation() {
 //		

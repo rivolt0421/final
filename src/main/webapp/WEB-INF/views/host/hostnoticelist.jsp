@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ include file="../common/tags.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,7 +50,7 @@
 							<th>등록일</th>
 						</tr>
 					</thead>
-					<tbody class="fs-6">
+					<tbody class="fs-6 text-center">
 					<c:choose>
 						<c:when test="${empty notices }">
 							<tr>
@@ -60,8 +61,8 @@
 							<c:forEach var="notice" items="${notices }">
 								<tr>
 									<td>${notice.no }</td>
-									<td>${notice.title }</td>
-									<td>${notice.createdDate }</td>
+									<td><a href="#" style="color: #000;">${notice.title }</a></td>
+									<td><fmt:formatDate value="${notice.createdDate }" pattern="yyyy년 M월 d일"/></td>
 								</tr>
 							</c:forEach>
 						</c:otherwise>

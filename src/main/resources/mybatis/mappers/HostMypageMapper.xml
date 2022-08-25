@@ -10,22 +10,47 @@
 		<result column="USER_HOST" property="host"/>
 	</resultMap>
 	
-	<resultMap type="Bank" id="BankResultMap">
+	<resultMap id="BankResultMap" type="Bank">
 		<id column="USER_NO" property="userNo"/>
 		<result column="BANK_NAME" property="name"/>
 		<result column="BANK_NUMBER" property="number"/>
 		<result column="BANK_USER" property="user"/>
 	</resultMap>
 	
-	<resultMap type="HostHouseStatusCategories" id="statusResultMap">
-		<result column="STATUS_ID" property="statusId"/>
-		<result column="STATUS_NAME" property="statusName"/>
+	<resultMap id="HostBusinessInfoMap" type="HostBusinessInfo" >
+		<id column="HOUSE_NO" property="houseNo"/>
+		<result column="USER_NO" property="userNo"/>
+		<result column="HOST_HOUSE_NAME" property="hostHouseName"/>
+		<result column="HOST_HOUSE_USER_NAME" property="hostHouseUserName"/>
+		<result column="HOST_HOUSE_REGISTER_NUMBER" property="hostHouseRegisterNumber"/>
+		<result column="HOST_HOUSE_CREATED_DATE" property="hostHouseCreatedDate"/>
+		<result column="HOST_HOUSE_TEL" property="hostHousetel"/>
+		<association column="STATUS_ID" property="statusCategory" select="getHostHouseStatusCategoryById"/>
+		<association column="TYPE_ID" property="typeCategory" select="getHostHouseTypeCategoryById"/>
+		<!-- association는 객체일 때 사용한다. -->
 	</resultMap>
 	
-	<resultMap type="HostHouseTypeCategories" id="typeResultMap">
-		<result column="TYPE_ID" property="typeId"/>
-		<result column="TYPE_NAME" property="typeName"/>
+	<resultMap id="StatusResultMap" type="HostHouseStatusCategory">
+		<result column="STATUS_ID" property="id"/>
+		<result column="STATUS_NAME" property="name"/>
 	</resultMap>
+	
+	<resultMap id="TypeResultMap" type="HostHouseTypeCategory" >
+		<result column="TYPE_ID" property="id"/>
+		<result column="TYPE_NAME" property="name"/>
+	</resultMap>
+	
+	<select id="getHostHouseStatusCategoryById" parameterType="string" resultMap="StatusResultMap">
+		select *
+		from HOST_HOUSE_STATUS_CATEGORIES
+		where STATUS_ID = #{value}
+	</select>
+	
+	<select id="getHostHouseTypeCategoryById" parameterType="string" resultMap="TypeResultMap">
+		select *
+		from HOST_HOUSE_TYPE_CATEGORIES
+		where TYPE_ID = #{value}
+	</select>
 
 	<!-- user정보 가져오기 -->
 	<!-- void getHost (User user); -->
@@ -46,10 +71,31 @@
 			(#{userNo}, #{name}, #{number}, #{user}
 	</insert>
 	
+	<!-- // 사업자 등록정보 입력하기
+	void inserBusniessInfo (HostBusinessInfo businessInfo); -->
+	<insert id="inserBusniessInfo" parameterType="HostBusinessInfo">
+		insert into HOST_BUSINESS_INFO
+			(HOUSE_NO, USER_NO, STATUS_ID, STATUS_ID, TYPE_ID, HOST_HOUSE_NAME, HOST_HOUSE_USER_NAME, HOST_HOUSE_REGISTER_NUMBER, HOST_HOUSE_CREATED_DATE, HOST_HOUSE_TEL)
+		values
+			(#{houseNo}, #{userNo}, #{statusCategory.id}, #{typeCategory.id}, #{hostHouseName}, #{hostHouseUserName}, #{hostHouseRegisterNumber}, #{hostHouseCreatedDate}, #{hostHousetel})
+	</insert>
+	
 	<!-- 업태 정보 입력하기 -->
-	<!-- void inserStatusCtegories(HostHouseStatusCategories status); -->
+	<!-- void inserStatusCtegory(HostHouseStatusCategory status); -->
+	<insert id="inserStatusCtegory" parameterType="HostHouseStatusCategory">
+		insert into HOST_HOUSE_STATUS_CATEGORIES
+			(STATUS_ID, STATUS_NAME)
+		values
+			(#{id}, #{name})
+	</insert>
 	
 	<!-- 업종 정보 입력하기 -->
-	<!-- void inserTypeCtegories(HostHouseTypeCategories type); -->
+	<!-- void inserTypeCtegory(HostHouseTypeCategory type); -->
+	<insert id="inserTypeCtegory" parameterType="HostHouseTypeCategory">
+		insert into HOST_HOUSE_TYPE_CATEGORIES
+			(TYPE_ID, TYPE_NAME)
+		vlaues
+			(#{id}, #{name})
+	</insert>
 	
 </mapper>
