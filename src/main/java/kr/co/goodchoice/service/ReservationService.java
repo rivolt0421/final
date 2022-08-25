@@ -32,6 +32,7 @@ public class ReservationService {
 	}
 	
 
+
 	//public Reservation getReservationDetail(int no) {
 	//	return reservationMapper.getReservationByNo(no);
 	//}

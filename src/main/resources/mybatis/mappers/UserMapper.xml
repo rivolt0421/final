@@ -37,9 +37,9 @@
 			from dual
 		</selectKey>
 		insert into final_users
-			(user_no, user_name, user_email, user_password, user_tel, user_nickname)
+			(user_no, user_name, user_email, user_password, user_tel, user_nickname, user_point)
 		values
-			(#{no}, #{name}, #{email}, #{password}, #{tel}, #{nickname})
+			(#{no}, #{name}, #{email}, #{password}, #{tel}, #{nickname}, #{point})
 	</insert>
 	
 	<!-- void updateUser(User user); -->
@@ -48,6 +48,7 @@
 		set
 			user_nickname = #{nickname},
 			user_name = #{name},
+			user_point = #{point},
 			user_updated_date = sysdate
 		where user_no = #{no}
 	</update>
