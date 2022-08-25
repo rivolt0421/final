@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="../common/tags.jsp" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -44,34 +45,34 @@
 		        <div>
 		            <div class="point_show gra_red">
 		                <span>사용 가능 포인트</span>
-		                <strong id="point-page-show"><!-- 현재가지고있는 포인트 --> P</strong>
+		                <strong id="point-page-show">${user.point } <!-- 현재가지고있는 유저 총 포인트 --> P</strong>
 		            </div>
 		
 		            <ul class="point_list"></ul>
 		        </div>
 		
-		        <!-- 리스트 없을시 -->
-		        <div class="list_none" style="display: block;">
-		            적립한 포인트가 없습니다<br>
-		        </div>
+		        
 		        
 		        <!-- 리스트 있을시 -->
-		        <section class="points-list">	
-					<div class="points-list__year-month">21년 08월</div>
+		        <section class="points-list" style="margin-top:30px;" >	
+		        <c:forEach var="point" items="${points }"> 
+					<div class="points-list__year-month"><fmt:formatDate value="${point.createdDate }"  pattern="yy년 MM월"/> <!-- xx년 xx월 --></div>
 					<div class="points-list-item">
 						<div class="points-list-item__wrap">
 							<p class="points-list-item__name">${point.reason } </p>
-							<p class="points-list-item__issued-date"> 22. 08. 01 </p>
+							<p class="points-list-item__issued-date"> <fmt:formatDate value="${point.createdDate }"  pattern="yy.MM.dd"/> <!-- xx.xx.xx 년 월 일 --> </p>
 						</div>
 						<div class="points-list-item__wrap">
 						<p class="points-list-item__balance text-red">
-	            			+10 P
+	            			+ ${point.amount } P
 	            		</p> 
-	            		<p class="points-list-item__expiry-date font-weight--b">
-	            			21.09.01까지 
+<!-- 	            		<p class="points-list-item__expiry-date font-weight--b">
+	            			만료날짜까지 -->
 	            		</p>
-	            		</div>				
+	            		</div>	
+	            					
 					</div>
+		        </c:forEach>
 		        </section>
 	        
     		</div>

@@ -1,5 +1,8 @@
 package kr.co.goodchoice.web.controller;
 
+import java.util.List;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.goodchoice.annotation.LoginUser;
+import kr.co.goodchoice.service.PointService;
 import kr.co.goodchoice.service.UserService;
+import kr.co.goodchoice.vo.Point;
 import kr.co.goodchoice.vo.User;
 
 
@@ -19,6 +24,9 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private PointService pointservice;
 	
 	@GetMapping(path ="/myinfo")
 	public String myinfo(@LoginUser User loginUser, Model model) {
@@ -47,7 +55,12 @@ public class UserController {
 	}
 
 	@GetMapping(path ="/point")
-	public String point() {
+	public String points(@LoginUser User loginUser, Model model) {
+		List<Point> points = pointservice.getMyPoints(loginUser.getNo());
+		model.addAttribute("points", points);
+		
+		User user = userService.getUserInfo(loginUser.getNo());
+		model.addAttribute("user", user);
 		
 		return "user/point";
 	}
@@ -56,6 +69,12 @@ public class UserController {
 	public String coupon() {
 		
 		return "user/couponbox";
+	}
+	
+	@GetMapping(path ="/findPw")
+	public String find() {
+		
+		return "user/findPw";
 	}
 	
 //	@GetMapping(path ="/reservation")

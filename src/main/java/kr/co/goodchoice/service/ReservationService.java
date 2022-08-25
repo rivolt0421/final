@@ -13,27 +13,42 @@ import kr.co.goodchoice.vo.Rooms;
 public class ReservationService {
 	
 	@Autowired
-	private ReservationMapper reservationMapper;
+	private ReservationMapper reservationMapper; 
 	
+	//userNo로 예약내역 리스트
+	public List<Reservation> getReservationsByUserNo(int userNo) {
+		return reservationMapper.getReservationsByUserNo(userNo);
+	}
+	
+	//userNo로 취소내역 리스트
+	public List<Reservation> getCancelReservationsByUserNo(int userNo) {
+		return reservationMapper.getCancelReservationsByUserNo(userNo);
+	}
+
 	public Rooms getRoomInfoByNo(int roomNo) {
 		return reservationMapper.getRoomByNo(roomNo);
 	}
 
-	public List<Reservation> getAllReservations() {
-		return reservationMapper.getReservations();
-	}
+	
+//	public List<Reservation> getAllReservations() {
+//		return reservationMapper.getReservations();
+//	}
+	
+//	//userNo로 예약내역 
+//	public Reservation getReservationsByUserNo(int userNo) {
+//		return reservationMapper.getReservationsByUserNo(userNo);
+//	}
+	
 
 //	public List<Reservation> getAllReservations(String userNo) {
 //		return reservationMapper.getReservationsByUserNo(userNo);
 //	}
 	
-	public Reservation getReservationByUserNo(int userNo) {
-		return reservationMapper.getReservationByUserNo(userNo);
-	}
 	
-	public Reservation getReservationDetail(int no) {
-		return reservationMapper.getReservationByUserNo(no);
-	}
-	
+
+//	public Reservation getReservationDetail(int no) {
+//		return reservationMapper.getReservationByNo(no);
+//	}
+
 	
 }

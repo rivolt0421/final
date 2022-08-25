@@ -22,7 +22,7 @@ public class UserService {
 	private UserMapper userMapper;
 	
 	@Autowired
-	private PointMapper pointMapper;
+	private PointService pointService;
 	
 	/**
 	 * 카카오 로그인으로 획득한 사용자정보로 로그인처리를 수행한다.<p>
@@ -40,6 +40,9 @@ public class UserService {
 			user.setEmail(email);
 			user.setName(name);
 			userMapper.insertUser(user);
+			
+			pointService.insertPoint(user, "회원가입 축하 포인트", 1000);
+			
 			log.info("카카오 로그인 신규 사용자 정보 등록 완료: " + user.getEmail() + ", " + user.getName());
 		}
 		return user;
@@ -58,6 +61,9 @@ public class UserService {
 			user.setEmail(email);
 			user.setName(name);
 			userMapper.insertUser(user);
+			
+			pointService.insertPoint(user, "회원가입 축하 포인트", 1000);
+			
 			log.info("페이스북 로그인 신규 사용자 정보 등록 완료: " + user.getEmail() + ", " + user.getName());
 		}
 		return user;
@@ -75,17 +81,13 @@ public class UserService {
 		}		
 		
 		user = new User();
+//		user.setPoint(1000);
 		BeanUtils.copyProperties(userRegisterForm, user);
 		
 		
 		userMapper.insertUser(user);	
 		
-		Point ph = new Point();
-		ph.setUser(user);
-		ph.setReason("적립");
-		ph.setAmount(1000);
-		
-		pointMapper.addPoint(ph);
+		pointService.insertPoint(user, "회원가입 축하 포인트", 1000);
 		
 	}
 
@@ -97,6 +99,10 @@ public class UserService {
 		if (!user.getPassword().trim().equals(password)) {
 			throw new OnlineApplicationException("아이디 혹은 비밀번호가 올바르지 않습니다.");			
 		}
+		
+		pointService.insertPoint(user, "출첵", 10);
+		user.setPoint(user.getPoint() + 10);
+		
 		return user;
 	}
 	

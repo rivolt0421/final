@@ -22,6 +22,10 @@ public class OftenService {
 		return oftenCategoryMapper.getAllCategories();
 	}
 	
+	public List<Often> getAllOftens() {
+		return oftenMapper.getOftens();
+	}
+	
 	public List<Often> getOftensByCategoryId(String categoryId) {
 		return oftenMapper.getOftensByCategoryId(categoryId);
 	}

@@ -9,9 +9,9 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@Alias("HostHouseTypeCategories")
-public class HostHouseTypeCategories {
+@Alias("HostHouseTypeCategory")
+public class HostHouseTypeCategory {
 
-	private String typeId;
-	private String typeName;
+	private String id;
+	private String name;
 }
