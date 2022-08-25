@@ -31,9 +31,9 @@ public class ReservationController {
 		int bak = p.getDays();
 		
 		Rooms room = reservationService.getRoomInfoByNo(roomNo);
-			String houseName = room.getHouseNo().getName();
-			String roomName = room.getName();
-			int price = room.getPrice();
+		String houseName 	= room.getHouseNo().getName();
+		String roomName 	= room.getName();
+		int price 			= room.getPrice();
 		
 		model.addAttribute("houseName", houseName);
 		model.addAttribute("roomName", roomName);

@@ -22,7 +22,7 @@ public class ReservationService {
 	public List<Reservation> getAllReservations() {
 		return reservationMapper.getReservations();
 	}
-	
+
 //	public List<Reservation> getAllReservations(String userNo) {
 //		return reservationMapper.getReservationsByUserNo(userNo);
 //	}
@@ -32,7 +32,7 @@ public class ReservationService {
 	}
 	
 	public Reservation getReservationDetail(int no) {
-		return reservationMapper.getReservationByNo(no);
+		return reservationMapper.getReservationByUserNo(no);
 	}
 	
 	

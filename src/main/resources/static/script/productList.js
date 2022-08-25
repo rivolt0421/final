@@ -183,10 +183,3 @@ function location_layer_close() {
     $('.area_pop').fadeOut(150);
     $('.city_child').eq($('.city li .fix').parent().index()).show(); // 첫 노출 지역 다시 보임
 }
-
-/*function loadRegions() {
-	$.get("https://localhost/product/regions", {},
-		  function(data, status, xhr) { 
-		  	for( r in da
-		   }, json);
-}*/

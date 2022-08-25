@@ -8,6 +8,7 @@
 	
 	<typeAliases>
 		<package name="kr.co.goodchoice.vo"/>	
+		<package name="kr.co.goodchoice.dto"/>	
 	</typeAliases>
 	
 </configuration>

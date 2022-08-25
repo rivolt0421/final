@@ -2,4 +2,39 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.co.goodchoice.mapper.ProductMapper">
 
+	<!-- List<House> getMotelsByProvinceName(String name); -->
+	<select id="getMotelsByProvinceName" parameterType="string" resultType="MotelList">
+		select h.house_no no,
+		       h.HOUSE_NAME houseName,
+		       (select avg(review_score) from reviews rev where h.house_no = rev.house_no) score,
+		       (select count(review_score) from reviews rev where h.house_no = rev.house_no) reviewCount,
+		       h.house_address address,
+		       min(r.short_price) shortPrice,
+		       min(r.long_price) longPrice,
+		       h.house_cover_image_name as image
+		from house h, rooms_motel r, regions g
+		where h.house_no = r.house_no
+		and h.region_id = g.region_id
+		and g.region_province = #{value}
+		and h.house_motel = 'Y' 
+		group by h.house_no, h.HOUSE_NAME, h.house_address, h.house_cover_image_name	
+	</select>
+	
+	<!-- List<MotelList> getMotelsByRegionId(int regionId); -->
+	<select id="getMotelsByRegionId" parameterType="int" resultType="MotelList">
+		select h.house_no no,
+		       h.HOUSE_NAME houseName,
+		       (select avg(review_score) from reviews rev where h.house_no = rev.house_no) score,
+		       (select count(review_score) from reviews rev where h.house_no = rev.house_no) reviewCount,
+		       h.house_address address,
+		       min(r.short_price) shortPrice,
+		       min(r.long_price) longPrice,
+		       h.house_cover_image_name as image
+		from house h, rooms_motel r, regions g
+		where h.house_no = r.house_no
+		and h.region_id = g.region_id
+		and g.region_id = #{value}
+		and h.house_motel = 'Y' 
+		group by h.house_no, h.HOUSE_NAME, h.house_address, h.house_cover_image_name	
+	</select>	
 </mapper>

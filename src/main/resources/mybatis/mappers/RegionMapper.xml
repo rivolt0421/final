@@ -8,9 +8,10 @@
 		and REGION_NAME = #{name}
 	</select>
 	
-	<select id="getAllRegions" resultType="Region">
+	<select id="getMotelRegions" resultType="Region">
 		select REGION_ID as id, REGION_PROVINCE as province, REGION_NAME as name
-		from regions
+		from regions r
+        where exists(select * from house where house_motel='Y' and region_id = r.region_id)
 		order by region_province
 	</select>
 
