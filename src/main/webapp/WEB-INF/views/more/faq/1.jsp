@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="../common/tags.jsp" %>
+<%@ include file="../../common/tags.jsp" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -22,7 +22,7 @@
 </style>
 </head>
 <body>
-<%@ include file="../common/nav.jsp" %>
+<%@ include file="../../common/nav.jsp" %>
 <link href="/css/mypage.css" rel="stylesheet">
 <link href="/css/more.css" rel="stylesheet">
 <div class="wrap show">
@@ -69,7 +69,7 @@
 		</div>
 	</div>
 </div>
-<%@ include file="../common/footer.jsp" %>
+<%@ include file="../../common/footer.jsp" %>
 
 </body>
 </html>

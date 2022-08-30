@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="../common/tags.jsp" %>
+<%@ include file="../../common/tags.jsp" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -22,7 +22,7 @@
 </style>
 </head>
 <body>
-<%@ include file="../common/nav.jsp" %>
+<%@ include file="../../common/nav.jsp" %>
 <link href="/css/mypage.css" rel="stylesheet">
 <link href="/css/more.css" rel="stylesheet">
 <div class="wrap show">
@@ -43,21 +43,21 @@
 	<div class="right">
 		<div class="faq">
 	        <div class="top_link">
-	        	<li><a href="/more/faq/1" class="on"> TOP7</a></li>
-	        	<li><a href="/more/faq/2" class=""> 이용문의</a></li>
+	        	<li><a href="/more/faq/1" class=""> TOP7</a></li>
+	        	<li><a href="/more/faq/2" class="on"> 이용문의</a></li>
 	        </div>
-		        
-		    <c:forEach var="top7" items="${top7}">
+	        
+	        <c:forEach var="used" items="${used}">
 	        <div class="faq_list">
 				<strong class="title">자주 묻는 질문</strong>
 				<div class="list" style="display:block">
 					<ul>
 	                	<li>
-		                    <p class="link"><span>${top7.title }<!-- [숙박] 예약대기 건 예약취소하고 싶어요. --></span></p>
+		                    <p class="link"><span>${used.title }</span></p>
 		                    <div class="ans">
 		                    	<div><font color="#252525" face="arial">
 		                    		<span style="font-size: 13.3333px;">
-		                    		${top7.content }
+		                    		${used.content }
 		                    		</span></font>
 	                    		</div>
 	                    	</div>
@@ -65,11 +65,11 @@
 					</ul>
 				</div>
 			</div>
-		    </c:forEach>
+	        </c:forEach>
 		</div>
 	</div>
 </div>
-<%@ include file="../common/footer.jsp" %>
+<%@ include file="../../common/footer.jsp" %>
 
 </body>
 </html>

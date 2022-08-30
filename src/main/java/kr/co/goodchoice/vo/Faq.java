@@ -14,7 +14,7 @@ import lombok.ToString;
 @Alias("Faq")
 public class Faq {
 	private String no;
-	private FaqCategory faqCategory;
+	private String id;
 	private String title;
 	private String content;
 	private Date createdDate;

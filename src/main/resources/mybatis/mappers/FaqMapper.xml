@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.co.goodchoice.mapper.FaqMapper">
+	
+	<!-- List<Faq> getTop7(); -->
+	<select id="getTop7" resultType="Faq">
+		select FAQ_NO as no,
+				FAQ_ID as id,
+				FAQ_TITLE as title,
+				FAQ_CONTENT as content,
+				FAQ_CREATED_DATE as createdDate,
+				FAQ_UPDATED_DATE as updatedDate
+		from faq
+		where faq_id = 'CAT-01'
+	</select>
+	
+	<!-- List<Faq> getUsed(); -->
+	<select id="getUsed" resultType="Faq">
+		select FAQ_NO as no,
+				FAQ_ID as id,
+				FAQ_TITLE as title,
+				FAQ_CONTENT as content,
+				FAQ_CREATED_DATE as createdDate,
+				FAQ_UPDATED_DATE as updatedDate
+		from faq
+		where faq_id = 'CAT-02'
+	</select>
+	
+</mapper> 

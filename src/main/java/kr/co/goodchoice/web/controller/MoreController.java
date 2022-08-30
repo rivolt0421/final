@@ -47,10 +47,22 @@ public class MoreController {
 		return "redirect:/more/inquiry";
 	}
 	
-	@GetMapping(path ="/faq")
-	public String faq() {
-		
-		return "more/faq";
-	}
+//	@GetMapping(path ="/faq")
+//	public String faq() {
+//		
+//		return "more/faq";
+//	}
+//	
+//	@GetMapping(path ="/faq/1")
+//	public String faq1() {
+//		
+//		return "more/faq/1";
+//	}
+//	
+//	@GetMapping(path ="/faq/2")
+//	public String faq2() {
+//		
+//		return "more/faq/2";
+//	}
 	
 }
